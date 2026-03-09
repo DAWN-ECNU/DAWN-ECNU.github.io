@@ -42,8 +42,10 @@ schedule:
     materials:
       - name: "课程教程"
         url: "/assets/html/第一章.html"
-      - name: "课件(ppt)"
-        url: "/assets/ppt/第一章.pptx"  
+      - name: "课件(第一节课ppt)"
+        url: "/assets/ppt/第一周_ba.pptx" 
+      - name: "课件(第二节课ppt)"
+        url: "/assets/ppt/第二周_ba.pptx" 
 
   - week: 2
     type: "基础章节" # 👈 新增标签
