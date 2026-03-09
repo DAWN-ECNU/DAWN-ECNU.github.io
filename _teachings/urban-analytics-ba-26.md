@@ -70,6 +70,14 @@ schedule:
     materials:
       - name: "课程教程"
         url: "/assets/html/第4章.html"
+        
+  - week: 5
+    type: "专题章节" # 👈 新增标签
+    topic: "第5章：专题1: 点数据分析"
+    description: "Theme 1: Points"
+    materials:
+      - name: "课程教程"
+        url: "/assets/html/第5章.html"
 
   # 后续你可以这样添加：
   # - week: 5
