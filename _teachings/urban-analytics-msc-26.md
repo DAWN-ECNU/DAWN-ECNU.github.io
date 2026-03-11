@@ -78,6 +78,14 @@ schedule:
     materials:
       - name: "课程教程"
         url: "/assets/html/第5章.html"
+  
+  - week: 6
+    type: "专题章节" # 👈 新增标签
+    topic: "第6章：专题2: 图与网络分析"
+    description: "Theme 1: Graph & Network"
+    materials:
+      - name: "课程教程"
+        url: "/assets/html/第6章.html"
 
   # 后续你可以这样添加：
   # - week: 5
