@@ -1,8 +1,8 @@
 metadata:
-  last_updated: '2026-03-04'
+  last_updated: '2026-03-13'
 papers:
   vR-ZpaEAAAAJ:2osOgNQ5qMEC:
-    citations: 70
+    citations: 71
     title: Understanding public transit patterns with open geodemographics to facilitate public transport planning
     year: '2020'
   vR-ZpaEAAAAJ:3fE2CSJIrl8C:
@@ -22,7 +22,7 @@ papers:
     title: 'Human mobility variations in response to restriction policies during the COVID-19 pandemic: an analysis from the Virus Watch community cohort in England, UK'
     year: '2022'
   vR-ZpaEAAAAJ:KlAtU1dfN6UC:
-    citations: 53
+    citations: 55
     title: 'Crowdsourcing geospatial data for earth and human observations: A review'
     year: '2024'
   vR-ZpaEAAAAJ:M3ejUd6NZC8C:
@@ -30,7 +30,7 @@ papers:
     title: Urban Vibrancy Resilience of New York City Neighbourhoods Across Pre-, Peri-, and Post-Pandemic Periods via Geodemographic Classification
     year: '2025'
   vR-ZpaEAAAAJ:MXK_kJrjxJIC:
-    citations: 56
+    citations: 57
     title: An interpretable machine learning framework for measuring urban perceptions from panoramic street view images
     year: '2023'
   vR-ZpaEAAAAJ:Se3iqnhoufwC:
@@ -58,19 +58,23 @@ papers:
     title: "Revealing spatiotemporal transmission patterns and stages of COVID-19 in China using individual patients\u2019 trajectory data"
     year: '2021'
   vR-ZpaEAAAAJ:YOwf2qJgpHMC:
-    citations: 4
+    citations: 6
     title: Impact of net zero policy scenarios on air pollution inequalities in England and Wales
     year: '2024'
   vR-ZpaEAAAAJ:Zph67rFs4hoC:
-    citations: 16
+    citations: 17
     title: 'Vivid London: Assessing the resilience of urban vibrancy during the COVID-19 pandemic using social media data'
     year: '2024'
   vR-ZpaEAAAAJ:_kc_bZDykSQC:
     citations: 14
     title: 'Climate change policies reduce air pollution and increase physical activity: Benefits, costs, inequalities, and indoor exposures'
     year: '2025'
+  vR-ZpaEAAAAJ:aqlVkmm33-oC:
+    citations: 0
+    title: 'An open framework for assessing urban mobility resilience: evidence from New York City'
+    year: '2026'
   vR-ZpaEAAAAJ:d1gkVwhDpl0C:
-    citations: 57
+    citations: 59
     title: A principal component analysis (PCA)-based framework for automated variable selection in geodemographic classification
     year: '2019'
   vR-ZpaEAAAAJ:eQOLeE2rZwMC:
@@ -86,14 +90,14 @@ papers:
     title: 'Exploring public sentiment and vaccination uptake of COVID-19 vaccines in England: a spatiotemporal and sociodemographic analysis of Twitter data'
     year: '2023'
   vR-ZpaEAAAAJ:qxL8FJ1GzNcC:
-    citations: 2
+    citations: 3
     title: "Coping with the \u201Cnew normal\u201D: assessing urban vibrancy resilience disparities through socioeconomic deprivation in New York City"
     year: '2025'
   vR-ZpaEAAAAJ:u-x6o8ySG0sC:
-    citations: 50
+    citations: 51
     title: 'Considering context and dynamics: A classification of transit-orientated development for New York City'
     year: '2020'
   vR-ZpaEAAAAJ:zYLM7Y9cAGgC:
-    citations: 55
+    citations: 56
     title: 'Identifying and understanding road-constrained areas of interest (AOIs) through spatiotemporal taxi GPS data: A case study in New York City'
     year: '2021'
