@@ -54,6 +54,8 @@ schedule:
     materials:
       - name: "课程教程"
         url: "/assets/html/第2章.html"
+      - name: "课件(第三节课ppt)"
+        url: "/assets/ppt/第三周_msc.pptx" 
         
   - week: 3
     type: "基础章节" # 👈 新增标签
