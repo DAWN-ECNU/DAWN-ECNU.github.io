@@ -64,6 +64,8 @@ schedule:
     materials:
       - name: "课程教程"
         url: "/assets/html/第3章.html"
+      - name: "课件(第四节课ppt)"
+        url: "/assets/ppt/第四周_ba.pptx" 
 
   - week: 4
     type: "基础章节" # 👈 新增标签
