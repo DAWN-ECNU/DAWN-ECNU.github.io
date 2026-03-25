@@ -8,6 +8,12 @@ nav_order: 5
 
 # --- 数据集信息 ---
 datasets:
+  - name: "大伦敦地区2025年11月Airbnb房源点"
+    desc: "大伦敦地区Airbnb房源数据"
+    icon: "fas fa-table" # 兼容性极好的面/多边形图标
+    type: ".csv"
+    url: "https://github.com/DAWN-ECNU/Example_data/raw/main/london2025_11_airbnb.csv"
+    
   - name: "纽约市Taxi Zone边界"
     desc: "纽约市Taxi Zone边界数据"
     icon: "fas fa-map" # 兼容性极好的面/多边形图标
