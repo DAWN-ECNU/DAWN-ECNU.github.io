@@ -42,9 +42,9 @@ schedule:
     materials:
       - name: "课程教程"
         url: "/assets/html/第一章.html"
-      - name: "课件(第一节课ppt)"
+      - name: "课件 (第一节课ppt)"
         url: "/assets/ppt/第一周_msc.pptx" 
-      - name: "课件(第二节课ppt)"
+      - name: "课件 (第二节课ppt)"
         url: "/assets/ppt/第二周_msc.pptx" 
 
   - week: 2
@@ -54,7 +54,7 @@ schedule:
     materials:
       - name: "课程教程"
         url: "/assets/html/第2章.html"
-      - name: "课件(第三节课ppt)"
+      - name: "课件 (第三节课ppt)"
         url: "/assets/ppt/第三周_msc.pptx" 
         
   - week: 3
@@ -64,7 +64,7 @@ schedule:
     materials:
       - name: "课程教程"
         url: "/assets/html/第3章.html"
-      - name: "课件(第四节课ppt)"
+      - name: "课件 (第四节课ppt)"
         url: "/assets/ppt/第四周_msc.pptx" 
 
   - week: 4
@@ -74,7 +74,7 @@ schedule:
     materials:
       - name: "课程教程"
         url: "/assets/html/第4章.html"
-      - name: "课件(第五节课ppt)"
+      - name: "课件 (第五节课ppt)"
         url: "/assets/ppt/第五周_msc.pptx" 
   
   - week: 5
