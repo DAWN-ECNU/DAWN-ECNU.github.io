@@ -74,7 +74,7 @@ schedule:
     materials:
       - name: "课程教程"
         url: "/assets/html/第4章.html"
-      - name: "课件 (第四节课ppt)"
+      - name: "课件 (第五节课ppt)"
         url: "/assets/ppt/第五周_ba.pptx" 
         
   - week: 5
