@@ -74,6 +74,8 @@ schedule:
     materials:
       - name: "课程教程"
         url: "/assets/html/第4章.html"
+      - name: "课件(第五节课ppt)"
+        url: "/assets/ppt/第五周_msc.pptx" 
   
   - week: 5
     type: "专题章节" # 👈 新增标签
