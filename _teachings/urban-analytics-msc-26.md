@@ -84,6 +84,8 @@ schedule:
     materials:
       - name: "课程教程"
         url: "/assets/html/第5章.html"
+      - name: "课件 (第七节课ppt) （清明假期）"
+        url: "/assets/ppt/第七周_msc.pptx" 
   
   - week: 6
     type: "专题章节" # 👈 新增标签
