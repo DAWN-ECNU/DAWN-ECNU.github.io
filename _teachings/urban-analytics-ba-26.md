@@ -86,6 +86,8 @@ schedule:
         url: "/assets/html/第5章.html"
       - name: "课件 (第七节课ppt) （清明假期）"
         url: "/assets/ppt/第七周_ba.pptx" 
+      - name: "课件 (第八节课ppt)"
+        url: "/assets/ppt/第八周_ba.pptx" 
   
   - week: 6
     type: "专题章节" # 👈 新增标签
