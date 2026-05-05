@@ -92,12 +92,21 @@ schedule:
   - week: 6
     type: "专题章节" # 👈 新增标签
     topic: "第6章：专题2: 图与网络分析"
-    description: "Theme 1: Graph & Network"
+    description: "Theme 2: Graph & Network"
     materials:
       - name: "课程教程"
         url: "/assets/html/第6章.html"
       - name: "课件 (第九节课ppt) （五一假期）"
         url: "/assets/ppt/第九周_ba.pptx" 
+    
+  - week: 7
+    type: "专题章节" # 👈 新增标签
+    topic: "第7章：专题3: 人口普查与地理人口特征分类"
+    description: "Theme 3: Census & Clustering & Geodemographics"
+    materials:
+      - name: "课程教程"
+        url: "/assets/html/第7章.html"
+
 
   # 后续你可以这样添加：
   # - week: 5
