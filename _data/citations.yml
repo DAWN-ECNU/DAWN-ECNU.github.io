@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-04-17'
+  last_updated: '2026-05-08'
 papers:
   vR-ZpaEAAAAJ:2osOgNQ5qMEC:
     citations: 71
@@ -10,7 +10,7 @@ papers:
     title: "Tracking Changes in Mobility Before and After the First SARS-CoV-2 Vaccination Using Global Positioning System Data in England and Wales (Virus Watch): Prospective \u2026"
     year: '2023'
   vR-ZpaEAAAAJ:4TOpqqG69KYC:
-    citations: 14
+    citations: 16
     title: Health and associated economic benefits of reduced air pollution and increased physical activity from climate change policies in the UK
     year: '2025'
   vR-ZpaEAAAAJ:5nxA0vEk-isC:
@@ -22,7 +22,7 @@ papers:
     title: 'Human mobility variations in response to restriction policies during the COVID-19 pandemic: an analysis from the Virus Watch community cohort in England, UK'
     year: '2022'
   vR-ZpaEAAAAJ:KlAtU1dfN6UC:
-    citations: 61
+    citations: 63
     title: 'Crowdsourcing geospatial data for earth and human observations: A review'
     year: '2024'
   vR-ZpaEAAAAJ:M3ejUd6NZC8C:
@@ -30,7 +30,7 @@ papers:
     title: Urban Vibrancy Resilience of New York City Neighbourhoods Across Pre-, Peri-, and Post-Pandemic Periods via Geodemographic Classification
     year: '2025'
   vR-ZpaEAAAAJ:MXK_kJrjxJIC:
-    citations: 61
+    citations: 66
     title: An interpretable machine learning framework for measuring urban perceptions from panoramic street view images
     year: '2023'
   vR-ZpaEAAAAJ:Se3iqnhoufwC:
@@ -46,7 +46,7 @@ papers:
     title: Measures to prevent nosocomial transmissions of COVID-19 based on interpersonal contact data
     year: '2022'
   vR-ZpaEAAAAJ:W7OEmFMy1HYC:
-    citations: 68
+    citations: 69
     title: 'Risk factors, symptom reporting, healthcare-seeking behaviour and adherence to public health guidance: protocol for Virus Watch, a prospective community cohort study'
     year: '2021'
   vR-ZpaEAAAAJ:WF5omc3nYNoC:
@@ -62,11 +62,11 @@ papers:
     title: Impact of net zero policy scenarios on air pollution inequalities in England and Wales
     year: '2024'
   vR-ZpaEAAAAJ:Zph67rFs4hoC:
-    citations: 20
+    citations: 22
     title: 'Vivid London: Assessing the resilience of urban vibrancy during the COVID-19 pandemic using social media data'
     year: '2024'
   vR-ZpaEAAAAJ:_kc_bZDykSQC:
-    citations: 18
+    citations: 19
     title: 'Climate change policies reduce air pollution and increase physical activity: Benefits, costs, inequalities, and indoor exposures'
     year: '2025'
   vR-ZpaEAAAAJ:aqlVkmm33-oC:
@@ -74,7 +74,7 @@ papers:
     title: 'An open framework for assessing urban mobility resilience: evidence from New York City'
     year: '2026'
   vR-ZpaEAAAAJ:d1gkVwhDpl0C:
-    citations: 59
+    citations: 60
     title: A principal component analysis (PCA)-based framework for automated variable selection in geodemographic classification
     year: '2019'
   vR-ZpaEAAAAJ:eQOLeE2rZwMC:
@@ -98,6 +98,6 @@ papers:
     title: 'Considering context and dynamics: A classification of transit-orientated development for New York City'
     year: '2020'
   vR-ZpaEAAAAJ:zYLM7Y9cAGgC:
-    citations: 57
+    citations: 58
     title: 'Identifying and understanding road-constrained areas of interest (AOIs) through spatiotemporal taxi GPS data: A case study in New York City'
     year: '2021'
