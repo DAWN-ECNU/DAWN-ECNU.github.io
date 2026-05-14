@@ -97,7 +97,9 @@ schedule:
       - name: "课程教程"
         url: "/assets/html/第6章.html"
       - name: "课件 (第九节课ppt) （五一假期）"
-        url: "/assets/ppt/第九周_msc.pptx" 
+        url: "/assets/ppt/第九周_msc.pptx"
+      - name: "课件 (第十一节课ppt) （五一假期）"
+        url: "/assets/ppt/第十一周_msc.pptx" 
         
   - week: 7
     type: "专题章节" # 👈 新增标签
