@@ -108,7 +108,8 @@ schedule:
     materials:
       - name: "课程教程"
         url: "/assets/html/第7章.html"
-
+      - name: "课件 (第十二节课ppt) "
+        url: "/assets/ppt/第十二周_ba.pptx" 
 
   # 后续你可以这样添加：
   # - week: 5
