@@ -9,8 +9,20 @@ nav_order: 5
 # --- 数据集信息 ---
 datasets:
 
-  - name: "北京、上海、深圳、广州市2024年专利申请数据（须处理）"
-    desc: "北上广深2024专利数据"
+  - name: "2024年中国新一线城市专利申请数据（须处理）"
+    desc: "新一线15城市2024专利数据"
+    icon: "fas fa-table" # 兼容性极好的面/多边形图标
+    type: ".csv"
+    url: "https://github.com/DAWN-ECNU/Example_data/raw/main/patent_new_tier_2024_raw.csv"
+    
+  - name: "2024年超一线、新一线常驻人口数据"
+    desc: "2024年一线城市常住人口数据"
+    icon: "fas fa-table" # 兼容性极好的面/多边形图标
+    type: ".csv"
+    url: "https://github.com/DAWN-ECNU/Example_data/raw/main/2024年超一线及新一线城市常住人口.csv"
+    
+  - name: "2024年中国超一线城市专利申请数据（须处理）"
+    desc: "超一线4城市2024专利数据"
     icon: "fas fa-table" # 兼容性极好的面/多边形图标
     type: ".csv"
     url: "https://github.com/DAWN-ECNU/Example_data/raw/main/patent_bj_sh_sz_gz_2024_raw.csv"
