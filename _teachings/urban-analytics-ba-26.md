@@ -109,7 +109,17 @@ schedule:
       - name: "课程教程"
         url: "/assets/html/第7章.html"
       - name: "课件 (第十二节课ppt) "
-        url: "/assets/ppt/第十二周_ba.pptx" 
+        url: "/assets/ppt/第十二周_msc.pptx" 
+      - name: "讲座 (第十三节课ppt) "
+        url: "/assets/ppt/讲座.pptx" 
+        
+  - week: 8
+    type: "专题章节" # 👈 新增标签
+    topic: "第8章：专题4: 综合指数构建"
+    description: "Theme 4: Composite Index"
+    materials:
+      - name: "课程教程"
+        url: "/assets/html/第8章.html"
 
   # 后续你可以这样添加：
   # - week: 5
