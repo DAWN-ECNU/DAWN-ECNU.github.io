@@ -1,20 +1,24 @@
 metadata:
-  last_updated: '2026-05-08'
+  last_updated: '2026-06-05'
 papers:
   vR-ZpaEAAAAJ:2osOgNQ5qMEC:
-    citations: 71
+    citations: 72
     title: Understanding public transit patterns with open geodemographics to facilitate public transport planning
     year: '2020'
   vR-ZpaEAAAAJ:3fE2CSJIrl8C:
     citations: 2
     title: "Tracking Changes in Mobility Before and After the First SARS-CoV-2 Vaccination Using Global Positioning System Data in England and Wales (Virus Watch): Prospective \u2026"
     year: '2023'
+  vR-ZpaEAAAAJ:4DMP91E08xMC:
+    citations: 28
+    title: Deprivation and exposure to public activities during the COVID-19 pandemic in England and Wales
+    year: '2022'
   vR-ZpaEAAAAJ:4TOpqqG69KYC:
     citations: 16
     title: Health and associated economic benefits of reduced air pollution and increased physical activity from climate change policies in the UK
     year: '2025'
   vR-ZpaEAAAAJ:5nxA0vEk-isC:
-    citations: 40
+    citations: 41
     title: Uncertainty-aware interpretable deep learning for slum mapping and monitoring
     year: '2022'
   vR-ZpaEAAAAJ:8k81kl-MbHgC:
@@ -22,7 +26,7 @@ papers:
     title: 'Human mobility variations in response to restriction policies during the COVID-19 pandemic: an analysis from the Virus Watch community cohort in England, UK'
     year: '2022'
   vR-ZpaEAAAAJ:KlAtU1dfN6UC:
-    citations: 63
+    citations: 67
     title: 'Crowdsourcing geospatial data for earth and human observations: A review'
     year: '2024'
   vR-ZpaEAAAAJ:M3ejUd6NZC8C:
@@ -30,7 +34,7 @@ papers:
     title: Urban Vibrancy Resilience of New York City Neighbourhoods Across Pre-, Peri-, and Post-Pandemic Periods via Geodemographic Classification
     year: '2025'
   vR-ZpaEAAAAJ:MXK_kJrjxJIC:
-    citations: 66
+    citations: 71
     title: An interpretable machine learning framework for measuring urban perceptions from panoramic street view images
     year: '2023'
   vR-ZpaEAAAAJ:Se3iqnhoufwC:
@@ -58,7 +62,7 @@ papers:
     title: "Revealing spatiotemporal transmission patterns and stages of COVID-19 in China using individual patients\u2019 trajectory data"
     year: '2021'
   vR-ZpaEAAAAJ:YOwf2qJgpHMC:
-    citations: 6
+    citations: 7
     title: Impact of net zero policy scenarios on air pollution inequalities in England and Wales
     year: '2024'
   vR-ZpaEAAAAJ:Zph67rFs4hoC:
@@ -74,7 +78,7 @@ papers:
     title: 'An open framework for assessing urban mobility resilience: evidence from New York City'
     year: '2026'
   vR-ZpaEAAAAJ:d1gkVwhDpl0C:
-    citations: 60
+    citations: 61
     title: A principal component analysis (PCA)-based framework for automated variable selection in geodemographic classification
     year: '2019'
   vR-ZpaEAAAAJ:eQOLeE2rZwMC:
@@ -82,11 +86,11 @@ papers:
     title: Dynamic Spreading of COVID-19 Versus Community Mobility in Regions of England
     year: '2021'
   vR-ZpaEAAAAJ:hqOjcs7Dif8C:
-    citations: 43
+    citations: 46
     title: Assessing the value of user-generated images of urban surroundings for house price estimation
     year: '2022'
   vR-ZpaEAAAAJ:kNdYIx-mwKoC:
-    citations: 14
+    citations: 13
     title: 'Exploring public sentiment and vaccination uptake of COVID-19 vaccines in England: a spatiotemporal and sociodemographic analysis of Twitter data'
     year: '2023'
   vR-ZpaEAAAAJ:qxL8FJ1GzNcC:
