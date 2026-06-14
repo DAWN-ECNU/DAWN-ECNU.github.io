@@ -121,7 +121,20 @@ schedule:
       - name: "课程教程"
         url: "/assets/html/第8章.html"
       - name: "课件 (第十四节课ppt) "
-        url: "/assets/ppt/第十四周_ba.pptx" 
+        url: "/assets/ppt/第十四周_msc.pptx" 
+      - name: "课件 (第十五节课ppt) "
+        url: "/assets/ppt/第十五周_ba.pptx" 
+
+  - week: 9
+    type: "专题章节" # 👈 新增标签
+    topic: "第9章：专题5: 自然语言处理入门"
+    description: "Theme 5: Introduciton to NLP"
+    materials:
+      - name: "课程教程"
+        url: "/assets/html/第9章.html"
+      # - name: "课件 (第十四节课ppt) "
+      #   url: "/assets/ppt/第十四周_msc.pptx" 
+
         
   # 后续你可以这样添加：
   # - week: 5
