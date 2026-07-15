@@ -1,8 +1,8 @@
 metadata:
-  last_updated: '2026-07-06'
+  last_updated: '2026-07-15'
 papers:
   vR-ZpaEAAAAJ:2osOgNQ5qMEC:
-    citations: 73
+    citations: 74
     title: Understanding public transit patterns with open geodemographics to facilitate public transport planning
     year: '2020'
   vR-ZpaEAAAAJ:3fE2CSJIrl8C:
@@ -22,7 +22,7 @@ papers:
     title: Uncertainty-aware interpretable deep learning for slum mapping and monitoring
     year: '2022'
   vR-ZpaEAAAAJ:8k81kl-MbHgC:
-    citations: 11
+    citations: 12
     title: 'Human mobility variations in response to restriction policies during the COVID-19 pandemic: an analysis from the Virus Watch community cohort in England, UK'
     year: '2022'
   vR-ZpaEAAAAJ:KlAtU1dfN6UC:
@@ -70,7 +70,7 @@ papers:
     title: 'Vivid London: Assessing the resilience of urban vibrancy during the COVID-19 pandemic using social media data'
     year: '2024'
   vR-ZpaEAAAAJ:_kc_bZDykSQC:
-    citations: 22
+    citations: 21
     title: 'Climate change policies reduce air pollution and increase physical activity: Benefits, costs, inequalities, and indoor exposures'
     year: '2025'
   vR-ZpaEAAAAJ:aqlVkmm33-oC:
@@ -86,7 +86,7 @@ papers:
     title: Dynamic Spreading of COVID-19 Versus Community Mobility in Regions of England
     year: '2021'
   vR-ZpaEAAAAJ:hqOjcs7Dif8C:
-    citations: 46
+    citations: 47
     title: Assessing the value of user-generated images of urban surroundings for house price estimation
     year: '2022'
   vR-ZpaEAAAAJ:kNdYIx-mwKoC:
@@ -94,7 +94,7 @@ papers:
     title: 'Exploring public sentiment and vaccination uptake of COVID-19 vaccines in England: a spatiotemporal and sociodemographic analysis of Twitter data'
     year: '2023'
   vR-ZpaEAAAAJ:qxL8FJ1GzNcC:
-    citations: 3
+    citations: 4
     title: "Coping with the \u201Cnew normal\u201D: assessing urban vibrancy resilience disparities through socioeconomic deprivation in New York City"
     year: '2025'
   vR-ZpaEAAAAJ:u-x6o8ySG0sC:
