@@ -1,8 +1,8 @@
 metadata:
-  last_updated: '2026-07-15'
+  last_updated: '2026-08-14'
 papers:
   vR-ZpaEAAAAJ:2osOgNQ5qMEC:
-    citations: 74
+    citations: 75
     title: Understanding public transit patterns with open geodemographics to facilitate public transport planning
     year: '2020'
   vR-ZpaEAAAAJ:3fE2CSJIrl8C:
@@ -18,7 +18,7 @@ papers:
     title: Health and associated economic benefits of reduced air pollution and increased physical activity from climate change policies in the UK
     year: '2025'
   vR-ZpaEAAAAJ:5nxA0vEk-isC:
-    citations: 41
+    citations: 42
     title: Uncertainty-aware interpretable deep learning for slum mapping and monitoring
     year: '2022'
   vR-ZpaEAAAAJ:8k81kl-MbHgC:
@@ -26,7 +26,7 @@ papers:
     title: 'Human mobility variations in response to restriction policies during the COVID-19 pandemic: an analysis from the Virus Watch community cohort in England, UK'
     year: '2022'
   vR-ZpaEAAAAJ:KlAtU1dfN6UC:
-    citations: 71
+    citations: 75
     title: 'Crowdsourcing geospatial data for earth and human observations: A review'
     year: '2024'
   vR-ZpaEAAAAJ:M3ejUd6NZC8C:
@@ -34,11 +34,11 @@ papers:
     title: Urban Vibrancy Resilience of New York City Neighbourhoods Across Pre-, Peri-, and Post-Pandemic Periods via Geodemographic Classification
     year: '2025'
   vR-ZpaEAAAAJ:MXK_kJrjxJIC:
-    citations: 74
+    citations: 73
     title: An interpretable machine learning framework for measuring urban perceptions from panoramic street view images
     year: '2023'
   vR-ZpaEAAAAJ:Se3iqnhoufwC:
-    citations: 40
+    citations: 39
     title: 'Trends, patterns and psychological influences on COVID-19 vaccination intention: Findings from a large prospective community cohort study in England and Wales (Virus Watch)'
     year: '2021'
   vR-ZpaEAAAAJ:ULOm3_A8WrAC:
@@ -50,7 +50,7 @@ papers:
     title: Measures to prevent nosocomial transmissions of COVID-19 based on interpersonal contact data
     year: '2022'
   vR-ZpaEAAAAJ:W7OEmFMy1HYC:
-    citations: 69
+    citations: 70
     title: 'Risk factors, symptom reporting, healthcare-seeking behaviour and adherence to public health guidance: protocol for Virus Watch, a prospective community cohort study'
     year: '2021'
   vR-ZpaEAAAAJ:WF5omc3nYNoC:
@@ -66,19 +66,19 @@ papers:
     title: Impact of net zero policy scenarios on air pollution inequalities in England and Wales
     year: '2024'
   vR-ZpaEAAAAJ:Zph67rFs4hoC:
-    citations: 25
+    citations: 27
     title: 'Vivid London: Assessing the resilience of urban vibrancy during the COVID-19 pandemic using social media data'
     year: '2024'
   vR-ZpaEAAAAJ:_kc_bZDykSQC:
-    citations: 21
+    citations: 23
     title: 'Climate change policies reduce air pollution and increase physical activity: Benefits, costs, inequalities, and indoor exposures'
     year: '2025'
   vR-ZpaEAAAAJ:aqlVkmm33-oC:
-    citations: 1
+    citations: 2
     title: 'An open framework for assessing urban mobility resilience: evidence from New York City'
     year: '2026'
   vR-ZpaEAAAAJ:d1gkVwhDpl0C:
-    citations: 61
+    citations: 60
     title: A principal component analysis (PCA)-based framework for automated variable selection in geodemographic classification
     year: '2019'
   vR-ZpaEAAAAJ:eQOLeE2rZwMC:
@@ -86,11 +86,11 @@ papers:
     title: Dynamic Spreading of COVID-19 Versus Community Mobility in Regions of England
     year: '2021'
   vR-ZpaEAAAAJ:hqOjcs7Dif8C:
-    citations: 47
+    citations: 46
     title: Assessing the value of user-generated images of urban surroundings for house price estimation
     year: '2022'
   vR-ZpaEAAAAJ:kNdYIx-mwKoC:
-    citations: 13
+    citations: 15
     title: 'Exploring public sentiment and vaccination uptake of COVID-19 vaccines in England: a spatiotemporal and sociodemographic analysis of Twitter data'
     year: '2023'
   vR-ZpaEAAAAJ:qxL8FJ1GzNcC:
@@ -98,7 +98,7 @@ papers:
     title: "Coping with the \u201Cnew normal\u201D: assessing urban vibrancy resilience disparities through socioeconomic deprivation in New York City"
     year: '2025'
   vR-ZpaEAAAAJ:u-x6o8ySG0sC:
-    citations: 52
+    citations: 51
     title: 'Considering context and dynamics: A classification of transit-orientated development for New York City'
     year: '2020'
   vR-ZpaEAAAAJ:zYLM7Y9cAGgC:
