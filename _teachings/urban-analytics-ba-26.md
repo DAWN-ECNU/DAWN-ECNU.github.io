@@ -26,6 +26,8 @@ time: "星期二 10：40 - 12：15"
 
 # --- 教学大纲 ---
 related_publications: false
+# 仅第一周开放 HTML 课件；其余旧版 PPT 链接暂时注释，后续按周替换。
+# 第0—2章教程开放；第3—9章教程待更新后取消注释。
 schedule:
   - week: 0
     type: "软件安装" # 👈 新增标签
@@ -42,10 +44,10 @@ schedule:
     materials:
       - name: "课程教程"
         url: "/assets/html/第一章.html"
-      - name: "课件 (第一节课ppt)"
-        url: "/assets/ppt/第一周_ba.pptx"
-      - name: "课件 (第二节课ppt)"
-        url: "/assets/ppt/第二周_ba.pptx"
+      - name: "课件（第一周 · HTML）"
+        url: "/assets/slides/week-01.html"
+      # - name: "课件 (第二节课ppt)"
+      #   url: "/assets/ppt/第二周_ba.pptx"
 
   - week: 2
     type: "基础章节" # 👈 新增标签
@@ -54,86 +56,86 @@ schedule:
     materials:
       - name: "课程教程"
         url: "/assets/html/第2章.html"
-      - name: "课件 (第三节课ppt)"
-        url: "/assets/ppt/第三周_ba.pptx"
+      # - name: "课件 (第三节课ppt)"
+      #   url: "/assets/ppt/第三周_ba.pptx"
 
   - week: 3
     type: "基础章节" # 👈 新增标签
     topic: "第3章：数据可视化 1: ggplot2"
     description: "Data Visualisation 1: ggplot2"
-    materials:
-      - name: "课程教程"
-        url: "/assets/html/第3章.html"
-      - name: "课件 (第四节课ppt)"
-        url: "/assets/ppt/第四周_ba.pptx"
+    # materials:
+    #   - name: "课程教程"
+    #     url: "/assets/html/第3章.html"
+    # - name: "课件 (第四节课ppt)"
+    #   url: "/assets/ppt/第四周_ba.pptx"
 
   - week: 4
     type: "基础章节" # 👈 新增标签
     topic: "第4章：数据可视化 2: 空间制图"
     description: "Data Visualisation 2: Geo-Visualisation"
-    materials:
-      - name: "课程教程"
-        url: "/assets/html/第4章.html"
-      - name: "课件 (第五节课ppt)"
-        url: "/assets/ppt/第五周_ba.pptx"
+    # materials:
+    #   - name: "课程教程"
+    #     url: "/assets/html/第4章.html"
+    # - name: "课件 (第五节课ppt)"
+    #   url: "/assets/ppt/第五周_ba.pptx"
 
   - week: 5
     type: "专题章节" # 👈 新增标签
     topic: "第5章：专题1: 点数据分析"
     description: "Theme 1: Points"
-    materials:
-      - name: "课程教程"
-        url: "/assets/html/第5章.html"
-      - name: "课件 (第七节课ppt) （清明假期）"
-        url: "/assets/ppt/第七周_ba.pptx"
-      - name: "课件 (第八节课ppt)"
-        url: "/assets/ppt/第八周_ba.pptx"
+    # materials:
+    #   - name: "课程教程"
+    #     url: "/assets/html/第5章.html"
+    # - name: "课件 (第七节课ppt) （清明假期）"
+    #   url: "/assets/ppt/第七周_ba.pptx"
+    # - name: "课件 (第八节课ppt)"
+    #   url: "/assets/ppt/第八周_ba.pptx"
 
   - week: 6
     type: "专题章节" # 👈 新增标签
     topic: "第6章：专题2: 图与网络分析"
     description: "Theme 2: Graph & Network"
-    materials:
-      - name: "课程教程"
-        url: "/assets/html/第6章.html"
-      - name: "课件 (第九节课ppt) （五一假期）"
-        url: "/assets/ppt/第九周_ba.pptx"
-      - name: "课件 (第十一节课ppt) （五一假期）"
-        url: "/assets/ppt/第十一周_ba.pptx"
+    # materials:
+    #   - name: "课程教程"
+    #     url: "/assets/html/第6章.html"
+    # - name: "课件 (第九节课ppt) （五一假期）"
+    #   url: "/assets/ppt/第九周_ba.pptx"
+    # - name: "课件 (第十一节课ppt) （五一假期）"
+    #   url: "/assets/ppt/第十一周_ba.pptx"
 
   - week: 7
     type: "专题章节" # 👈 新增标签
     topic: "第7章：专题3: 人口普查与地理人口特征分类"
     description: "Theme 3: Census & Clustering & Geodemographics"
-    materials:
-      - name: "课程教程"
-        url: "/assets/html/第7章.html"
-      - name: "课件 (第十二节课ppt) "
-        url: "/assets/ppt/第十二周_msc.pptx"
-      - name: "讲座 (第十三节课ppt) "
-        url: "/assets/ppt/讲座.pptx"
+    # materials:
+    #   - name: "课程教程"
+    #     url: "/assets/html/第7章.html"
+    # - name: "课件 (第十二节课ppt) "
+    #   url: "/assets/ppt/第十二周_msc.pptx"
+    # - name: "讲座 (第十三节课ppt) "
+    #   url: "/assets/ppt/讲座.pptx"
 
   - week: 8
     type: "专题章节" # 👈 新增标签
     topic: "第8章：专题4: 综合指数构建"
     description: "Theme 4: Composite Index"
-    materials:
-      - name: "课程教程"
-        url: "/assets/html/第8章.html"
-      - name: "课件 (第十四节课ppt) "
-        url: "/assets/ppt/第十四周_msc.pptx"
-      - name: "课件 (第十五节课ppt) "
-        url: "/assets/ppt/第十五周_ba.pptx"
+    # materials:
+    #   - name: "课程教程"
+    #     url: "/assets/html/第8章.html"
+    # - name: "课件 (第十四节课ppt) "
+    #   url: "/assets/ppt/第十四周_msc.pptx"
+    # - name: "课件 (第十五节课ppt) "
+    #   url: "/assets/ppt/第十五周_ba.pptx"
 
   - week: 9
     type: "专题章节" # 👈 新增标签
     topic: "第9章：专题5: 自然语言处理入门"
     description: "Theme 5: Introduciton to NLP"
-    materials:
-      - name: "课程教程"
-        url: "/assets/html/第9章.html"
-      # - name: "课件 (第十四节课ppt) "
-      #   url: "/assets/ppt/第十四周_msc.pptx"
+    # materials:
+    #   - name: "课程教程"
+    #     url: "/assets/html/第9章.html"
+    # - name: "课件 (第十四节课ppt) "
+    #   url: "/assets/ppt/第十四周_msc.pptx"
 
   # 后续你可以这样添加：
   # - week: 5

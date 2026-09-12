@@ -8,25 +8,24 @@ nav_order: 5
 
 # --- 数据集信息 ---
 datasets:
-
   - name: "2024年中国新一线城市专利申请数据（须处理）"
     desc: "新一线15城市2024专利数据"
     icon: "fas fa-table" # 兼容性极好的面/多边形图标
     type: ".csv"
     url: "https://github.com/DAWN-ECNU/Example_data/raw/main/patent_new_tier_2024_raw.csv"
-    
+
   - name: "2024年超一线、新一线常驻人口数据"
     desc: "2024年一线城市常住人口数据"
     icon: "fas fa-table" # 兼容性极好的面/多边形图标
     type: ".csv"
     url: "https://github.com/DAWN-ECNU/Example_data/raw/main/2024年超一线及新一线城市常住人口.csv"
-    
+
   - name: "2024年中国超一线城市专利申请数据（须处理）"
     desc: "超一线4城市2024专利数据"
     icon: "fas fa-table" # 兼容性极好的面/多边形图标
     type: ".csv"
     url: "https://github.com/DAWN-ECNU/Example_data/raw/main/patent_bj_sh_sz_gz_2024_raw.csv"
-    
+
   - name: "大伦敦地区2025年10月-12月推特数据点"
     desc: "大伦敦地区推特数据"
     icon: "fas fa-table" # 兼容性极好的面/多边形图标
@@ -38,61 +37,61 @@ datasets:
     icon: "fas fa-table" # 兼容性极好的面/多边形图标
     type: ".csv"
     url: "https://github.com/DAWN-ECNU/Example_data/raw/main/london2025_11_airbnb.csv"
-    
+
   - name: "纽约市Taxi Zone边界"
     desc: "纽约市Taxi Zone边界数据"
     icon: "fas fa-map" # 兼容性极好的面/多边形图标
     type: ".geojson"
     url: "https://github.com/DAWN-ECNU/Example_data/raw/main/nyc_boundary.geojson"
-    
+
   - name: "纽约市网约车采样数据"
     desc: "2026年1月纽约市网约车10%采样数据"
     icon: "fas fa-table" # 兼容性极好的面/多边形图标
     type: ".csv"
-    url: "https://github.com/DAWN-ECNU/Example_data/raw/main/nyc_taxi_202601_sample.csv"    
-    
+    url: "https://github.com/DAWN-ECNU/Example_data/raw/main/nyc_taxi_202601_sample.csv"
+
   - name: "上海市边界"
     desc: "上海市行政边界底图数据"
     icon: "fas fa-map" # 兼容性极好的面/多边形图标
     type: ".geojson"
     url: "https://github.com/DAWN-ECNU/Example_data/raw/main/shanghai_boundary.geojson"
-    
+
   - name: "微博采样数据"
     desc: "Weibo 采样数据 (4% 比例)"
     icon: "fas fa-table" # 兼容性极好的表格/CSV图标
     type: ".csv"
     url: "https://github.com/DAWN-ECNU/Example_data/raw/main/weibo_sample_4pct.csv"
-    
+
   - name: "便利超市 POI"
     desc: "上海市便利店与超市空间数据"
     icon: "fas fa-map-marker-alt" # 兼容性极好的点位图标
     type: ".geojson"
     url: "https://github.com/DAWN-ECNU/Example_data/raw/main/便利超市.geojson"
-    
+
   - name: "公交站 POI"
     desc: "公共交通站点空间分布数据"
     icon: "fas fa-map-marker-alt"
     type: ".geojson"
     url: "https://github.com/DAWN-ECNU/Example_data/raw/main/公交站.geojson"
-    
+
   - name: "公园 POI"
     desc: "城市绿地与公园空间数据"
     icon: "fas fa-map-marker-alt"
     type: ".geojson"
     url: "https://github.com/DAWN-ECNU/Example_data/raw/main/公园.geojson"
-    
+
   - name: "咖啡厅 POI"
     desc: "各类咖啡馆、饮品店数据"
     icon: "fas fa-map-marker-alt"
     type: ".geojson"
     url: "https://github.com/DAWN-ECNU/Example_data/raw/main/咖啡厅.geojson"
-    
+
   - name: "地铁站 POI"
     desc: "轨道交通站点及出口数据"
     icon: "fas fa-map-marker-alt"
     type: ".geojson"
     url: "https://github.com/DAWN-ECNU/Example_data/raw/main/地铁站.geojson"
-    
+
   - name: "餐厅 POI"
     desc: "餐饮服务业空间分布数据"
     icon: "fas fa-map-marker-alt"
@@ -108,9 +107,10 @@ datasets:
     --bs-table-accent-bg: transparent !important;
     --bs-table-striped-bg: transparent !important;
   }
-  .custom-data-table th, 
+  .custom-data-table th,
   .custom-data-table td {
     background-color: transparent !important;
+    color: var(--global-text-color);
     border-bottom: 1px solid var(--global-divider-color) !important;
   }
   .custom-data-table thead th {
@@ -139,10 +139,51 @@ datasets:
     color: var(--global-hover-text-color) !important;
     transform: translateY(-1px);
   }
+
+  .btn-data-download:focus-visible,
+  .btn-data-cancel:focus-visible {
+    outline: 2px solid var(--global-theme-color);
+    outline-offset: 3px;
+  }
+
+  a.btn-data-download[aria-disabled="true"] {
+    cursor: wait;
+    transform: none;
+  }
+
+  .btn-data-cancel {
+    margin-left: 0.5rem;
+    padding: 4px 8px;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 6px;
+    background: transparent;
+    color: var(--global-text-color);
+  }
+
+  .data-download-status {
+    display: block;
+    max-width: 18rem;
+    margin-top: 0.35rem;
+    color: var(--global-text-color);
+    font-size: 0.85rem;
+    overflow-wrap: anywhere;
+  }
+
+  .data-download-status:empty {
+    display: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    a.btn-data-download,
+    a.btn-data-download:hover {
+      transition: none;
+      transform: none;
+    }
+  }
 </style>
 
 <div class="projects">
-  <p>本页面集中提供 DAWN 课题组及相关课程的示例数据集。点击右侧按钮可直接获取托管于 GitHub 的原始数据文件。</p>
+  <p>本页面集中提供 DAWN 课题组及相关课程的示例数据集。点击 Download 即可下载文件；文件较大时会显示下载进度，请稍候。</p>
 
   <div class="container mt-4">
     <div class="table-responsive">
@@ -166,7 +207,16 @@ datasets:
               <code>{{ data.type }}</code>
             </td>
             <td class="align-middle" style="text-align: right;">
-              <a href="{{ data.url }}" target="_blank" class="btn-data-download">Download</a>
+              <a
+                href="{{ data.url | replace: 'https://github.com/', 'https://raw.githubusercontent.com/' | replace: '/raw/', '/' | escape }}"
+                download="{{ data.url | split: '/' | last | escape }}"
+                class="btn-data-download"
+                data-download-file
+                aria-label="下载 {{ data.name | escape }}"
+                aria-describedby="data-download-status-{{ forloop.index }}"
+              >Download</a>
+              <button type="button" class="btn-data-cancel" hidden>取消</button>
+              <span id="data-download-status-{{ forloop.index }}" class="data-download-status" role="status" aria-live="polite" aria-atomic="true"></span>
             </td>
           </tr>
           {% endfor %}
@@ -175,3 +225,5 @@ datasets:
     </div>
   </div>
 </div>
+
+<script defer src="{{ '/assets/js/data-download.js' | relative_url }}"></script>
