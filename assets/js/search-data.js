@@ -418,42 +418,47 @@ ninja.data = [{
           description: "",
           section: "News",},{id: "projects-城市感知",
           title: '城市感知',
-          description: "Urban Perception",
+          description: "Urban Perception — 基于街景与社交媒体图像，研究城市物理环境如何影响安全感、美观、压力、步行性等主观感知与评价。",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
-            },},{id: "projects-城市活力-与-韧性",
-          title: '城市活力 与 韧性',
-          description: "Urban Vitality &amp; Resilience",
+            },},{id: "projects-城市活力与韧性",
+          title: '城市活力与韧性',
+          description: "Urban Vitality &amp; Resilience — 研究城市活动在外部冲击下的抵抗、适应与恢复过程，尤其关注不同地区和群体之间的空间差异。",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_project/";
-            },},{id: "projects-社会空间分异",
-          title: '社会空间分异',
-          description: "Socio-spatial Disparities",
+            },},{id: "projects-geoai-与智能社会科学-ai4ss",
+          title: 'GeoAI 与智能社会科学（AI4SS）',
+          description: "GeoAI &amp; AI for Social Science (AI4SS) — 将 GeoAI、LLM、智能体和人机协同方法应用于社会科学问题，并关注其表现、可靠性与适用边界。",
           section: "Projects",handler: () => {
               window.location.href = "/projects/3_project/";
-            },},{id: "projects-人口迁移-与-城市流动性",
-          title: '人口迁移 与 城市流动性',
-          description: "Population Migration &amp; Urban Mobility",
+            },},{id: "projects-社会空间分异",
+          title: '社会空间分异',
+          description: "Socio-spatial Disparities — 以地理人口特征分类（Geodemographics）为主，结合社会综合指数，研究城市内部多维社会差异、剥夺与不平等。",
           section: "Projects",handler: () => {
               window.location.href = "/projects/4_project/";
-            },},{id: "projects-社会感知-与-数据挖掘",
-          title: '社会感知 与 数据挖掘',
-          description: "Social Sensing &amp; Data Mining",
+            },},{id: "projects-社会流动与城市流动性",
+          title: '社会流动与城市流动性',
+          description: "Social Mobility &amp; Urban Mobility — 研究个体生命历程中的社会经济位置变化，以及日常出行、活动链和城市时空行为。",
           section: "Projects",handler: () => {
               window.location.href = "/projects/5_project/";
-            },},{id: "projects-环境暴露-与-公共健康",
-          title: '环境暴露 与 公共健康',
-          description: "Environment Exposure &amp; Public Health",
+            },},{id: "projects-数字足迹与社会感知",
+          title: '数字足迹与社会感知',
+          description: "Digital Footprints &amp; Social Sensing — 基于社交媒体与平台数据研究公众表达、情绪、语义、信息传播、时空聚集，以及线上与线下社会空间的关系。",
           section: "Projects",handler: () => {
               window.location.href = "/projects/6_project/";
-            },},{id: "projects-geoai方法-与-应用",
-          title: 'GeoAI方法 与 应用',
-          description: "GeoAI Methods &amp; Applications",
+            },},{id: "projects-环境暴露与公共健康",
+          title: '环境暴露与公共健康',
+          description: "Environmental Exposure &amp; Public Health — 研究空气污染、热暴露和极端天气等环境风险对健康的影响，并关注医疗可达性、步行、骑行和健康支持环境。",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/7_project/";
+            },},{id: "projects-开放科学与开放数据",
+          title: '开放科学与开放数据',
+          description: "Open Science &amp; Open Data — 推动开放数据、代码、方法和教学资源共享，支持研究复现、资源复用和开放协作。",
           section: "Projects",handler: () => {
               window.location.href = "/projects/8_project/";
-            },},{id: "projects-开放科学-与-开源数据",
-          title: '开放科学 与 开源数据',
-          description: "Open Science &amp; Open Data",
+            },},{id: "projects-全球科研人才流动",
+          title: '全球科研人才流动',
+          description: "Global Research Talent Mobility — 基于 ORCID、履历、机构记录等多源数据，研究科研人才的成长路径、机构迁移、城市流动与全球知识循环。",
           section: "Projects",handler: () => {
               window.location.href = "/projects/9_project/";
             },},{id: "teachings-多源数据分析与实践multi-source-data-analytics-and-practice",
