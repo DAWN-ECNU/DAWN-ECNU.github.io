@@ -21,12 +21,12 @@ course_id: "SOCI235.01"
 course_level: "本科生 · 专业选修"
 year: 2026
 term: "2026年 秋"
-location: "闵二教 110"
+location: "法商北楼 101"
 time: "星期二 10：40 - 12：15"
 
 # --- 教学大纲 ---
 related_publications: false
-# 课程导论与第一章重点解析 HTML 课件已开放；后续课件按周更新。
+# 课程导论与第一章 · 课堂解析 HTML 课件已开放；后续课件按周更新。
 # 第0—2章教程开放；第3—9章教程待更新后取消注释。
 schedule:
   - week: 0
@@ -34,7 +34,7 @@ schedule:
     topic: "第0章：环境搭建与准备"
     description: "Chapter 0: Environment & Tools Setup"
     materials:
-      - name: "课后学习"
+      - name: "课程学习"
         kind: "tutorial"
         url: "/assets/html/第零章.html"
       - name: "课程导论"
@@ -46,10 +46,10 @@ schedule:
     topic: "第1章：RStudio与R Markdown入门"
     description: "Introduction to RStudio & R Markdown"
     materials:
-      - name: "课后学习"
+      - name: "课程学习"
         kind: "tutorial"
         url: "/assets/html/第一章.html"
-      - name: "第一章重点解析"
+      - name: "第一章 · 课堂解析"
         kind: "slides"
         url: "/assets/slides/第一章重点解析.html"
       # - name: "课件 (第二节课ppt)"
@@ -60,7 +60,7 @@ schedule:
     topic: "第2章：数据处理与探索性数据分析"
     description: "Basic Data Processing & EDA"
     materials:
-      - name: "课后学习"
+      - name: "课程学习"
         kind: "tutorial"
         url: "/assets/html/第2章.html"
       # - name: "课件 (第三节课ppt)"
