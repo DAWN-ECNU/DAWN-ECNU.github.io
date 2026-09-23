@@ -1,6 +1,14 @@
 {
+  "scripts": {
+    "build:course-material-icons": "esbuild _scripts/course-material-morphicons.js --bundle --format=iife --target=es2020 --minify --legal-comments=none --outfile=assets/js/course-material-morphicons.min.js"
+  },
   "devDependencies": {
     "@shopify/prettier-plugin-liquid": "^1.10.0",
+    "esbuild": "^0.28.2",
     "prettier": "^3.8.0"
+  },
+  "dependencies": {
+    "lucide": "^1.47.0",
+    "morphicons": "^1.7.1"
   }
 }

@@ -26,7 +26,7 @@ time: "星期二 10：40 - 12：15"
 
 # --- 教学大纲 ---
 related_publications: false
-# 仅第一周开放 HTML 课件；其余旧版 PPT 链接暂时注释，后续按周替换。
+# 课程导论与第一章重点解析 HTML 课件已开放；后续课件按周更新。
 # 第0—2章教程开放；第3—9章教程待更新后取消注释。
 schedule:
   - week: 0
@@ -34,18 +34,24 @@ schedule:
     topic: "第0章：环境搭建与准备"
     description: "Chapter 0: Environment & Tools Setup"
     materials:
-      - name: "课程教程"
+      - name: "课后学习"
+        kind: "tutorial"
         url: "/assets/html/第零章.html"
+      - name: "课程导论"
+        kind: "slides"
+        url: "/assets/slides/课程导论.html"
 
   - week: 1
     type: "基础章节" # 👈 新增标签
     topic: "第1章：RStudio与R Markdown入门"
     description: "Introduction to RStudio & R Markdown"
     materials:
-      - name: "课程教程"
+      - name: "课后学习"
+        kind: "tutorial"
         url: "/assets/html/第一章.html"
-      - name: "课件（第一周 · HTML）"
-        url: "/assets/slides/week-01.html"
+      - name: "第一章重点解析"
+        kind: "slides"
+        url: "/assets/slides/第一章重点解析.html"
       # - name: "课件 (第二节课ppt)"
       #   url: "/assets/ppt/第二周_ba.pptx"
 
@@ -54,7 +60,8 @@ schedule:
     topic: "第2章：数据处理与探索性数据分析"
     description: "Basic Data Processing & EDA"
     materials:
-      - name: "课程教程"
+      - name: "课后学习"
+        kind: "tutorial"
         url: "/assets/html/第2章.html"
       # - name: "课件 (第三节课ppt)"
       #   url: "/assets/ppt/第三周_ba.pptx"

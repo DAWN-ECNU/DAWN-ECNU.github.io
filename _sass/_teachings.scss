@@ -72,6 +72,69 @@
 }
 
 .schedule-materials {
-  padding-left: 18px;
+  padding-left: 0;
   margin-bottom: 0;
+
+  li:last-child {
+    margin-bottom: 0 !important;
+  }
+}
+
+.schedule-material-link {
+  display: inline-flex;
+  max-width: 100%;
+  align-items: center;
+  gap: 0.38rem;
+  line-height: 1.45;
+
+  &:focus-visible {
+    border-radius: 0.25rem;
+    outline: 2px solid var(--global-theme-color);
+    outline-offset: 3px;
+  }
+}
+
+.schedule-material-action {
+  width: 0.85rem;
+  flex: 0 0 0.85rem;
+  font-size: 0.72em;
+  opacity: 0.62;
+  text-align: center;
+}
+
+.schedule-material-kind {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 0.26rem;
+  padding: 0.08rem 0.4rem;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  color: var(--global-theme-color);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.45;
+  white-space: nowrap;
+}
+
+.schedule-material-kind-icon {
+  display: inline-flex;
+  width: 1em;
+  height: 1em;
+  flex: 0 0 1em;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    display: block;
+    width: 1em;
+    height: 1em;
+    overflow: visible;
+  }
+}
+
+.schedule-material-name {
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
