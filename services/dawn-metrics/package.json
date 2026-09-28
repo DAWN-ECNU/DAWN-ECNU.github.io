@@ -1,0 +1,17 @@
+{
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "test": "node --test",
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "migrate:local": "wrangler d1 migrations apply dawn-site-metrics --local",
+    "migrate:remote": "wrangler d1 migrations apply dawn-site-metrics --remote"
+  },
+  "devDependencies": {
+    "wrangler": "4.142.0"
+  }
+}

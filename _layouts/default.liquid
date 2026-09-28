@@ -28,6 +28,7 @@
     class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %}{% if dawn_section == 'home' %} dawn-home-page{% elsif dawn_section %} dawn-section-page{% endif %}"
     {% if dawn_section %}
       data-dawn-section="{{ dawn_section }}"
+      data-dawn-metrics-api="{{ site.dawn_metrics_api_url | escape }}"
     {% endif %}
   >
     {% if dawn_section %}

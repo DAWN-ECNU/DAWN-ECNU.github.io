@@ -97,6 +97,14 @@ jobs:
           valueFile: "_config.yml"
           propertyPath: "giscus.repo"
           value: ${{ github.repository }}
+      - name: Configure DAWN counter URL
+        if: ${{ vars.DAWN_METRICS_API_URL != '' }}
+        uses: fjogeleit/yaml-update-action@main
+        with:
+          commitChange: false
+          valueFile: "_config.yml"
+          propertyPath: "dawn_metrics_api_url"
+          value: ${{ vars.DAWN_METRICS_API_URL }}
       - name: Build DAWN motion assets 🌊
         run: |
           npm ci

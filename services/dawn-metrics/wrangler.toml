@@ -1,0 +1,13 @@
+name = "dawn-site-metrics"
+main = "src/index.js"
+compatibility_date = "2026-09-28"
+
+[vars]
+ALLOWED_ORIGIN = "https://dawn-ecnu.github.io"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "dawn-site-metrics"
+# Replace with the database_id printed by `npx wrangler d1 create dawn-site-metrics`.
+database_id = "REPLACE_WITH_D1_DATABASE_ID"
+migrations_dir = "migrations"

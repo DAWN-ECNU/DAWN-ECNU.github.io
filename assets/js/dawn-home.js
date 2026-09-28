@@ -1,35 +1,49 @@
 (() => {
   const button = document.querySelector(".dawn-like");
   const count = document.getElementById("dawn-like-count");
-  if (!button) return;
+  if (!button || !count || button.dataset.dawnMetricsBound) return;
+  button.dataset.dawnMetricsBound = "true";
 
-  const key = "dawn-site-liked";
+  const metrics = window.dawnMetrics;
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   let liked = false;
-  try {
-    liked = localStorage.getItem(key) === "true";
-  } catch (_) {}
+  let ready = false;
+  let pending = false;
+  button.disabled = true;
 
-  function setLiked(value) {
-    liked = value;
-    button.setAttribute("aria-pressed", String(value));
-    button.title = value ? "取消点赞" : "点赞";
-    if (count) count.textContent = value ? "1" : "0";
-    try {
-      localStorage.setItem(key, String(value));
-    } catch (_) {}
+  if (!metrics?.enabled) {
+    button.title = "共享点赞服务尚未启用";
+    return;
   }
 
-  setLiked(liked);
-  button.addEventListener("click", () => {
-    if (button.classList.contains("is-pulsing")) return;
-    const next = !liked;
-    if (reducedMotion.matches) {
-      setLiked(next);
-      return;
+  const unsubscribe = metrics.subscribe((state) => {
+    ready = true;
+    liked = state.liked;
+    button.setAttribute("aria-pressed", String(liked));
+    button.title = liked ? "取消点赞" : "点赞";
+    button.disabled = pending;
+    count.textContent = state.totalLikes.toLocaleString("zh-CN");
+  });
+  const onSectionChange = (event) => {
+    if (event.detail?.section === "home") return;
+    unsubscribe();
+    document.removeEventListener("dawn:sectionchange", onSectionChange);
+  };
+  document.addEventListener("dawn:sectionchange", onSectionChange);
+
+  button.addEventListener("click", async () => {
+    if (!ready || pending) return;
+    pending = true;
+    button.disabled = true;
+    if (!reducedMotion.matches) button.classList.add("is-pulsing");
+    try {
+      await metrics.setLiked(!liked);
+    } catch (_) {
+      button.title = "计数服务暂不可用，请稍后重试";
+    } finally {
+      pending = false;
+      button.disabled = !ready;
+      window.setTimeout(() => button.classList.remove("is-pulsing"), 560);
     }
-    button.classList.add("is-pulsing");
-    window.setTimeout(() => setLiked(next), 220);
-    window.setTimeout(() => button.classList.remove("is-pulsing"), 560);
   });
 })();

@@ -134,12 +134,11 @@
         <strong>访问统计</strong><button class="dawn-site-stats__close" type="button" aria-label="关闭访问统计">×</button>
       </div>
       <div class="dawn-site-stats__grid">
-        <div class="dawn-site-stats__item"><span>今日访客</span><strong title="需接入每日访客统计">—</strong></div>
-        <div class="dawn-site-stats__item"><span>月活访客</span><strong title="需接入近30日访客统计">—</strong></div>
-        <div class="dawn-site-stats__item"><span>累计访问</span><strong id="dawn-total-visits" aria-live="polite">—</strong></div>
+        <div class="dawn-site-stats__item"><span>今日访客</span><strong id="dawn-today-visitors" aria-live="polite">—</strong></div>
+        <div class="dawn-site-stats__item"><span>近30日访客</span><strong id="dawn-month-visitors" aria-live="polite">—</strong></div>
+        <div class="dawn-site-stats__item"><span>累计访客</span><strong id="dawn-total-visitors" aria-live="polite">—</strong></div>
       </div>
-      <span class="dawn-site-stats__note">今日与月活待接入</span>
-      <span id="busuanzi_container_site_pv" class="dawn-stat-source"><span id="busuanzi_value_site_pv"></span></span>
+      <span class="dawn-site-stats__note">{% if site.dawn_metrics_api_url != blank %}正在读取访问统计…{% else %}共享计数服务尚未启用{% endif %}</span>
     </aside>
   {% endif %}
   {% if site.enable_progressbar %}
