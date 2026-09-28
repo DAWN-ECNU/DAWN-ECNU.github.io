@@ -379,6 +379,10 @@ if (mount) {
       const nextDocument = new DOMParser().parseFromString(await fetchPageMarkup(destination), 'text/html');
       const newContent = mainContent(nextDocument);
       if (!newContent || nextDocument.body.dataset.dawnSection !== targetSection) throw new Error('Unexpected page shell');
+      // DOMParser is scripting-disabled and parses <noscript> children as live nodes.
+      // Remove those fallbacks before insertion into this scripting-enabled document.
+      // Otherwise the data page's no-script CSS overrides hidden table rows.
+      newContent.querySelectorAll('noscript').forEach(fallback => fallback.remove());
       markContentSection(newContent, targetSection);
       if (!mount.isConnected) throw new Error('Persistent canvas is missing');
       if (targetSection === 'projects') await prepareProjectImages(newContent, destination.href);
