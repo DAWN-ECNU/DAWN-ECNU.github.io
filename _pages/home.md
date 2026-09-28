@@ -21,7 +21,7 @@ dawn_section: home
       <a href="https://orcid.org/0000-0002-7189-3323" aria-label="ORCID" title="ORCID" target="_blank" rel="noopener noreferrer"><i class="ai ai-orcid" aria-hidden="true"></i></a>
       <a href="https://github.com/ECNUyunzhe" aria-label="GitHub" title="GitHub" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
       <span class="dawn-social-divider" aria-hidden="true"></span>
-      <button class="dawn-like" type="button" aria-label="喜欢 DAWN" aria-pressed="false" title="共享点赞服务尚未启用" disabled>
+      <button class="dawn-like" type="button" aria-label="喜欢 DAWN" aria-pressed="false" title="正在加载点赞" disabled>
         <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78Z"/></svg>
       </button>
       <span class="dawn-like-count" role="status" aria-live="polite" aria-atomic="true"><span class="dawn-like-count__label">累计点赞 </span><strong id="dawn-like-count">—</strong></span>

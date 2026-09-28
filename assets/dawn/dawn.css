@@ -1170,6 +1170,14 @@ html[data-theme="dark"] .dawn-hero-meta {
     white-space: nowrap;
     border: 0;
   }
+  .dawn-like-count--local .dawn-like-count__label {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+  }
   .dawn-hero-meta {
     display: grid;
     grid-template-columns: repeat(2, max-content);
