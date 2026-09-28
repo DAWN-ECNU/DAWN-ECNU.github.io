@@ -3,13 +3,20 @@ const ninja = document.querySelector('ninja-keys');
 
 // add the home and posts menu items
 ninja.data = [{
-    id: "nav-span-class-nav-cn-主页-span-span-class-nav-en-home-span",
-    title: "<span class='nav-cn'>主页</span><span class='nav-en'>Home</span>",
+    id: "nav-dawn",
+    title: "DAWN",
     section: "Navigation",
     handler: () => {
       window.location.href = "/";
     },
-  },{id: "nav-lt-span-class-39-nav-cn-39-gt-成果-lt-span-gt-lt-span-class-39-nav-en-39-gt-publications-lt-span-gt",
+  },{id: "nav-lt-span-class-39-nav-cn-39-gt-关于-lt-span-gt-lt-span-class-39-nav-en-39-gt-about-lt-span-gt",
+          title: "&lt;span class=&#39;nav-cn&#39;&gt;关于&lt;/span&gt;&lt;span class=&#39;nav-en&#39;&gt;About&lt;/span&gt;",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/about/";
+          },
+        },{id: "nav-lt-span-class-39-nav-cn-39-gt-成果-lt-span-gt-lt-span-class-39-nav-en-39-gt-publications-lt-span-gt",
           title: "&lt;span class=&#39;nav-cn&#39;&gt;成果&lt;/span&gt;&lt;span class=&#39;nav-en&#39;&gt;Publications&lt;/span&gt;",
           description: "代表性学术成果",
           section: "Navigation",
@@ -18,14 +25,14 @@ ninja.data = [{
           },
         },{id: "nav-lt-span-class-39-nav-cn-39-gt-项目-lt-span-gt-lt-span-class-39-nav-en-39-gt-projects-lt-span-gt",
           title: "&lt;span class=&#39;nav-cn&#39;&gt;项目&lt;/span&gt;&lt;span class=&#39;nav-en&#39;&gt;Projects&lt;/span&gt;",
-          description: "科研项目与方向 Research Projects &amp; Directions",
+          description: "",
           section: "Navigation",
           handler: () => {
             window.location.href = "/projects/";
           },
         },{id: "nav-lt-span-class-39-nav-cn-39-gt-数据-lt-span-gt-lt-span-class-39-nav-en-39-gt-data-lt-span-gt",
           title: "&lt;span class=&#39;nav-cn&#39;&gt;数据&lt;/span&gt;&lt;span class=&#39;nav-en&#39;&gt;Data&lt;/span&gt;",
-          description: "课程练习与研究示例数据集 (Datasets for Practice &amp; Research)",
+          description: "",
           section: "Navigation",
           handler: () => {
             window.location.href = "/data/";
