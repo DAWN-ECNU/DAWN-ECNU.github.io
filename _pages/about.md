@@ -1,11 +1,13 @@
 ---
 layout: about
-title: "<span class='nav-cn'>主页</span><span class='nav-en'>Home</span>"
-permalink: /
-subtitle: >
+title: "<span class='nav-cn'>关于</span><span class='nav-en'>About</span>"
+permalink: /about/
+dawn_section: about
+nav: true
+nav_order: 1
 
 selected_papers: false
-social: true
+social: false
 
 announcements:
   enabled: false
@@ -41,7 +43,7 @@ latest_posts:
 
 <div class="lang-en" markdown="1">
 
-The **DAWN** (**D**ata **A**nalytics for **W**ell-being & **N**eighborhoods) Research Group was established at the University of Oxford in 2020 by  [**Dr. Yunzhe Liu**](https://faculty.ecnu.edu.cn/_s6/lyz2/main.psp), currently an Associate Professor at the Institute of Population Research, School of Social Development, **East China Normal University**.
+The **DAWN** (**D**ata **A**nalytics for **W**ell-being & **N**eighborhoods) Research Group was established at the University of Oxford in 2020 by [**Dr. Yunzhe Liu**](https://faculty.ecnu.edu.cn/_s6/lyz2/main.psp), currently an Associate Professor at the Institute of Population Research, School of Social Development, **East China Normal University**.
 
 Embracing the new research paradigm of **Computational Social Science in the Digital Intelligence Era**, the group utilises **multi-source data** to deeply analyse patterns of socio-spatial disparities, aiming to optimise urban neighbourhood environments and enhance resident well-being.
 
@@ -52,40 +54,3 @@ Positioned at the cutting-edge intersection of **Computational Social Science, D
 </div>
 
 </div>
-
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  const checkbox = document.getElementById('lang-checkbox');
-  const wrapper = document.getElementById('dawn-intro-wrapper');
-  
-  // 定义切换函数
-  function setLanguage(lang) {
-    if (lang === 'en') {
-      wrapper.classList.remove('show-cn');
-      wrapper.classList.add('show-en');
-      checkbox.checked = true;
-    } else {
-      wrapper.classList.remove('show-en');
-      wrapper.classList.add('show-cn');
-      checkbox.checked = false;
-    }
-    localStorage.setItem('dawn-pref-lang', lang);
-  }
-
-  // 初始化逻辑
-  const savedLang = localStorage.getItem('dawn-pref-lang');
-  
-  // 只有当用户明确存过 'en' 时才切换，否则保持 HTML 里的默认中文（最安全）
-  if (savedLang === 'en') {
-    setLanguage('en');
-  } else if (savedLang === 'cn') {
-    setLanguage('cn');
-  }
-  // 如果没有存过，什么都不做，默认就是显示中文
-
-  // 监听点击
-  checkbox.addEventListener('change', function() {
-    setLanguage(this.checked ? 'en' : 'cn');
-  });
-});
-</script>

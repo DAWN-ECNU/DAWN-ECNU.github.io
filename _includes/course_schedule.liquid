@@ -2,42 +2,7 @@
 
 {% if course %}
   <div class="course">
-    <div class="course-info-tags mb-5">
-      <div class="d-flex flex-wrap align-items-center">
-        {% if course.instructor %}
-          <span class="course-tag-base tag-instructor"> <i class="fas fa-user-circle me-2"></i>{{ course.instructor }} </span>
-        {% endif %}
-
-        {% if course.course_id %}
-          <span class="course-tag-base tag-id"> <i class="fas fa-fingerprint me-2"></i>{{ course.course_id }} </span>
-        {% endif %}
-
-        {% if course.course_level %}
-          <span class="course-tag-base tag-level"> <i class="fas fa-layer-group me-2"></i>{{ course.course_level }} </span>
-        {% endif %}
-
-        {% if course.term %}
-          <span class="course-tag-base tag-term"> <i class="fas fa-calendar-alt me-2"></i>{{ course.term }} </span>
-        {% endif %}
-
-        {% if course.location %}
-          <span class="course-tag-base tag-location"> <i class="fas fa-map-marker-alt me-2"></i>{{ course.location }} </span>
-        {% endif %}
-
-        {% if course.time %}
-          <span class="course-tag-base tag-time"> <i class="fas fa-clock me-2"></i>{{ course.time }} </span>
-        {% endif %}
-      </div>
-    </div>
-
-    {% if course.description %}
-      <div class="course-description mb-4">
-        {{ course.description | markdownify }}
-      </div>
-    {% endif %}
-
     {% if course.schedule %}
-      <h2 class="mt-5 mb-4">Schedule</h2>
       <div class="table-responsive">
         <table class="table align-middle" style="min-width: 760px;">
           <thead>

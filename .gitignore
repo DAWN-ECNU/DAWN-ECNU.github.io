@@ -13,3 +13,7 @@ assets/rendercv/rendercv_output/*.typ
 Gemfile.lock
 node_modules/
 vendor
+!assets/vendor/
+!assets/vendor/reactbits/
+!assets/vendor/reactbits/floating-lines.js
+!assets/vendor/reactbits/floating-lines.css

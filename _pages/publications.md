@@ -1,6 +1,7 @@
 ---
 layout: page
 permalink: /publications/
+dawn_section: publications
 title: "<span class='nav-cn'>成果</span><span class='nav-en'>Publications</span>"
 description: 代表性学术成果
 nav: true

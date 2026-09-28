@@ -17,6 +17,8 @@ on:
       - "**.yml"
       - "Gemfile"
       - "Gemfile.lock"
+      - "package.json"
+      - "package-lock.json"
       - "!.github/workflows/axe.yml"
       - "!.github/workflows/broken-links.yml"
       - "!.github/workflows/deploy-docker-tag.yml"
@@ -46,6 +48,8 @@ on:
       - "**.yml"
       - "Gemfile"
       - "Gemfile.lock"
+      - "package.json"
+      - "package-lock.json"
       - "!.github/workflows/axe.yml"
       - "!.github/workflows/broken-links.yml"
       - "!.github/workflows/deploy-docker-tag.yml"
@@ -76,6 +80,11 @@ jobs:
         with:
           ruby-version: "3.3.5"
           bundler-cache: true
+      - name: Setup Node.js 🟢
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
       - name: Setup Python 🐍
         uses: actions/setup-python@v5
         with:
@@ -88,6 +97,10 @@ jobs:
           valueFile: "_config.yml"
           propertyPath: "giscus.repo"
           value: ${{ github.repository }}
+      - name: Build DAWN motion assets 🌊
+        run: |
+          npm ci
+          npm run build:dawn
       - name: Install and Build 🔧
         run: |
           sudo apt-get update && sudo apt-get install -y imagemagick

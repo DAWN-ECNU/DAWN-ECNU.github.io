@@ -1,3 +1,11 @@
+{% assign dawn_section = page.dawn_section %}
+{% if dawn_section == null %}
+  {% if page.url contains '/teachings/' %}
+    {% assign dawn_section = 'teaching' %}
+  {% elsif page.url contains '/projects/' %}
+    {% assign dawn_section = 'projects' %}
+  {% endif %}
+{% endif %}
 <!doctype html>
 <html lang="{{ site.lang }}">
   <!-- Head -->
@@ -16,39 +24,51 @@
   </head>
 
   <!-- Body -->
-  <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %}">
+  <body
+    class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %}{% if dawn_section == 'home' %} dawn-home-page{% elsif dawn_section %} dawn-section-page{% endif %}"
+    {% if dawn_section %}
+      data-dawn-section="{{ dawn_section }}"
+    {% endif %}
+  >
+    {% if dawn_section %}
+      <div class="dawn-site-atmosphere" aria-hidden="true"><div id="dawn-floating-lines-root"></div></div>
+    {% endif %}
     <!-- Header -->
     {% include header.liquid %}
 
     <!-- Content -->
-    <div class="container mt-5" role="main">
-      {% if page.toc and page.toc.sidebar %}
-        {% if page.toc.sidebar == 'right' %}
-          <div class="row">
-            <!-- main content area -->
-            <div class="col-sm-9">{{ content }}</div>
-            <!-- sidebar, which will move to the top on a small screen -->
-            <div class="col-sm-3">
-              <nav id="toc-sidebar" class="sticky-top"></nav>
+    {% if dawn_section == 'home' %}
+      {{ content }}
+    {% else %}
+      <div class="container mt-5" role="main">
+        {% if page.toc and page.toc.sidebar %}
+          {% if page.toc.sidebar == 'right' %}
+            <div class="row">
+              <!-- main content area -->
+              <div class="col-sm-9">{{ content }}</div>
+              <!-- sidebar, which will move to the top on a small screen -->
+              <div class="col-sm-3">
+                <nav id="toc-sidebar" class="sticky-top"></nav>
+              </div>
             </div>
-          </div>
+          {% else %}
+            <div class="row">
+              <!-- sidebar, which will move to the top on a small screen -->
+              <div class="col-sm-3">
+                <nav id="toc-sidebar" class="sticky-top"></nav>
+              </div>
+              <!-- main content area -->
+              <div class="col-sm-9">{{ content }}</div>
+            </div>
+          {% endif %}
         {% else %}
-          <div class="row">
-            <!-- sidebar, which will move to the top on a small screen -->
-            <div class="col-sm-3">
-              <nav id="toc-sidebar" class="sticky-top"></nav>
-            </div>
-            <!-- main content area -->
-            <div class="col-sm-9">{{ content }}</div>
-          </div>
+          {{ content }}
         {% endif %}
-      {% else %}
-        {{ content }}
-      {% endif %}
-    </div>
+      </div>
+    {% endif %}
 
     <!-- Footer -->
-    {% include footer.liquid %}
+    {% unless dawn_section %}{% include footer.liquid %}{% endunless %}
 
     <!-- JavaScripts -->
     {% include scripts.liquid %}

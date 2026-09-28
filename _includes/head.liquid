@@ -26,7 +26,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link
+  href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+  rel="stylesheet"
+>
 
 <link href="https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
 
@@ -70,9 +73,20 @@
   <link rel="shortcut icon" href="{{ site.icon | prepend: '/assets/img/' | relative_url | bust_file_cache}}">
 {% endif %}
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url | bust_css_cache }}">
+{% if dawn_section %}
+  <link rel="stylesheet" href="{{ '/assets/dawn/dawn.css' | relative_url | bust_file_cache }}">
+  <link rel="stylesheet" href="{{ '/assets/vendor/reactbits/floating-lines.css' | relative_url | bust_file_cache }}">
+{% endif %}
 <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
 
 {% if site.enable_darkmode %}
+  {% if dawn_section %}
+    <script>
+      try {
+        if (!localStorage.getItem('theme')) localStorage.setItem('theme', 'dark');
+      } catch (_) {}
+    </script>
+  {% endif %}
   <script src="{{ '/assets/js/theme.js' | relative_url | bust_file_cache }}"></script>
   <link
     defer

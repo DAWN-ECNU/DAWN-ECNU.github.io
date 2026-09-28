@@ -2,27 +2,13 @@
   <!-- Nav Bar -->
   <nav id="navbar" class="navbar navbar-light navbar-expand-sm {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}" role="navigation">
     <div class="container">
-      {% if page.permalink != '/' %}
-        <a class="navbar-brand title font-weight-lighter" href="{{ site.baseurl }}/">
-          {% if site.title == 'blank' %}
-            {% if site.first_name %}
-              <span class="font-weight-bold">
-                {{- site.first_name -}}
-              </span>
-            {% endif %}
-            {% if site.middle_name %}
-              {{- site.middle_name -}}
-            {% endif %}
-            {% if site.last_name %}
-              {{- site.last_name -}}
-            {% endif %}
-          {% else %}
-            {{- site.title -}}
-          {% endif %}
+      {% if dawn_section %}
+        <a class="navbar-brand dawn-navbar-brand" href="{{ '/' | relative_url }}" aria-label="DAWN 破晓研究组，返回主页">
+          <img src="{{ '/assets/img/logo.webp' | relative_url }}" alt="">
+          <span class="dawn-brand-word"><span>DAWN</span><span aria-hidden="true">·</span><span class="dawn-brand-cn">破晓</span></span>
         </a>
-      {% elsif site.enable_navbar_social %}
-        <!-- Social Icons -->
-        <div class="navbar-brand social">{% social_links %}</div>
+      {% else %}
+        <a class="navbar-brand title font-weight-lighter" href="{{ '/' | relative_url }}">{{ site.title }}</a>
       {% endif %}
       <!-- Navbar Toggle -->
       <button
@@ -42,21 +28,7 @@
 
       <div class="collapse navbar-collapse text-right" id="navbarNav">
         <ul class="navbar-nav ml-auto flex-nowrap">
-          {% for page in site.pages %}
-            {% if page.permalink == '/' %} {% assign about_title = page.title %} {% endif %}
-          {% endfor %}
-
-          <!-- About -->
-          <li class="nav-item {% if page.permalink == '/' %}active{% endif %}">
-            <a class="nav-link" href="{{ '/' | relative_url }}">
-              {{- about_title }}
-              {% if page.permalink == '/' %}
-                <span class="sr-only">(current)</span>
-              {% endif %}
-            </a>
-          </li>
-
-          <!-- Other pages -->
+          <!-- About and the other sections -->
           {% assign sorted_pages = site.pages | sort: 'nav_order' %}
           {% for p in sorted_pages %}
             {% if p.nav and p.autogen == null %}
@@ -99,7 +71,7 @@
                 </li>
               {% else %}
                 {% assign parent_link = p.permalink | remove: 'index.html' %}
-                <li class="nav-item {% if page.url contains parent_link %}active{% endif %}">
+                <li class="nav-item {% if page.url contains parent_link or dawn_section == 'teaching' and p.permalink == '/teaching/' %}active{% endif %}">
                   {%- if p.permalink contains '://' -%}
                     {%- assign url = p.permalink -%}
                   {%- elsif p.permalink contains '/blog/' -%}
@@ -125,10 +97,27 @@
               </button>
             </li>
           {% endif %}
+          {% if dawn_section %}
+            <li class="dawn-stats-nav">
+              <button
+                id="dawn-stats-toggle"
+                type="button"
+                aria-label="查看网站访问统计"
+                aria-expanded="false"
+                aria-controls="dawn-site-stats-panel"
+                title="访问统计"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M4 19V5M4 19h16M9 16v-4m5 4V8m5 8V5"/>
+                </svg>
+                <span class="dawn-stats-label">访问统计</span>
+              </button>
+            </li>
+          {% endif %}
           {% if site.enable_darkmode %}
             <!-- Toogle theme mode -->
             <li class="toggle-container">
-              <button id="light-toggle" title="Change theme">
+              <button id="light-toggle" type="button" title="切换显示主题" aria-label="切换显示主题">
                 <i class="fa-half-sun-moon" id="light-toggle-system"></i>
                 <i class="fa-solid fa-moon" id="light-toggle-dark"></i>
                 <i class="fa-solid fa-sun" id="light-toggle-light"></i>
@@ -139,6 +128,20 @@
       </div>
     </div>
   </nav>
+  {% if dawn_section %}
+    <aside id="dawn-site-stats-panel" class="dawn-site-stats" aria-label="网站访问统计" hidden>
+      <div class="dawn-site-stats__heading">
+        <strong>访问统计</strong><button class="dawn-site-stats__close" type="button" aria-label="关闭访问统计">×</button>
+      </div>
+      <div class="dawn-site-stats__grid">
+        <div class="dawn-site-stats__item"><span>今日访客</span><strong title="需接入每日访客统计">—</strong></div>
+        <div class="dawn-site-stats__item"><span>月活访客</span><strong title="需接入近30日访客统计">—</strong></div>
+        <div class="dawn-site-stats__item"><span>累计访问</span><strong id="dawn-total-visits" aria-live="polite">—</strong></div>
+      </div>
+      <span class="dawn-site-stats__note">今日与月活待接入</span>
+      <span id="busuanzi_container_site_pv" class="dawn-stat-source"><span id="busuanzi_value_site_pv"></span></span>
+    </aside>
+  {% endif %}
   {% if site.enable_progressbar %}
     <!-- Scrolling Progress Bar -->
     <progress id="progress" value="0">

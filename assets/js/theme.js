@@ -258,7 +258,16 @@ let setCookieConsentTheme = (theme) => {
   }
 };
 
+let dawnThemeTransitionReady = false;
+document.addEventListener(
+  "DOMContentLoaded",
+  () => {
+    dawnThemeTransitionReady = true;
+  },
+  { once: true }
+);
 let transTheme = () => {
+  if (!dawnThemeTransitionReady || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
   document.documentElement.classList.add("transition");
   window.setTimeout(() => {
     document.documentElement.classList.remove("transition");

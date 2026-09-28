@@ -9,6 +9,7 @@
 {% endif %}
 
 {% capture author_name %}{{ site.first_name }}{% if site.middle_name %} {{ site.middle_name }}{% endif %} {{ site.last_name }}{% endcapture %}
+{% assign metadata_page_title = page.browser_title | default: page.title %}
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -20,12 +21,12 @@
     {% capture title %}{{ site.title }}{% endcapture %}
   {% endif %}
   {% if page.url == '/blog/index.html' %}
-    {{ page.title | strip_html }} | {{ title }}
-  {% elsif page.title != 'blank' and page.url != '/' %}
-    {% if page.title == null or page.title == '' %}
+    {{ metadata_page_title | strip_html }} | {{ title }}
+  {% elsif metadata_page_title != 'blank' and page.url != '/' %}
+    {% if metadata_page_title == null or metadata_page_title == '' %}
       {{ page.date | date: '%Y' }} | {{ title }}
     {% else %}
-      {{ page.title | strip_html }} | {{ title }}
+      {{ metadata_page_title | strip_html }} | {{ title }}
     {% endif %}
   {% else %}
     {{ title }}
@@ -37,26 +38,29 @@
 {% if site.serve_og_meta %}
   <meta property="og:site_name" content="{{ title }}">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="{% if page.title %}{{ title }} | {{ page.title | strip_html }}{% else %}{{ title }}{% endif %}">
+  <meta
+    property="og:title"
+    content="{% if metadata_page_title %}{{ title }} | {{ metadata_page_title | strip_html }}{% else %}{{ title }}{% endif %}"
+  >
   <meta property="og:url" content="{{ page.url | prepend: site.baseurl | prepend: site.url | remove_first: 'index.html' }}">
   <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
   <meta property="og:locale" content="{{ site.lang }}">
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="{% if page.title %}{{ page.title | strip_html }}{% else %}{{ title }}{% endif %}">
+  <meta name="twitter:title" content="{% if metadata_page_title %}{{ metadata_page_title | strip_html }}{% else %}{{ title }}{% endif %}">
   <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
 {% endif %}
 
 {% if site.serve_schema_org %}
   <script type="application/ld+json">
     {
-        "author": { "@type": "Person", "name": "{{ author_name }}" },
-        "url": "{{ page.url | prepend: site.baseurl | prepend: site.url }}",
-        "@type": "WebSite",
-        "description": "{% if page.description %}{{ page.description }}{% else if site.description %}{{ site.description }}{% endif %}",
-        "headline": "{% if page.title %}{{ page.title | strip_html }}{% else %}{{ site.title }}{% endif %}",
-        "name": "{{ author_name }}",
-        "@context": "https://schema.org"
+      "author": { "@type": "Person", "name": "{{ author_name }}" },
+      "url": "{{ page.url | prepend: site.baseurl | prepend: site.url }}",
+      "@type": "WebSite",
+      "description": "{% if page.description %}{{ page.description }}{% else if site.description %}{{ site.description }}{% endif %}",
+      "headline": "{% if metadata_page_title %}{{ metadata_page_title | strip_html }}{% else %}{{ site.title }}{% endif %}",
+      "name": "{{ author_name }}",
+      "@context": "https://schema.org"
     }
   </script>
 {% endif %}

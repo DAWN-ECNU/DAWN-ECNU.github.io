@@ -1,8 +1,8 @@
 ---
 layout: page
 permalink: /data/
+dawn_section: data
 title: "<span class='nav-cn'>数据</span><span class='nav-en'>Data</span>"
-description: 课程练习与研究示例数据集 (Datasets for Practice & Research)
 nav: true
 nav_order: 5
 
@@ -116,6 +116,12 @@ datasets:
   .custom-data-table thead th {
     border-bottom: 2px solid var(--global-divider-color) !important;
   }
+  .custom-data-table td code {
+    background: transparent !important;
+    box-shadow: none !important;
+    color: inherit;
+    padding: 0;
+  }
 
   /* 彻底修复下载按钮在各模式下的对比度问题 */
   a.btn-data-download {
@@ -181,48 +187,82 @@ datasets:
     }
   }
 </style>
+<noscript>
+  <style>
+    html body.dawn-section-page[data-dawn-section="data"] .dawn-data-group .custom-data-table tr.dawn-data-extra[hidden] { display: table-row !important; }
+  </style>
+</noscript>
 
 <div class="projects">
-  <p>本页面集中提供 DAWN 课题组及相关课程的示例数据集。点击 Download 即可下载文件；文件较大时会显示下载进度，请稍候。</p>
+  <p>教学与研究数据，按文件类型浏览和下载。</p>
 
-  <div class="container mt-4">
-    <div class="table-responsive">
-      <table class="table table-sm custom-data-table" style="border-collapse: collapse;">
-        <thead>
-          <tr>
-            <th scope="col" style="border-top: none;">数据名称 / Dataset</th>
-            <th scope="col" class="d-none d-md-table-cell" style="border-top: none;">类型</th>
-            <th scope="col" class="text-right" style="text-align: right; border-top: none;">获取链接</th>
-          </tr>
-        </thead>
-        <tbody>
-          {% for data in page.datasets %}
-          <tr>
-            <td class="align-middle">
-              <i class="{{ data.icon }}" style="color: var(--global-theme-color); width: 20px; text-align: center;"></i> 
-              <strong style="margin-left: 5px;">{{ data.name }}</strong> <br>
-              <span style="color: var(--global-text-color-light); font-size: 0.85em; margin-left: 28px; display: inline-block;">{{ data.desc }}</span>
-            </td>
-            <td class="d-none d-md-table-cell align-middle">
-              <code>{{ data.type }}</code>
-            </td>
-            <td class="align-middle" style="text-align: right;">
-              <a
-                href="{{ data.url | replace: 'https://github.com/', 'https://raw.githubusercontent.com/' | replace: '/raw/', '/' | escape }}"
-                download="{{ data.url | split: '/' | last | escape }}"
-                class="btn-data-download"
-                data-download-file
-                aria-label="下载 {{ data.name | escape }}"
-                aria-describedby="data-download-status-{{ forloop.index }}"
-              >Download</a>
-              <button type="button" class="btn-data-cancel" hidden>取消</button>
-              <span id="data-download-status-{{ forloop.index }}" class="data-download-status" role="status" aria-live="polite" aria-atomic="true"></span>
-            </td>
-          </tr>
-          {% endfor %}
-        </tbody>
-      </table>
-    </div>
+{% assign data_formats = 'csv,geojson' | split: ',' %}
+
+  <div class="dawn-data-groups">
+    {% for format in data_formats %}
+      {% assign file_type = format | prepend: '.' %}
+      {% assign group_items = page.datasets | where: 'type', file_type %}
+      {% assign remaining = group_items.size | minus: 3 %}
+      {% if format == 'csv' %}
+        {% assign group_title = 'CSV · 表格数据' %}
+      {% else %}
+        {% assign group_title = 'GeoJSON · 空间数据' %}
+      {% endif %}
+      <section class="dawn-data-group" aria-labelledby="dawn-data-{{ format }}-title">
+        <div class="table-responsive">
+          <div class="dawn-data-group__header">
+            <div class="dawn-data-group__identity">
+              <h2 id="dawn-data-{{ format }}-title">{{ group_title }}</h2>
+              <span>{{ group_items.size }} 项数据</span>
+            </div>
+            {% if remaining > 0 %}
+              <button class="dawn-data-group__toggle" type="button" aria-controls="dawn-data-{{ format }}-body" aria-expanded="false" hidden>
+                <span class="dawn-data-group__toggle-label">展开其余 {{ remaining }} 项</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+              </button>
+            {% endif %}
+          </div>
+          <p class="dawn-data-group__status" role="status" aria-live="polite"></p>
+          <table class="table table-sm custom-data-table" style="border-collapse: collapse;" aria-labelledby="dawn-data-{{ format }}-title">
+            <thead>
+              <tr>
+                <th scope="col" style="border-top: none;">数据名称 / Dataset</th>
+                <th scope="col" class="d-none d-md-table-cell" style="border-top: none;">类型</th>
+                <th scope="col" class="text-right" style="text-align: right; border-top: none;">获取链接</th>
+              </tr>
+            </thead>
+            <tbody id="dawn-data-{{ format }}-body">
+              {% assign group_position = 0 %}
+              {% for data in page.datasets %}
+                {% if data.type == file_type %}
+                  {% assign group_position = group_position | plus: 1 %}
+                  <tr{% if group_position > 3 %} class="dawn-data-extra" hidden{% endif %}>
+                    <td class="align-middle">
+                      <i class="{{ data.icon }}" style="color: var(--global-theme-color); width: 20px; text-align: center;"></i>
+                      <strong style="margin-left: 5px;">{{ data.name }}</strong> <br>
+                      <span style="color: var(--global-text-color-light); font-size: 0.85em; margin-left: 28px; display: inline-block;">{{ data.desc }}</span>
+                    </td>
+                    <td class="d-none d-md-table-cell align-middle"><code>{{ data.type }}</code></td>
+                    <td class="align-middle" style="text-align: right;">
+                      <a
+                        href="{{ data.url | replace: 'https://github.com/', 'https://raw.githubusercontent.com/' | replace: '/raw/', '/' | escape }}"
+                        download="{{ data.url | split: '/' | last | escape }}"
+                        class="btn-data-download"
+                        data-download-file
+                        aria-label="下载 {{ data.name | escape }}"
+                        aria-describedby="data-download-status-{{ forloop.index }}"
+                      >Download</a>
+                      <button type="button" class="btn-data-cancel" hidden>取消</button>
+                      <span id="data-download-status-{{ forloop.index }}" class="data-download-status" role="status" aria-live="polite" aria-atomic="true"></span>
+                    </td>
+                  </tr>
+                {% endif %}
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </section>
+    {% endfor %}
   </div>
 </div>
 

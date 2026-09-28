@@ -1,6 +1,8 @@
 **/*.map
 **/*.min.css
 **/*.min.js
+assets/vendor/reactbits/floating-lines.css
+assets/vendor/reactbits/floating-lines.js
 assets/css/main.scss
 assets/js/distillpub/template.v2.js
 assets/js/search/*.js

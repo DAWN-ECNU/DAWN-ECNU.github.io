@@ -18,13 +18,13 @@ layout: default
       {% elsif page.permalink == '/projects/' %}
         <span class="nav-cn">项目</span>
         <span style="margin: 0 10px; color: var(--global-text-color);">·</span>
-        <span class="nav-en">PROJECTS</span>
+        <span class="nav-en">Projects &amp; Directions</span>
 
       {% elsif page.permalink == '/teaching/' %}
         <span class="nav-cn">教学</span>
         <span style="margin: 0 10px; color: var(--global-text-color);">·</span>
         <span class="nav-en">TEACHING</span>
-      
+
       {% elsif page.permalink == '/people/' %}
         <span class="nav-cn">成员</span>
         <span style="margin: 0 10px; color: var(--global-text-color);">·</span>
@@ -38,9 +38,10 @@ layout: default
       {% else %}
         {{ page.title }}
       {% endif %}
-      
-      </h1>
-    <p class="post-description">{{ page.description }}</p>
+    </h1>
+    {% if page.description %}
+      <p class="post-description">{{ page.description }}</p>
+    {% endif %}
   </header>
 
   <article>

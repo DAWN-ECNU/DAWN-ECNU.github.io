@@ -4,13 +4,19 @@ layout: default
 <div class="post">
   <header class="post-header">
     <h1 class="post-title">
-      <span class="nav-cn">破晓</span>
-      
-      <span style="margin: 0 10px; color: var(--global-text-color);">·</span>
-      
-      <span class="nav-en">DAWN</span>
+      {% if page.permalink == '/about/' %}
+        <span class="nav-cn">关于</span>
+        <span style="margin: 0 10px; color: var(--global-text-color);">·</span>
+        <span class="nav-en">About DAWN</span>
+      {% else %}
+        <span class="nav-cn">破晓</span>
+        <span style="margin: 0 10px; color: var(--global-text-color);">·</span>
+        <span class="nav-en">DAWN</span>
+      {% endif %}
     </h1>
-    <p class="desc">{{ page.subtitle }}</p>
+    {% if page.subtitle %}
+      <p class="desc">{{ page.subtitle }}</p>
+    {% endif %}
   </header>
 
   <article>

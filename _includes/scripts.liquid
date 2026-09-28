@@ -376,3 +376,12 @@
 {% if site.newsletter.enabled %}
   <script defer src="{{ '/assets/js/newsletter.js' | relative_url | bust_file_cache }}"></script>
 {% endif %}
+
+{% if dawn_section %}
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script defer src="{{ '/assets/js/dawn-stats.js' | relative_url | bust_file_cache }}"></script>
+  {% if dawn_section == 'home' %}
+    <script defer src="{{ '/assets/js/dawn-home.js' | relative_url | bust_file_cache }}"></script>
+  {% endif %}
+  <script defer src="{{ '/assets/vendor/reactbits/floating-lines.js' | relative_url | bust_file_cache }}"></script>
+{% endif %}

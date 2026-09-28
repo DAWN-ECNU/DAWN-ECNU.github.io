@@ -4,7 +4,10 @@ layout: page
 <div class="course">
   {% include course_schedule.liquid course_id=page.course_id %}
 
-  <article class="course-post-content mt-4">
-    {{ content }}
-  </article>
+  {% assign course_content = content | strip %}
+  {% unless course_content == '' %}
+    <article class="course-post-content mt-4">
+      {{ content }}
+    </article>
+  {% endunless %}
 </div>
