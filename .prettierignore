@@ -16,6 +16,7 @@ _data/citations.yml
 # Final classroom HTML exports; keep identical to the authored sources.
 assets/slides/课程导论.html
 assets/slides/第一章重点解析.html
+assets/slides/第二章重点解析.html
 # Published tutorial exports; keep identical to the authored sources.
 assets/html/第零章.html
 assets/html/第一章.html

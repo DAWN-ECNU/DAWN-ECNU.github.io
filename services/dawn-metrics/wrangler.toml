@@ -8,6 +8,5 @@ ALLOWED_ORIGIN = "https://dawn-ecnu.github.io"
 [[d1_databases]]
 binding = "DB"
 database_name = "dawn-site-metrics"
-# Replace with the database_id printed by `npx wrangler d1 create dawn-site-metrics`.
-database_id = "REPLACE_WITH_D1_DATABASE_ID"
+database_id = "e5ee63af-cf15-4f8b-955f-b0f342e4485e"
 migrations_dir = "migrations"

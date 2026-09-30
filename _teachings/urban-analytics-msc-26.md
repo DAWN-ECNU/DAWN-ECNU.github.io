@@ -26,7 +26,7 @@ time: "星期四 13：00 - 14：35"
 
 # --- 教学大纲 ---
 related_publications: false
-# 课程导论与第一章 · 课堂解析 HTML 课件已开放；后续课件按周更新。
+# 课程导论与第一、二章 · 课堂解析 HTML 课件已开放；后续课件按周更新。
 # 第0—2章教程开放；第3—9章教程链接暂时注释，更新后恢复。
 schedule:
   - week: 0
@@ -63,6 +63,9 @@ schedule:
       - name: "课程学习"
         kind: "tutorial"
         url: "/assets/html/第2章.html"
+      - name: "第二章 · 课堂解析"
+        kind: "slides"
+        url: "/assets/slides/第二章重点解析.html"
       # - name: "课件 (第三节课ppt)"
       #   url: "/assets/ppt/第三周_msc.pptx"
 
