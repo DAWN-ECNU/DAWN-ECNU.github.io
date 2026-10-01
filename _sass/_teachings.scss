@@ -140,3 +140,9 @@
   word-break: keep-all;
   white-space: nowrap;
 }
+
+.schedule-material-count {
+  color: var(--global-text-color);
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}

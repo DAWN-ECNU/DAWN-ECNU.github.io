@@ -82,7 +82,12 @@
     today.textContent = format(state.todayVisitors);
     month.textContent = format(state.last30DayVisitors);
     total.textContent = format(state.totalVisitors);
-    if (note) note.textContent = "匿名浏览器去重 · 近30日访客";
+    if (note) {
+      note.textContent =
+        validCount(state.legacyVisitorBaseline) && state.legacyVisitorBaseline > 0
+          ? `累计含旧站基数 ${format(state.legacyVisitorBaseline)}；今日及近30日仅新系统，跨平台可能重复`
+          : "匿名浏览器去重 · 近30日访客";
+    }
     subscribers.forEach((listener) => listener(state));
     return state;
   }

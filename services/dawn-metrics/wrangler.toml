@@ -4,6 +4,7 @@ compatibility_date = "2026-09-28"
 
 [vars]
 ALLOWED_ORIGIN = "https://dawn-ecnu.github.io"
+LEGACY_VISITOR_BASELINE = "3177"
 
 [[d1_databases]]
 binding = "DB"

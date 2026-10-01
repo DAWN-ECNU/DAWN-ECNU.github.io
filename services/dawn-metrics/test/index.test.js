@@ -6,13 +6,17 @@ import { handleRequest } from "../src/index.js";
 
 const ORIGIN = "https://dawn-ecnu.github.io";
 const BASE = "https://metrics.example/api";
-const migration = readFileSync(new URL("../migrations/0001_initial.sql", import.meta.url), "utf8");
+const migrations = ["0001_initial.sql", "0002_course_material_clicks.sql"].map((name) =>
+  readFileSync(new URL(`../migrations/${name}`, import.meta.url), "utf8")
+);
 
 function database() {
   const sqlite = new DatabaseSync(":memory:");
   sqlite.exec("PRAGMA foreign_keys=ON");
-  sqlite.exec(migration);
-  sqlite.exec(migration); // The initial migration is safe to rerun.
+  for (const migration of migrations) {
+    sqlite.exec(migration);
+    sqlite.exec(migration); // Both migrations are safe to rerun.
+  }
 
   function prepared(sql, values = []) {
     return {
@@ -23,6 +27,9 @@ function database() {
       },
       async first() {
         return sqlite.prepare(sql).get(...values) || null;
+      },
+      async all() {
+        return { results: sqlite.prepare(sql).all(...values) };
       },
     };
   }
@@ -83,6 +90,34 @@ test("one browser is counted once per Beijing day and gets a reusable token", as
   assert.equal(env.DB.raw.prepare("SELECT COUNT(*) AS n FROM visits_by_day").get().n, 1);
   assert.equal(env.DB.raw.prepare("SELECT COUNT(*) AS n FROM visitors").get().n, 1);
   assert.notEqual(env.DB.raw.prepare("SELECT token_hash FROM visitors").get().token_hash, first.data.visitorToken);
+});
+
+test("legacy visitors are added once to lifetime totals on site-state and like", async () => {
+  const env = { ...setup(), LEGACY_VISITOR_BASELINE: "3177" };
+  const first = await call(env, "/site-state");
+  assert.equal(first.status, 200);
+  assert.deepEqual(
+    [first.data.todayVisitors, first.data.last30DayVisitors, first.data.totalVisitors, first.data.legacyVisitorBaseline],
+    [1, 1, 3178, 3177]
+  );
+  const token = first.data.visitorToken;
+  const liked = await call(env, "/like", { method: "POST", token, liked: true });
+  assert.equal(liked.status, 200);
+  assert.deepEqual(
+    [liked.data.todayVisitors, liked.data.last30DayVisitors, liked.data.totalVisitors, liked.data.totalLikes, liked.data.legacyVisitorBaseline],
+    [1, 1, 3178, 1, 3177]
+  );
+  const second = await call(env, "/site-state");
+  assert.deepEqual([second.data.todayVisitors, second.data.last30DayVisitors, second.data.totalVisitors], [2, 2, 3179]);
+  assert.equal(env.DB.raw.prepare("SELECT COUNT(*) AS n FROM visitors").get().n, 2);
+});
+
+test("invalid legacy visitor baselines fail before visitor writes", async () => {
+  for (const baseline of ["-1", "3.5", "abc", "9007199254740992"]) {
+    const env = { ...setup(), LEGACY_VISITOR_BASELINE: baseline };
+    assert.equal((await call(env, "/site-state")).status, 503);
+    assert.equal(env.DB.raw.prepare("SELECT COUNT(*) AS n FROM visitors").get().n, 0);
+  }
 });
 
 test("likes are shared, idempotent, and reversible", async () => {
@@ -172,4 +207,87 @@ test("CORS preflight accepts the site and rejects other origins", async () => {
   const noOrigin = await handleRequest(new Request(`${BASE}/site-state`), env);
   assert.equal(noOrigin.status, 403);
   assert.equal(env.DB.raw.prepare("SELECT COUNT(*) AS n FROM visitors").get().n, 0);
+});
+
+test("course totals count each view and download while keeping BA and MSc separate", async () => {
+  const env = setup();
+  const ba = "SOCI235.01";
+  const msc = "202621742";
+  const empty = await call(env, `/material-counts?courseId=${ba}`);
+  assert.equal(empty.status, 200);
+  assert.deepEqual(empty.data, {
+    courseId: ba,
+    counts: Object.fromEntries(Array.from({ length: 10 }, (_, week) => [String(week), 0])),
+  });
+  const actions = [
+    ["tutorial", "view"],
+    ["slides", "view"],
+    ["tutorial", "download"],
+    ["slides", "download"],
+  ];
+  for (const [index, [materialKind, action]] of actions.entries()) {
+    const click = await call(env, "/material-click", {
+      method: "POST",
+      body: JSON.stringify({ eventId: String(index).repeat(32), courseId: ba, week: 0, materialKind, action }),
+    });
+    assert.equal(click.status, 200);
+    assert.deepEqual(click.data, { courseId: ba, week: 0, total: index + 1, recorded: true });
+  }
+  assert.equal((await call(env, `/material-counts?courseId=${ba}`)).data.counts["0"], 4);
+  assert.equal((await call(env, `/material-counts?courseId=${msc}`)).data.counts["0"], 0);
+  const otherWeek = await call(env, "/material-click", {
+    method: "POST",
+    body: JSON.stringify({ eventId: "a".repeat(32), courseId: msc, week: 2, materialKind: "tutorial", action: "view" }),
+  });
+  assert.deepEqual(otherWeek.data, { courseId: msc, week: 2, total: 1, recorded: true });
+  assert.equal((await call(env, `/material-counts?courseId=${msc}`)).data.counts["2"], 1);
+  assert.equal((await call(env, `/material-counts?courseId=${ba}`)).data.counts["2"], 0);
+  assert.equal(env.DB.raw.prepare("SELECT COUNT(*) AS n FROM visitors").get().n, 0);
+});
+
+test("duplicate event IDs are idempotent, including concurrent retries", async () => {
+  const env = setup();
+  const click = { eventId: "b".repeat(32), courseId: "SOCI235.01", week: 1, materialKind: "slides", action: "download" };
+  const results = await Promise.all(Array.from({ length: 8 }, () => call(env, "/material-click", { method: "POST", body: JSON.stringify(click) })));
+  assert.equal(results.filter((result) => result.data.recorded).length, 1);
+  assert.ok(results.every((result) => result.status === 200 && result.data.total === 1));
+  assert.equal(env.DB.raw.prepare("SELECT COUNT(*) AS n FROM course_material_clicks").get().n, 1);
+});
+
+test("material count endpoints reject malformed inputs and forbidden origins", async () => {
+  const env = setup();
+  const valid = { eventId: "c".repeat(32), courseId: "202621742", week: 0, materialKind: "tutorial", action: "view" };
+  const invalid = [
+    { ...valid, eventId: "C".repeat(32) },
+    { ...valid, eventId: "short" },
+    { ...valid, courseId: "other" },
+    { ...valid, week: -1 },
+    { ...valid, week: 10 },
+    { ...valid, week: "0" },
+    { ...valid, week: 0.5 },
+    { ...valid, materialKind: "resource" },
+    { ...valid, action: "open" },
+  ];
+  for (const click of invalid) {
+    assert.equal((await call(env, "/material-click", { method: "POST", body: JSON.stringify(click) })).status, 400);
+  }
+  assert.equal((await call(env, "/material-click", { method: "POST", body: "not json" })).status, 400);
+  assert.equal((await call(env, "/material-click", { method: "POST", body: JSON.stringify({ ...valid, padding: "x".repeat(600) }) })).status, 400);
+  assert.equal((await call(env, "/material-click", { method: "POST", body: JSON.stringify(valid), origin: "https://other.example" })).status, 403);
+  assert.equal((await call(env, "/material-counts")).status, 400);
+  assert.equal((await call(env, "/material-counts?courseId=other")).status, 400);
+  assert.equal((await call(env, "/material-counts?courseId=202621742&courseId=SOCI235.01")).status, 400);
+  assert.equal((await call(env, "/material-click")).status, 405);
+  assert.equal((await call(env, "/material-counts?courseId=202621742", { method: "POST" })).status, 405);
+  assert.equal(env.DB.raw.prepare("SELECT COUNT(*) AS n FROM course_material_clicks").get().n, 0);
+
+  const preflight = await handleRequest(
+    new Request(`${BASE}/material-click`, {
+      method: "OPTIONS",
+      headers: { Origin: ORIGIN, "Access-Control-Request-Method": "POST", "Access-Control-Request-Headers": "content-type" },
+    }),
+    env
+  );
+  assert.equal(preflight.status, 204);
+  assert.equal(preflight.headers.get("Access-Control-Allow-Origin"), ORIGIN);
 });

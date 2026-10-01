@@ -4,7 +4,7 @@
   <div class="course">
     {% if course.schedule %}
       <div class="table-responsive">
-        <table class="table align-middle" style="min-width: 760px;">
+        <table class="table align-middle" style="min-width: 860px;" data-material-counts data-course-id="{{ course.course_id | escape }}">
           <thead>
             <tr>
               <th scope="col" class="text-center" style="width: 80px;">Week</th>
@@ -12,11 +12,12 @@
               <th scope="col">Topic</th>
               <th scope="col" class="text-nowrap">在线查看</th>
               <th scope="col" class="text-nowrap">离线下载</th>
+              <th scope="col" class="text-center text-nowrap">累计点击</th>
             </tr>
           </thead>
           <tbody>
             {% for entry in course.schedule %}
-              <tr>
+              <tr data-week="{{ entry.week | escape }}">
                 <td class="text-center">{{ entry.week }}</td>
 
                 <td class="text-center">
@@ -68,6 +69,13 @@
                               href="{{ material.url | relative_url | escape }}"
                               target="_blank"
                               rel="noopener"
+                              {% if material_kind == 'tutorial' or material_kind == 'slides' %}
+                                data-material-click
+                                data-course-id="{{ course.course_id | escape }}"
+                                data-week="{{ entry.week | escape }}"
+                                data-material-kind="{{ material_kind | escape }}"
+                                data-action="view"
+                              {% endif %}
                               aria-label="在线查看：{{ entry.topic | escape }} · {{ material_kind_label }} · {{ material.name | escape }}"
                             >
                               <i class="fas fa-external-link-alt schedule-material-action" aria-hidden="true"></i>
@@ -110,6 +118,13 @@
                               class="schedule-material-link"
                               href="{{ material.url | relative_url | escape }}"
                               download="{{ material.url | split: '/' | last | escape }}"
+                              {% if material_kind == 'tutorial' or material_kind == 'slides' %}
+                                data-material-click
+                                data-course-id="{{ course.course_id | escape }}"
+                                data-week="{{ entry.week | escape }}"
+                                data-material-kind="{{ material_kind | escape }}"
+                                data-action="download"
+                              {% endif %}
                               aria-label="离线下载：{{ entry.topic | escape }} · {{ material_kind_label }} · {{ material.name | escape }}"
                             >
                               <i class="fas fa-download schedule-material-action" aria-hidden="true"></i>
@@ -131,6 +146,13 @@
                         </li>
                       {% endfor %}
                     </ul>
+                  {% endif %}
+                </td>
+                <td class="text-center">
+                  {% if entry.materials and entry.materials.size > 0 %}
+                    <output class="schedule-material-count" data-material-count-week="{{ entry.week | escape }}" aria-live="polite">—</output>
+                  {% else %}
+                    <span aria-label="暂无资料">—</span>
                   {% endif %}
                 </td>
               </tr>
