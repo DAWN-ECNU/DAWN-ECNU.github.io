@@ -27,7 +27,7 @@ time: "星期四 13：00 - 14：35"
 # --- 教学大纲 ---
 related_publications: false
 # 课程导论与第一、二章 · 课堂解析 HTML 课件已开放；后续课件按周更新。
-# 第0—2章教程开放；第3—9章教程链接暂时注释，更新后恢复。
+# 第0—3章教程开放；第4—9章教程链接暂时注释，更新后恢复。
 schedule:
   - week: 0
     type: "软件安装" # 👈 新增标签
@@ -73,9 +73,10 @@ schedule:
     type: "基础章节" # 👈 新增标签
     topic: "第3章：数据可视化 1: ggplot2"
     description: "Data Visualisation 1: ggplot2"
-    # materials:
-    #   - name: "课程教程"
-    #     url: "/assets/html/第3章.html"
+    materials:
+      - name: "课程学习"
+        kind: "tutorial"
+        url: "/assets/html/第3章.html"
     # - name: "课件 (第四节课ppt)"
     #   url: "/assets/ppt/第四周_msc.pptx"
 
