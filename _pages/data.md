@@ -8,6 +8,18 @@ nav_order: 5
 
 # --- 数据集信息 ---
 datasets:
+  - name: "2020年中国县级常住人口"
+    desc: "七普年鉴整理数据；含县级区划代码，不含边界"
+    icon: "fas fa-table"
+    type: ".csv"
+    url: "https://github.com/DAWN-ECNU/Example_data/raw/main/china_county_population_2020.csv"
+
+  - name: "2020年三沙市及群岛人口分项"
+    desc: "与县级人口表配套的三沙市总数及三个群岛分项；不含边界"
+    icon: "fas fa-table"
+    type: ".csv"
+    url: "https://github.com/DAWN-ECNU/Example_data/raw/main/china_sansha_population_2020.csv"
+
   - name: "2024年中国新一线城市专利申请数据（须处理）"
     desc: "新一线15城市2024专利数据"
     icon: "fas fa-table" # 兼容性极好的面/多边形图标
