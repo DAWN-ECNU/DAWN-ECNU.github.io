@@ -27,7 +27,7 @@ time: "星期四 13：00 - 14：35"
 # --- 教学大纲 ---
 related_publications: false
 # 课程导论与第一至三章 · 课堂解析 HTML 课件已开放；后续课件按周更新。
-# 第0—3章教程开放；第4—9章教程链接暂时注释，更新后恢复。
+# 第0—4章教程开放；第5—9章教程链接暂时注释，更新后恢复。
 schedule:
   - week: 0
     type: "软件安装" # 👈 新增标签
@@ -87,9 +87,10 @@ schedule:
     type: "基础章节" # 👈 新增标签
     topic: "第4章：数据可视化 2: 空间制图"
     description: "Data Visualisation 2: Geo-Visualisation"
-    # materials:
-    #   - name: "课程教程"
-    #     url: "/assets/html/第4章.html"
+    materials:
+      - name: "课程学习"
+        kind: "tutorial"
+        url: "/assets/html/第4章.html"
     # - name: "课件 (第五节课ppt)"
     #   url: "/assets/ppt/第五周_msc.pptx"
 
