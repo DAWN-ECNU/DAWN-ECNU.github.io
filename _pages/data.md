@@ -50,6 +50,18 @@ datasets:
     type: ".csv"
     url: "https://github.com/DAWN-ECNU/Example_data/raw/main/london2025_11_airbnb.csv"
 
+  - name: "伦敦绿色基础设施综合需求与供给"
+    desc: "GLA LGIF 2026 修正版；15,041 个 350 m 六角网格，综合及十项目标的需求与供给分类；OGL v3"
+    icon: "fas fa-map"
+    type: ".geojson"
+    url: "https://github.com/DAWN-ECNU/Example_data/raw/main/london_lgif_hex350_scores_2026.geojson"
+
+  - name: "伦敦行政区边界（2018）"
+    desc: "GLA 提供的 Ordnance Survey Boundary-Line 提取数据；33 个行政区；OGL v3"
+    icon: "fas fa-map"
+    type: ".geojson"
+    url: "https://github.com/DAWN-ECNU/Example_data/raw/main/london_boroughs_os_2018.geojson"
+
   - name: "纽约市Taxi Zone边界"
     desc: "纽约市Taxi Zone边界数据"
     icon: "fas fa-map" # 兼容性极好的面/多边形图标
