@@ -101,9 +101,10 @@ schedule:
     type: "专题章节" # 👈 新增标签
     topic: "第5章：专题1: 点数据分析"
     description: "Theme 1: Points"
-    # materials:
-    #   - name: "课程教程"
-    #     url: "/assets/html/第5章.html"
+    materials:
+      - name: "课程学习（先行版）"
+        kind: "tutorial"
+        url: "/assets/html/第5章（先行版）.html"
     # - name: "课件 (第七节课ppt) （清明假期）"
     #   url: "/assets/ppt/第七周_msc.pptx"
     # - name: "课件 (第八节课ppt)"
