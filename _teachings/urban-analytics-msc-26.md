@@ -91,6 +91,9 @@ schedule:
       - name: "课程学习"
         kind: "tutorial"
         url: "/assets/html/第4章.html"
+      - name: "第四章 · 课堂解析"
+        kind: "slides"
+        url: "/assets/slides/第四章重点解析.html"
     # - name: "课件 (第五节课ppt)"
     #   url: "/assets/ppt/第五周_msc.pptx"
 
