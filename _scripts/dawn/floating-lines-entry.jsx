@@ -440,7 +440,9 @@ if (mount) {
       return;
     }
     event.preventDefault();
-    void navigate(destination);
+    // Pointer navigation should not leave Safari's focus outline on the new heading.
+    // Keyboard and assistive-technology activation still move focus to the heading.
+    void navigate(destination, true, event.detail === 0);
   });
   function prefetchNavLink(event) {
     const link = event.target instanceof Element ? event.target.closest('a[href]') : null;
