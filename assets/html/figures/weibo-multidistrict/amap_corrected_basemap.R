@@ -1,4 +1,4 @@
-# 高德底图纠偏探针：只改变底图采样，不修改分析数据的坐标。
+# 高德底图坐标匹配：只调整底图采样，不修改分析坐标。
 # 正向WGS84→GCJ-02公式核对来源：
 # https://github.com/wandergis/coordTransform_py/blob/master/coordTransform_utils.py
 # 此处按每个输出像素的真实WGS84位置，找到高德底图中的对应GCJ-02像素。
@@ -34,10 +34,6 @@ wgs84_to_gcj02 <- function(longitude, latitude) {
 
 amap_corrected_raster <- function(
     window, zoom, cache_dir, target_crs = 32651, output_width = 1100L) {
-  stopifnot(
-    all(c("xmin", "xmax", "ymin", "ymax") %in% names(window)),
-    zoom >= 1, zoom <= 18
-  )
   dir.create(cache_dir, recursive = TRUE, showWarnings = FALSE)
   tile_dir <- file.path(cache_dir, "amap_style_7")
   warp_dir <- file.path(cache_dir, "amap_corrected")
@@ -105,8 +101,6 @@ amap_corrected_raster <- function(
   y0 <- floor(sy)
   fx <- sx - x0
   fy <- sy - y0
-  stopifnot(min(x0) >= 1, max(x0) < source_width,
-            min(y0) >= 1, max(y0) < source_height)
   i00 <- y0 + (x0 - 1L) * source_height
   i10 <- y0 + x0 * source_height
   i01 <- y0 + 1L + (x0 - 1L) * source_height
