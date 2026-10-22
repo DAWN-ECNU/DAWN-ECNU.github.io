@@ -1,6 +1,10 @@
 <header>
   <!-- Nav Bar -->
-  <nav id="navbar" class="navbar navbar-light navbar-expand-sm {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}" role="navigation">
+  <nav
+    id="navbar"
+    class="navbar navbar-light {% if dawn_section %}navbar-expand-md{% else %}navbar-expand-sm{% endif %} {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}"
+    role="navigation"
+  >
     <div class="container">
       {% if dawn_section %}
         <a class="navbar-brand dawn-navbar-brand" href="{{ '/' | relative_url }}" aria-label="DAWN 破晓研究组，返回主页">
@@ -113,6 +117,22 @@
                 <span class="dawn-stats-label">访问统计</span>
               </button>
             </li>
+            <li class="dawn-palette-nav" hidden>
+              <button
+                id="dawn-palette-toggle"
+                type="button"
+                aria-label="选择背景与标题配色"
+                aria-expanded="false"
+                aria-controls="dawn-palette-panel"
+                title="背景与标题配色"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M12 3a9 9 0 1 0 0 18h1.2a2.2 2.2 0 0 0 1.6-3.8 1.9 1.9 0 0 1 1.4-3.2H18a3 3 0 0 0 3-3 8 8 0 0 0-9-8Z"/>
+                  <circle cx="7.5" cy="11.5" r="1"/><circle cx="9" cy="7.5" r="1"/><circle cx="14" cy="7.5" r="1"/><circle cx="17.5" cy="10.5" r="1"/>
+                </svg>
+                <span class="dawn-palette-nav__label">主题配色</span>
+              </button>
+            </li>
           {% endif %}
           {% if site.enable_darkmode %}
             <!-- Toogle theme mode -->
@@ -129,6 +149,16 @@
     </div>
   </nav>
   {% if dawn_section %}
+    <aside id="dawn-palette-panel" class="dawn-palette-panel" aria-label="背景与标题配色" hidden>
+      <div class="dawn-palette-panel__heading">
+        <div>
+          <strong>主题配色</strong>
+          <p>同步调整背景曲线与分页中文标题</p>
+        </div>
+        <button class="dawn-palette-panel__close" type="button" aria-label="关闭配色选择">×</button>
+      </div>
+      <div id="dawn-palette-options" class="dawn-palette-options" role="radiogroup" aria-label="背景与标题配色方案"></div>
+    </aside>
     <aside id="dawn-site-stats-panel" class="dawn-site-stats" aria-label="网站访问统计" hidden>
       <div class="dawn-site-stats__heading">
         <strong>访问统计</strong><button class="dawn-site-stats__close" type="button" aria-label="关闭访问统计">×</button>
@@ -138,7 +168,9 @@
         <div class="dawn-site-stats__item"><span>近30日访客</span><strong id="dawn-month-visitors" aria-live="polite">—</strong></div>
         <div class="dawn-site-stats__item"><span>累计访客</span><strong id="dawn-total-visitors" aria-live="polite">—</strong></div>
       </div>
-      <span class="dawn-site-stats__note">{% if site.dawn_metrics_api_url != blank %}正在读取访问统计…{% else %}共享计数服务尚未启用{% endif %}</span>
+      <span class="dawn-site-stats__note">
+        {%- if site.dawn_metrics_api_url != blank %}正在读取访问统计…{% else %}共享计数服务尚未启用{% endif -%}
+      </span>
     </aside>
   {% endif %}
   {% if site.enable_progressbar %}

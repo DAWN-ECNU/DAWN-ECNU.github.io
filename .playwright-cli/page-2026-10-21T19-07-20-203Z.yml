@@ -1,0 +1,81 @@
+- generic [ref=e1]:
+  - banner:
+    - navigation [ref=e6]:
+      - generic [ref=e7]:
+        - link "DAWN 破晓研究组，返回主页" [ref=e8] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e9]:
+            - generic [ref=e10]: DAWN
+            - generic [aria-hidden] [ref=e11]: ·
+            - generic [ref=e12]: 破晓
+        - list [ref=e14]:
+          - listitem [ref=e15]:
+            - link "关于 About" [ref=e181] [cursor=pointer]:
+              - /url: /about/
+              - generic [ref=e17]: 关于
+              - generic [ref=e18]: About
+          - listitem [ref=e19]:
+            - link "成果 Publications" [ref=e340] [cursor=pointer]:
+              - /url: /publications/
+              - generic [ref=e21]: 成果
+              - generic [ref=e22]: Publications
+          - listitem [ref=e23]:
+            - link "项目 Projects" [ref=e423] [cursor=pointer]:
+              - /url: /projects/
+              - generic [ref=e25]: 项目
+              - generic [ref=e26]: Projects
+          - listitem [ref=e27]:
+            - link "数据 Data" [ref=e521] [cursor=pointer]:
+              - /url: /data/
+              - generic [ref=e29]: 数据
+              - generic [ref=e30]: Data
+          - listitem [ref=e31]:
+            - link "教学 Teaching (current)" [active] [ref=e522] [cursor=pointer]:
+              - /url: /teaching/
+              - generic [ref=e33]: 教学
+              - generic [ref=e34]: Teaching
+              - generic [ref=e523]: (current)
+          - listitem [ref=e35]:
+            - button "查看网站访问统计" [ref=e36] [cursor=pointer]
+          - listitem [ref=e39]:
+            - button "选择背景曲线配色" [ref=e40] [cursor=pointer]
+          - listitem [ref=e47]:
+            - button "切换显示主题" [ref=e48] [cursor=pointer]:
+              - generic [ref=e180]:  
+    - progressbar [ref=e50]
+  - main [ref=e524]:
+    - generic [ref=e525]:
+      - generic [ref=e526]:
+        - heading "教学 · TEACHING" [level=1] [ref=e527]:
+          - generic [ref=e528]: 教学
+          - text: · TEACHING
+        - paragraph [ref=e529]: 课程与课程材料
+      - article [ref=e530]:
+        - generic [ref=e531]:
+          - heading "2026" [level=2] [ref=e532]
+          - generic [ref=e533]:
+            - generic [ref=e536]:
+              - heading [level=3] [ref=e537]:
+                - link "多源城市数据分析与实践 Multi-source Urban Data Analytics and Practice" [ref=e538] [cursor=pointer]:
+                  - /url: /teachings/urban-analytics-msc-26/
+                  - generic [ref=e539]: 多源城市数据分析与实践
+                  - generic [ref=e540]: Multi-source Urban Data Analytics and Practice
+              - generic [ref=e542]:
+                - generic [ref=e543]: Dr. Yunzhe Liu
+                - generic [ref=e545]: "202621742"
+                - generic [ref=e547]: 研究生 · 专业选修
+                - generic [ref=e549]: 2026年 秋
+                - generic [ref=e551]: 法商南楼 402
+            - generic [ref=e555]:
+              - heading [level=3] [ref=e556]:
+                - link "多源数据分析与实践 Multi-source Data Analytics and Practice" [ref=e557] [cursor=pointer]:
+                  - /url: /teachings/urban-analytics-ba-26/
+                  - generic [ref=e558]: 多源数据分析与实践
+                  - generic [ref=e559]: Multi-source Data Analytics and Practice
+              - generic [ref=e561]:
+                - generic [ref=e562]: Dr. Yunzhe Liu
+                - generic [ref=e564]: SOCI235.01
+                - generic [ref=e566]: 本科生 · 专业选修
+                - generic [ref=e568]: 2026年 秋
+                - generic [ref=e570]: 法商北楼 101
+  - generic [ref=e105] [cursor=pointer]

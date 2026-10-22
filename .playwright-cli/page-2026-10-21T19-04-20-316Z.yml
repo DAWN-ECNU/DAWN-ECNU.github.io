@@ -1,0 +1,145 @@
+- generic [ref=e1]:
+  - banner:
+    - navigation [ref=e6]:
+      - generic [ref=e7]:
+        - link "DAWN 破晓研究组，返回主页" [ref=e8] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e9]:
+            - generic [ref=e10]: DAWN
+            - generic [aria-hidden] [ref=e11]: ·
+            - generic [ref=e12]: 破晓
+        - list [ref=e14]:
+          - listitem [ref=e15]:
+            - link "关于 About (current)" [ref=e62] [cursor=pointer]:
+              - /url: /about/
+              - generic [ref=e17]: 关于
+              - generic [ref=e18]: About
+              - generic [ref=e63]: (current)
+          - listitem [ref=e19]:
+            - link "成果 Publications" [ref=e20] [cursor=pointer]:
+              - /url: /publications/
+              - generic [ref=e21]: 成果
+              - generic [ref=e22]: Publications
+          - listitem [ref=e23]:
+            - link "项目 Projects" [ref=e24] [cursor=pointer]:
+              - /url: /projects/
+              - generic [ref=e25]: 项目
+              - generic [ref=e26]: Projects
+          - listitem [ref=e27]:
+            - link "数据 Data" [ref=e28] [cursor=pointer]:
+              - /url: /data/
+              - generic [ref=e29]: 数据
+              - generic [ref=e30]: Data
+          - listitem [ref=e31]:
+            - link "教学 Teaching" [ref=e32] [cursor=pointer]:
+              - /url: /teaching/
+              - generic [ref=e33]: 教学
+              - generic [ref=e34]: Teaching
+          - listitem [ref=e35]:
+            - button "查看网站访问统计" [ref=e36] [cursor=pointer]
+          - listitem [ref=e39]:
+            - button "选择背景曲线配色" [expanded] [ref=e40] [cursor=pointer]
+          - listitem [ref=e47]:
+            - button "切换显示主题" [ref=e48] [cursor=pointer]:
+              - generic [ref=e180]:  
+    - complementary "背景曲线配色" [ref=e108]:
+      - generic [ref=e109]:
+        - generic [ref=e110]:
+          - strong [ref=e111]: 背景曲线配色
+          - paragraph [ref=e112]: 仅调整动态曲线的颜色
+        - button "关闭配色选择" [ref=e113] [cursor=pointer]: ×
+      - radiogroup "背景曲线配色方案" [ref=e114]:
+        - generic [ref=e115] [cursor=pointer]:
+          - radio "默认 · 当前配色 沿用原有深浅色自动轮换" [ref=e116]
+          - generic [ref=e122]: 默认 · 当前配色
+          - generic [ref=e123]: 沿用原有深浅色自动轮换
+        - generic [ref=e124] [cursor=pointer]:
+          - radio "车厘子夜雾" [checked] [active] [ref=e125]
+          - generic [ref=e131]: 车厘子夜雾
+        - generic [ref=e132] [cursor=pointer]:
+          - radio "葡萄蜜桃" [ref=e133]
+          - generic [ref=e139]: 葡萄蜜桃
+        - generic [ref=e140] [cursor=pointer]:
+          - radio "孔雀鎏金" [ref=e141]
+          - generic [ref=e147]: 孔雀鎏金
+        - generic [ref=e148] [cursor=pointer]:
+          - radio "青柠冰海" [ref=e149]
+          - generic [ref=e155]: 青柠冰海
+        - generic [ref=e156] [cursor=pointer]:
+          - radio "玫瑰烟灰" [ref=e157]
+          - generic [ref=e163]: 玫瑰烟灰
+        - generic [ref=e164] [cursor=pointer]:
+          - radio "琥珀夜航" [ref=e165]
+          - generic [ref=e171]: 琥珀夜航
+        - generic [ref=e172] [cursor=pointer]:
+          - radio "乌梅薄荷" [ref=e173]
+          - generic [ref=e179]: 乌梅薄荷
+    - progressbar [ref=e50]
+  - main [ref=e64]:
+    - generic [ref=e65]:
+      - heading "关于 · About DAWN" [level=1] [ref=e67]:
+        - generic [ref=e68]: 关于
+        - text: · About DAWN
+      - article [ref=e69]:
+        - generic [ref=e70]:
+          - generic [ref=e71]:
+            - generic [ref=e72]: 中文
+            - generic [ref=e73]:
+              - checkbox
+              - generic [ref=e74] [cursor=pointer]
+            - generic [ref=e75]: EN
+          - generic [ref=e77]:
+            - paragraph [ref=e78]:
+              - strong [ref=e79]: DAWN
+              - text: (
+              - strong [ref=e80]: D
+              - text: ata
+              - strong [ref=e81]: A
+              - text: nalytics for
+              - strong [ref=e82]: W
+              - text: ell-being &
+              - strong [ref=e83]: "N"
+              - text: eighborhoods，
+              - strong [ref=e84]: 福祉 · 邻里 · 数据分析
+              - text: ) 研究小组，由华东师范大学社会发展学院人口研究所
+              - link [ref=e85] [cursor=pointer]:
+                - /url: https://faculty.ecnu.edu.cn/_s6/lyz2/main.psp
+                - strong [ref=e86]: 刘贇喆
+              - text: 副教授于
+              - strong [ref=e87]: "2020"
+              - text: 年在
+              - strong [ref=e88]: 英国牛津大学
+              - text: 发起成立。
+            - paragraph [ref=e89]:
+              - text: 研究组致力于依托
+              - strong [ref=e90]: 数智时代计算社会科学新范式
+              - text: ，利用
+              - strong [ref=e91]: 多源数据
+              - text: 深度解析
+              - strong [ref=e92]: 社会空间分异规律
+              - text: ，以期优化城市邻里环境并提升居民福祉。目前，DAWN 已与包括
+              - strong [ref=e93]: 英国牛津大学、帝国理工学院、伦敦大学学院 (UCL)、利兹大学、利物浦大学
+              - text: ，
+              - strong [ref=e94]: 美国南加州大学
+              - text: ，以及中国
+              - strong [ref=e95]: 北京大学、清华大学、武汉大学、华东理工大学
+              - text: 在内的海内外知名高校研究者与团队建立了合作，构筑起跨地域、跨学科的协同研究网络。
+            - paragraph [ref=e96]:
+              - text: 本课题组立足于
+              - strong [ref=e97]: 计算社会科学、人口学、地理学、公共健康与城市规划
+              - text: 等学科交叉前沿，致力于利用
+              - strong [ref=e98]: 多源城市时空数据
+              - text: 与
+              - strong [ref=e99]: 地理人工智能技术
+              - text: （GeoAI），深入解析城市复杂系统中的
+              - strong [ref=e100]: 社会空间分异
+              - text: 与
+              - strong [ref=e101]: 不平等
+              - text: 模式；旨在通过
+              - strong [ref=e102]: 数据驱动
+              - text: 的实证研究，为理解城市社会系统的演化规律与推动可持续发展，提供科学的、
+              - strong [ref=e103]: 以人为本
+              - text: 的
+              - strong [ref=e104]: 循证依据
+              - text: 。
+  - generic [ref=e105] [cursor=pointer]

@@ -1,0 +1,112 @@
+- generic [active] [ref=e1]:
+  - banner:
+    - navigation [ref=e2]:
+      - generic [ref=e3]:
+        - link "DAWN 破晓研究组，返回主页" [ref=e4] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e5]:
+            - generic [ref=e6]: DAWN
+            - generic [aria-hidden] [ref=e7]: ·
+            - generic [ref=e8]: 破晓
+        - list [ref=e10]:
+          - listitem [ref=e11]:
+            - link "关于 About (current)" [ref=e12] [cursor=pointer]:
+              - /url: /about/
+              - generic [ref=e13]: 关于
+              - generic [ref=e14]: About
+              - generic [ref=e15]: (current)
+          - listitem [ref=e16]:
+            - link "成果 Publications" [ref=e17] [cursor=pointer]:
+              - /url: /publications/
+              - generic [ref=e18]: 成果
+              - generic [ref=e19]: Publications
+          - listitem [ref=e20]:
+            - link "项目 Projects" [ref=e21] [cursor=pointer]:
+              - /url: /projects/
+              - generic [ref=e22]: 项目
+              - generic [ref=e23]: Projects
+          - listitem [ref=e24]:
+            - link "数据 Data" [ref=e25] [cursor=pointer]:
+              - /url: /data/
+              - generic [ref=e26]: 数据
+              - generic [ref=e27]: Data
+          - listitem [ref=e28]:
+            - link "教学 Teaching" [ref=e29] [cursor=pointer]:
+              - /url: /teaching/
+              - generic [ref=e30]: 教学
+              - generic [ref=e31]: Teaching
+          - listitem [ref=e32]:
+            - button "查看网站访问统计" [ref=e33] [cursor=pointer]
+          - listitem [ref=e36]:
+            - button "选择背景曲线配色" [ref=e37] [cursor=pointer]
+          - listitem [ref=e44]:
+            - button "切换显示主题" [ref=e45] [cursor=pointer]:  
+    - progressbar [ref=e47]
+  - main [ref=e48]:
+    - generic [ref=e49]:
+      - heading "关于 · About DAWN" [level=1] [ref=e51]:
+        - generic [ref=e52]: 关于
+        - text: · About DAWN
+      - article [ref=e53]:
+        - generic [ref=e54]:
+          - generic [ref=e55]:
+            - generic [ref=e56]: 中文
+            - generic [ref=e57]:
+              - checkbox
+              - generic [ref=e58] [cursor=pointer]
+            - generic [ref=e59]: EN
+          - generic [ref=e61]:
+            - paragraph [ref=e62]:
+              - strong [ref=e63]: DAWN
+              - text: (
+              - strong [ref=e64]: D
+              - text: ata
+              - strong [ref=e65]: A
+              - text: nalytics for
+              - strong [ref=e66]: W
+              - text: ell-being &
+              - strong [ref=e67]: "N"
+              - text: eighborhoods，
+              - strong [ref=e68]: 福祉 · 邻里 · 数据分析
+              - text: ) 研究小组，由华东师范大学社会发展学院人口研究所
+              - link [ref=e69] [cursor=pointer]:
+                - /url: https://faculty.ecnu.edu.cn/_s6/lyz2/main.psp
+                - strong [ref=e70]: 刘贇喆
+              - text: 副教授于
+              - strong [ref=e71]: "2020"
+              - text: 年在
+              - strong [ref=e72]: 英国牛津大学
+              - text: 发起成立。
+            - paragraph [ref=e73]:
+              - text: 研究组致力于依托
+              - strong [ref=e74]: 数智时代计算社会科学新范式
+              - text: ，利用
+              - strong [ref=e75]: 多源数据
+              - text: 深度解析
+              - strong [ref=e76]: 社会空间分异规律
+              - text: ，以期优化城市邻里环境并提升居民福祉。目前，DAWN 已与包括
+              - strong [ref=e77]: 英国牛津大学、帝国理工学院、伦敦大学学院 (UCL)、利兹大学、利物浦大学
+              - text: ，
+              - strong [ref=e78]: 美国南加州大学
+              - text: ，以及中国
+              - strong [ref=e79]: 北京大学、清华大学、武汉大学、华东理工大学
+              - text: 在内的海内外知名高校研究者与团队建立了合作，构筑起跨地域、跨学科的协同研究网络。
+            - paragraph [ref=e80]:
+              - text: 本课题组立足于
+              - strong [ref=e81]: 计算社会科学、人口学、地理学、公共健康与城市规划
+              - text: 等学科交叉前沿，致力于利用
+              - strong [ref=e82]: 多源城市时空数据
+              - text: 与
+              - strong [ref=e83]: 地理人工智能技术
+              - text: （GeoAI），深入解析城市复杂系统中的
+              - strong [ref=e84]: 社会空间分异
+              - text: 与
+              - strong [ref=e85]: 不平等
+              - text: 模式；旨在通过
+              - strong [ref=e86]: 数据驱动
+              - text: 的实证研究，为理解城市社会系统的演化规律与推动可持续发展，提供科学的、
+              - strong [ref=e87]: 以人为本
+              - text: 的
+              - strong [ref=e88]: 循证依据
+              - text: 。
+  - generic [ref=e89] [cursor=pointer]

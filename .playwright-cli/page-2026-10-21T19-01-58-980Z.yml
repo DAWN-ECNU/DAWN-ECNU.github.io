@@ -1,0 +1,87 @@
+- generic [active] [ref=e1]:
+  - banner:
+    - navigation [ref=e6]:
+      - generic [ref=e7]:
+        - link "DAWN 破晓研究组，返回主页" [ref=e8] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e9]:
+            - generic [ref=e10]: DAWN
+            - generic [aria-hidden] [ref=e11]: ·
+            - generic [ref=e12]: 破晓
+        - list [ref=e14]:
+          - listitem [ref=e15]:
+            - link "关于 About" [ref=e16] [cursor=pointer]:
+              - /url: /about/
+              - generic [ref=e17]: 关于
+              - generic [ref=e18]: About
+          - listitem [ref=e19]:
+            - link "成果 Publications" [ref=e20] [cursor=pointer]:
+              - /url: /publications/
+              - generic [ref=e21]: 成果
+              - generic [ref=e22]: Publications
+          - listitem [ref=e23]:
+            - link "项目 Projects" [ref=e24] [cursor=pointer]:
+              - /url: /projects/
+              - generic [ref=e25]: 项目
+              - generic [ref=e26]: Projects
+          - listitem [ref=e27]:
+            - link "数据 Data" [ref=e28] [cursor=pointer]:
+              - /url: /data/
+              - generic [ref=e29]: 数据
+              - generic [ref=e30]: Data
+          - listitem [ref=e31]:
+            - link "教学 Teaching" [ref=e32] [cursor=pointer]:
+              - /url: /teaching/
+              - generic [ref=e33]: 教学
+              - generic [ref=e34]: Teaching
+          - listitem [ref=e35]:
+            - button "查看网站访问统计" [ref=e36] [cursor=pointer]
+          - listitem [ref=e39]:
+            - button "选择背景曲线配色" [ref=e40] [cursor=pointer]
+          - listitem [ref=e47]:
+            - button "切换显示主题" [ref=e48] [cursor=pointer]:  
+    - progressbar [ref=e50]
+  - main:
+    - generic:
+      - generic:
+        - generic: DAWN
+        - generic:
+          - generic:
+            - strong: D
+            - text: ata
+          - generic:
+            - strong: A
+            - text: nalytics
+          - text: for
+          - generic:
+            - strong: W
+            - text: ell-being
+          - text: "&"
+          - generic:
+            - strong: "N"
+            - text: eighborhoods
+      - heading "以数据理解城市、 邻里与福祉" [level=1]
+      - paragraph: 融合多源时空大数据与数智技术，解析城市社会空间分异及其形成机制
+      - group "联系、学术主页与点赞":
+        - link "发送邮件" [ref=e51] [cursor=pointer]:
+          - /url: mailto:yzliu@soci.ecnu.edu.cn
+        - link "Google Scholar" [ref=e53] [cursor=pointer]:
+          - /url: https://scholar.google.com/citations?user=vR-ZpaEAAAAJ
+          - generic [aria-hidden] [ref=e54]: 
+        - link "ORCID" [ref=e55] [cursor=pointer]:
+          - /url: https://orcid.org/0000-0002-7189-3323
+          - generic [aria-hidden] [ref=e56]: 
+        - link "GitHub" [ref=e57] [cursor=pointer]:
+          - /url: https://github.com/ECNUyunzhe
+        - button "本机点赞" [ref=e59] [cursor=pointer]
+        - status:
+          - text: 本机
+          - strong: "0"
+      - paragraph:
+        - generic: 数智社会科学
+        - generic [aria-hidden]: "|"
+        - generic: AI4SS
+        - generic [aria-hidden]: "|"
+        - generic: 多源时空数据分析
+        - generic [aria-hidden]: "|"
+        - generic: 城市社会地理

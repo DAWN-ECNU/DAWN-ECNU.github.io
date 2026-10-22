@@ -1,0 +1,49 @@
+- generic [active] [ref=e1]:
+  - banner:
+    - navigation [ref=e2]:
+      - generic [ref=e3]:
+        - link "DAWN 破晓研究组，返回主页" [ref=e4] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e5]:
+            - generic [ref=e6]: DAWN
+            - generic [aria-hidden] [ref=e7]: ·
+            - generic [ref=e8]: 破晓
+        - button "Toggle navigation" [ref=e9] [cursor=pointer]
+        - text:  
+    - progressbar [ref=e14]
+  - main [ref=e15]:
+    - generic [ref=e16]:
+      - generic [ref=e17]:
+        - heading "教学 · TEACHING" [level=1] [ref=e18]:
+          - generic [ref=e19]: 教学
+          - text: · TEACHING
+        - paragraph [ref=e20]: 课程与课程材料
+      - article [ref=e21]:
+        - generic [ref=e22]:
+          - heading "2026" [level=2] [ref=e23]
+          - generic [ref=e24]:
+            - generic [ref=e27]:
+              - heading [level=3] [ref=e28]:
+                - link "多源城市数据分析与实践 Multi-source Urban Data Analytics and Practice" [ref=e29] [cursor=pointer]:
+                  - /url: /teachings/urban-analytics-msc-26/
+                  - generic [ref=e30]: 多源城市数据分析与实践
+                  - generic [ref=e31]: Multi-source Urban Data Analytics and Practice
+              - generic [ref=e33]:
+                - generic [ref=e34]: Dr. Yunzhe Liu
+                - generic [ref=e36]: "202621742"
+                - generic [ref=e38]: 研究生 · 专业选修
+                - generic [ref=e40]: 2026年 秋
+                - generic [ref=e42]: 法商南楼 402
+            - generic [ref=e46]:
+              - heading [level=3] [ref=e47]:
+                - link "多源数据分析与实践 Multi-source Data Analytics and Practice" [ref=e48] [cursor=pointer]:
+                  - /url: /teachings/urban-analytics-ba-26/
+                  - generic [ref=e49]: 多源数据分析与实践
+                  - generic [ref=e50]: Multi-source Data Analytics and Practice
+              - generic [ref=e52]:
+                - generic [ref=e53]: Dr. Yunzhe Liu
+                - generic [ref=e55]: SOCI235.01
+                - generic [ref=e57]: 本科生 · 专业选修
+                - generic [ref=e59]: 2026年 秋
+                - generic [ref=e61]: 法商北楼 101
+  - generic [ref=e63] [cursor=pointer]

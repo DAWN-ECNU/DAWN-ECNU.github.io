@@ -1,0 +1,111 @@
+- generic [ref=e1]:
+  - banner:
+    - navigation [ref=e6]:
+      - generic [ref=e7]:
+        - link "DAWN 破晓研究组，返回主页" [ref=e8] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e9]:
+            - generic [ref=e10]: DAWN
+            - generic [aria-hidden] [ref=e11]: ·
+            - generic [ref=e12]: 破晓
+        - list [ref=e14]:
+          - listitem [ref=e15]:
+            - link "关于 About" [ref=e181] [cursor=pointer]:
+              - /url: /about/
+              - generic [ref=e17]: 关于
+              - generic [ref=e18]: About
+          - listitem [ref=e19]:
+            - link "成果 Publications" [ref=e340] [cursor=pointer]:
+              - /url: /publications/
+              - generic [ref=e21]: 成果
+              - generic [ref=e22]: Publications
+          - listitem [ref=e23]:
+            - link "项目 Projects (current)" [active] [ref=e341] [cursor=pointer]:
+              - /url: /projects/
+              - generic [ref=e25]: 项目
+              - generic [ref=e26]: Projects
+              - generic [ref=e342]: (current)
+          - listitem [ref=e27]:
+            - link "数据 Data" [ref=e28] [cursor=pointer]:
+              - /url: /data/
+              - generic [ref=e29]: 数据
+              - generic [ref=e30]: Data
+          - listitem [ref=e31]:
+            - link "教学 Teaching" [ref=e32] [cursor=pointer]:
+              - /url: /teaching/
+              - generic [ref=e33]: 教学
+              - generic [ref=e34]: Teaching
+          - listitem [ref=e35]:
+            - button "查看网站访问统计" [ref=e36] [cursor=pointer]
+          - listitem [ref=e39]:
+            - button "选择背景曲线配色" [ref=e40] [cursor=pointer]
+          - listitem [ref=e47]:
+            - button "切换显示主题" [ref=e48] [cursor=pointer]:
+              - generic [ref=e180]:  
+    - progressbar [ref=e50]
+  - main [ref=e343]:
+    - generic [ref=e344]:
+      - heading "项目 · Projects & Directions" [level=1] [ref=e346]:
+        - generic [ref=e347]: 项目
+        - text: · Projects & Directions
+      - article [ref=e348]:
+        - generic [ref=e350]:
+          - generic [ref=e352]:
+            - figure [ref=e353]:
+              - img "project thumbnail" [ref=e355]
+            - generic [ref=e356]:
+              - heading "城市感知" [level=2] [ref=e357]
+              - paragraph [ref=e358]: Urban Perception — 基于街景与社交媒体图像，研究城市物理环境如何影响安全感、美观、压力、步行性等主观感知与评价。
+          - generic [ref=e360]:
+            - figure [ref=e361]:
+              - img "project thumbnail" [ref=e363]
+            - generic [ref=e364]:
+              - heading "城市活力与韧性" [level=2] [ref=e365]
+              - paragraph [ref=e366]: Urban Vitality & Resilience — 研究城市活动在外部冲击下的抵抗、适应与恢复过程，尤其关注不同地区和群体之间的空间差异。
+          - generic [ref=e368]:
+            - figure [ref=e369]:
+              - img "project thumbnail" [ref=e371]
+            - generic [ref=e372]:
+              - heading "GeoAI 与智能社会科学（AI4SS）" [level=2] [ref=e373]
+              - paragraph [ref=e374]: GeoAI & AI for Social Science (AI4SS) — 将 GeoAI、LLM、智能体和人机协同方法应用于社会科学问题，并关注其表现、可靠性与适用边界。
+          - generic [ref=e376]:
+            - figure [ref=e377]:
+              - generic [ref=e378]:
+                - img "project thumbnail"
+            - generic [ref=e379]:
+              - heading "社会空间分异" [level=2] [ref=e380]
+              - paragraph [ref=e381]: Socio-spatial Disparities — 以地理人口特征分类（Geodemographics）为主，结合社会综合指数，研究城市内部多维社会差异、剥夺与不平等。
+          - generic [ref=e383]:
+            - figure [ref=e384]:
+              - img "project thumbnail" [ref=e386]
+            - generic [ref=e387]:
+              - heading "社会流动与城市流动性" [level=2] [ref=e388]
+              - paragraph [ref=e389]: Social Mobility & Urban Mobility — 研究个体生命历程中的社会经济位置变化，以及日常出行、活动链和城市时空行为。
+          - generic [ref=e391]:
+            - figure [ref=e392]:
+              - img "project thumbnail" [ref=e394]
+            - generic [ref=e395]:
+              - heading "数字足迹与社会感知" [level=2] [ref=e396]
+              - paragraph [ref=e397]: Digital Footprints & Social Sensing — 基于社交媒体与平台数据研究公众表达、情绪、语义、信息传播、时空聚集，以及线上与线下社会空间的关系。
+          - generic [ref=e399]:
+            - figure [ref=e400]:
+              - generic [ref=e401]:
+                - img "project thumbnail"
+            - generic [ref=e402]:
+              - heading "环境暴露与公共健康" [level=2] [ref=e403]
+              - paragraph [ref=e404]: Environmental Exposure & Public Health — 研究空气污染、热暴露和极端天气等环境风险对健康的影响，并关注医疗可达性、步行、骑行和健康支持环境。
+          - generic [ref=e406]:
+            - figure [ref=e407]:
+              - generic [ref=e408]:
+                - img "project thumbnail"
+            - generic [ref=e409]:
+              - heading "开放科学与开放数据" [level=2] [ref=e410]
+              - paragraph [ref=e411]: Open Science & Open Data — 推动开放数据、代码、方法和教学资源共享，支持研究复现、资源复用和开放协作。
+          - generic [ref=e413]:
+            - figure [ref=e414]:
+              - generic [ref=e415]:
+                - img "project thumbnail"
+            - generic [ref=e416]:
+              - heading "全球科研人才流动" [level=2] [ref=e417]
+              - paragraph [ref=e418]: Global Research Talent Mobility — 基于 ORCID、履历、机构记录等多源数据，研究科研人才的成长路径、机构迁移、城市流动与全球知识循环。
+  - generic [ref=e105] [cursor=pointer]

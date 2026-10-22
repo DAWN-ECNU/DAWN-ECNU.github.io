@@ -1,0 +1,143 @@
+- generic [ref=e1]:
+  - banner:
+    - navigation [ref=e6]:
+      - generic [ref=e7]:
+        - link "DAWN 破晓研究组，返回主页" [ref=e8] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e9]:
+            - generic [ref=e10]: DAWN
+            - generic [aria-hidden] [ref=e11]: ·
+            - generic [ref=e12]: 破晓
+        - list [ref=e14]:
+          - listitem [ref=e15]:
+            - link "关于 About" [ref=e181] [cursor=pointer]:
+              - /url: /about/
+              - generic [ref=e17]: 关于
+              - generic [ref=e18]: About
+          - listitem [ref=e19]:
+            - link "成果 Publications" [ref=e340] [cursor=pointer]:
+              - /url: /publications/
+              - generic [ref=e21]: 成果
+              - generic [ref=e22]: Publications
+          - listitem [ref=e23]:
+            - link "项目 Projects" [ref=e423] [cursor=pointer]:
+              - /url: /projects/
+              - generic [ref=e25]: 项目
+              - generic [ref=e26]: Projects
+          - listitem [ref=e27]:
+            - link "数据 Data (current)" [active] [ref=e424] [cursor=pointer]:
+              - /url: /data/
+              - generic [ref=e29]: 数据
+              - generic [ref=e30]: Data
+              - generic [ref=e425]: (current)
+          - listitem [ref=e31]:
+            - link "教学 Teaching" [ref=e32] [cursor=pointer]:
+              - /url: /teaching/
+              - generic [ref=e33]: 教学
+              - generic [ref=e34]: Teaching
+          - listitem [ref=e35]:
+            - button "查看网站访问统计" [ref=e36] [cursor=pointer]
+          - listitem [ref=e39]:
+            - button "选择背景曲线配色" [ref=e40] [cursor=pointer]
+          - listitem [ref=e47]:
+            - button "切换显示主题" [ref=e48] [cursor=pointer]:
+              - generic [ref=e180]:  
+    - progressbar [ref=e50]
+  - main [ref=e426]:
+    - generic [ref=e427]:
+      - heading "数据 · DATA" [level=1] [ref=e429]:
+        - generic [ref=e430]: 数据
+        - text: · DATA
+      - article [ref=e431]:
+        - generic [ref=e432]:
+          - paragraph [ref=e433]: 教学与研究数据，按文件类型浏览和下载。
+          - generic [ref=e434]:
+            - region [ref=e435]:
+              - generic [ref=e436]:
+                - generic [ref=e437]:
+                  - generic [ref=e438]:
+                    - heading "CSV · 表格数据" [level=2] [ref=e439]
+                    - text: 9 项数据
+                  - button "展开其余 6 项" [ref=e440] [cursor=pointer]
+                - table "CSV · 表格数据" [ref=e444]:
+                  - rowgroup [ref=e445]:
+                    - row [ref=e446]:
+                      - columnheader "数据名称 / Dataset" [ref=e447]
+                      - columnheader "类型" [ref=e448]
+                      - columnheader "获取链接" [ref=e449]
+                  - rowgroup [ref=e450]:
+                    - row [ref=e451]:
+                      - cell "2020年中国县级常住人口 七普年鉴整理数据；含县级区划代码，不含边界" [ref=e452]:
+                        - strong [ref=e454]: 2020年中国县级常住人口
+                        - generic [ref=e455]: 七普年鉴整理数据；含县级区划代码，不含边界
+                      - cell [ref=e456]:
+                        - code [ref=e457]: .csv
+                      - cell [ref=e458]:
+                        - link "下载 2020年中国县级常住人口" [ref=e459] [cursor=pointer]:
+                          - /url: https://raw.githubusercontent.com/DAWN-ECNU/Example_data/main/china_county_population_2020.csv
+                          - text: Download
+                    - row [ref=e460]:
+                      - cell "2020年三沙市及群岛人口分项 与县级人口表配套的三沙市总数及三个群岛分项；不含边界" [ref=e461]:
+                        - strong [ref=e463]: 2020年三沙市及群岛人口分项
+                        - generic [ref=e464]: 与县级人口表配套的三沙市总数及三个群岛分项；不含边界
+                      - cell [ref=e465]:
+                        - code [ref=e466]: .csv
+                      - cell [ref=e467]:
+                        - link "下载 2020年三沙市及群岛人口分项" [ref=e468] [cursor=pointer]:
+                          - /url: https://raw.githubusercontent.com/DAWN-ECNU/Example_data/main/china_sansha_population_2020.csv
+                          - text: Download
+                    - row [ref=e469]:
+                      - cell "2024年中国新一线城市专利申请数据（须处理） 新一线15城市2024专利数据" [ref=e470]:
+                        - strong [ref=e472]: 2024年中国新一线城市专利申请数据（须处理）
+                        - generic [ref=e473]: 新一线15城市2024专利数据
+                      - cell [ref=e474]:
+                        - code [ref=e475]: .csv
+                      - cell [ref=e476]:
+                        - link "下载 2024年中国新一线城市专利申请数据（须处理）" [ref=e477] [cursor=pointer]:
+                          - /url: https://raw.githubusercontent.com/DAWN-ECNU/Example_data/main/patent_new_tier_2024_raw.csv
+                          - text: Download
+            - region [ref=e478]:
+              - generic [ref=e479]:
+                - generic [ref=e480]:
+                  - generic [ref=e481]:
+                    - heading "GeoJSON · 空间数据" [level=2] [ref=e482]
+                    - text: 10 项数据
+                  - button "展开其余 7 项" [ref=e483] [cursor=pointer]
+                - table "GeoJSON · 空间数据" [ref=e487]:
+                  - rowgroup [ref=e488]:
+                    - row [ref=e489]:
+                      - columnheader "数据名称 / Dataset" [ref=e490]
+                      - columnheader "类型" [ref=e491]
+                      - columnheader "获取链接" [ref=e492]
+                  - rowgroup [ref=e493]:
+                    - row [ref=e494]:
+                      - cell "伦敦绿色基础设施综合需求与供给 GLA LGIF 2026 修正版；15,041 个 350 m 六角网格，综合及十项目标的需求与供给分类；OGL v3" [ref=e495]:
+                        - strong [ref=e497]: 伦敦绿色基础设施综合需求与供给
+                        - generic [ref=e498]: GLA LGIF 2026 修正版；15,041 个 350 m 六角网格，综合及十项目标的需求与供给分类；OGL v3
+                      - cell [ref=e499]:
+                        - code [ref=e500]: .geojson
+                      - cell [ref=e501]:
+                        - link "下载 伦敦绿色基础设施综合需求与供给" [ref=e502] [cursor=pointer]:
+                          - /url: https://raw.githubusercontent.com/DAWN-ECNU/Example_data/main/london_lgif_hex350_scores_2026.geojson
+                          - text: Download
+                    - row [ref=e503]:
+                      - cell "伦敦行政区边界（2018） GLA 提供的 Ordnance Survey Boundary-Line 提取数据；33 个行政区；OGL v3" [ref=e504]:
+                        - strong [ref=e506]: 伦敦行政区边界（2018）
+                        - generic [ref=e507]: GLA 提供的 Ordnance Survey Boundary-Line 提取数据；33 个行政区；OGL v3
+                      - cell [ref=e508]:
+                        - code [ref=e509]: .geojson
+                      - cell [ref=e510]:
+                        - link "下载 伦敦行政区边界（2018）" [ref=e511] [cursor=pointer]:
+                          - /url: https://raw.githubusercontent.com/DAWN-ECNU/Example_data/main/london_boroughs_os_2018.geojson
+                          - text: Download
+                    - row [ref=e512]:
+                      - cell "纽约市Taxi Zone边界 纽约市Taxi Zone边界数据" [ref=e513]:
+                        - strong [ref=e515]: 纽约市Taxi Zone边界
+                        - generic [ref=e516]: 纽约市Taxi Zone边界数据
+                      - cell [ref=e517]:
+                        - code [ref=e518]: .geojson
+                      - cell [ref=e519]:
+                        - link "下载 纽约市Taxi Zone边界" [ref=e520] [cursor=pointer]:
+                          - /url: https://raw.githubusercontent.com/DAWN-ECNU/Example_data/main/nyc_boundary.geojson
+                          - text: Download
+  - generic [ref=e105] [cursor=pointer]

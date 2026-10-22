@@ -1,0 +1,206 @@
+- generic [ref=e1]:
+  - banner:
+    - navigation [ref=e6]:
+      - generic [ref=e7]:
+        - link "DAWN 破晓研究组，返回主页" [ref=e8] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e9]:
+            - generic [ref=e10]: DAWN
+            - generic [aria-hidden] [ref=e11]: ·
+            - generic [ref=e12]: 破晓
+        - list [ref=e14]:
+          - listitem [ref=e15]:
+            - link "关于 About" [ref=e181] [cursor=pointer]:
+              - /url: /about/
+              - generic [ref=e17]: 关于
+              - generic [ref=e18]: About
+          - listitem [ref=e19]:
+            - link "成果 Publications (current)" [active] [ref=e182] [cursor=pointer]:
+              - /url: /publications/
+              - generic [ref=e21]: 成果
+              - generic [ref=e22]: Publications
+              - generic [ref=e183]: (current)
+          - listitem [ref=e23]:
+            - link "项目 Projects" [ref=e24] [cursor=pointer]:
+              - /url: /projects/
+              - generic [ref=e25]: 项目
+              - generic [ref=e26]: Projects
+          - listitem [ref=e27]:
+            - link "数据 Data" [ref=e28] [cursor=pointer]:
+              - /url: /data/
+              - generic [ref=e29]: 数据
+              - generic [ref=e30]: Data
+          - listitem [ref=e31]:
+            - link "教学 Teaching" [ref=e32] [cursor=pointer]:
+              - /url: /teaching/
+              - generic [ref=e33]: 教学
+              - generic [ref=e34]: Teaching
+          - listitem [ref=e35]:
+            - button "查看网站访问统计" [ref=e36] [cursor=pointer]
+          - listitem [ref=e39]:
+            - button "选择背景曲线配色" [ref=e40] [cursor=pointer]
+          - listitem [ref=e47]:
+            - button "切换显示主题" [ref=e48] [cursor=pointer]:
+              - generic [ref=e180]:  
+    - progressbar [ref=e50]
+  - main [ref=e184]:
+    - generic [ref=e185]:
+      - generic [ref=e186]:
+        - heading "成果 · PUBLICATIONS" [level=1] [ref=e187]:
+          - generic [ref=e188]: 成果
+          - text: · PUBLICATIONS
+        - paragraph [ref=e189]: 代表性学术成果
+      - article [ref=e190]:
+        - paragraph [ref=e191]:
+          - textbox "Type to filter" [ref=e192]
+        - generic [ref=e193]:
+          - heading "2026" [level=2] [ref=e194]
+          - list [ref=e195]:
+            - listitem [ref=e196]:
+              - generic [ref=e197]:
+                - generic [ref=e198]: JCR Q1
+                - generic [ref=e200]:
+                  - generic [ref=e201]: "An open framework for assessing urban mobility resilience: evidence from New York City"
+                  - generic [ref=e202]:
+                    - emphasis [ref=e203]: Yunzhe Liu
+                    - text: and Meixu Chen
+                  - generic [ref=e204]:
+                    - emphasis [ref=e205]: npj Urban Sustainability
+                    - text: ", 2026"
+                  - button "DOI" [ref=e207] [cursor=pointer]
+          - heading "2025" [level=2] [ref=e208]
+          - list [ref=e209]:
+            - listitem [ref=e210]:
+              - generic [ref=e211]:
+                - generic [ref=e212]: JCR Q1
+                - generic [ref=e214]:
+                  - generic [ref=e215]: "Coping with the “new normal”: assessing urban vibrancy resilience disparities through socioeconomic deprivation in New York City"
+                  - generic [ref=e216]:
+                    - emphasis [ref=e217]: Yunzhe Liu
+                    - text: and Meixu Chen
+                  - generic [ref=e218]:
+                    - emphasis [ref=e219]: Habitat International
+                    - text: ", 2025"
+                  - generic [ref=e220]:
+                    - button "DOI" [ref=e221] [cursor=pointer]
+                    - button "PDF" [ref=e222] [cursor=pointer]
+          - heading "2024" [level=2] [ref=e223]
+          - list [ref=e224]:
+            - listitem [ref=e225]:
+              - generic [ref=e226]:
+                - generic [ref=e227]: JCR Q1
+                - generic [ref=e229]:
+                  - generic [ref=e230]: "Crowdsourcing Geospatial Data for Earth and Human Observations: A Review"
+                  - generic [ref=e231]: Xiao Huang, Siqin Wang, Di Yang, and 15 more authors
+                  - generic [ref=e232]:
+                    - emphasis [ref=e233]: Journal of Remote Sensing
+                    - text: ", 2024"
+                  - button "DOI" [ref=e235] [cursor=pointer]
+            - listitem [ref=e236]:
+              - generic [ref=e237]:
+                - generic [ref=e238]: JCR Q1
+                - generic [ref=e240]:
+                  - generic [ref=e241]: Impact of net zero policy scenarios on air pollution inequalities in England and Wales
+                  - generic [ref=e242]:
+                    - emphasis [ref=e243]: Yunzhe Liu
+                    - text: ", David Dajnak, Nosha Assareh, and 10 more authors"
+                  - generic [ref=e244]:
+                    - emphasis [ref=e245]: Environment International
+                    - text: ", 2024"
+                  - button "DOI" [ref=e247] [cursor=pointer]
+            - listitem [ref=e248]:
+              - generic [ref=e249]:
+                - generic [ref=e250]: JCR Q1
+                - generic [ref=e252]:
+                  - generic [ref=e253]: "Vivid London: Assessing the resilience of urban vibrancy during the COVID-19 pandemic using social media data"
+                  - generic [ref=e254]:
+                    - text: Meixu Chen,
+                    - emphasis [ref=e255]: Yunzhe Liu
+                    - text: ", Zi Ye, and 2 more authors"
+                  - generic [ref=e256]:
+                    - emphasis [ref=e257]: Sustainable Cities and Society
+                    - text: ", 2024"
+                  - button "DOI" [ref=e259] [cursor=pointer]
+          - heading "2023" [level=2] [ref=e260]
+          - list [ref=e261]:
+            - listitem [ref=e262]:
+              - generic [ref=e263]:
+                - generic [ref=e264]: JCR Q1
+                - generic [ref=e266]:
+                  - generic [ref=e267]: An interpretable machine learning framework for measuring urban perceptions from panoramic street view images
+                  - generic [ref=e268]:
+                    - emphasis [ref=e269]: Yunzhe Liu
+                    - text: ", Meixu Chen, Meihui Wang, and 4 more authors"
+                  - generic [ref=e270]:
+                    - emphasis [ref=e271]: iScience
+                    - text: ", 2023"
+          - heading "2022" [level=2] [ref=e272]
+          - list [ref=e273]:
+            - listitem [ref=e274]:
+              - generic [ref=e275]:
+                - generic [ref=e276]: JCR Q1
+                - generic [ref=e278]:
+                  - generic [ref=e279]: Assessing the value of user-generated images of urban surroundings for house price estimation
+                  - generic [ref=e280]:
+                    - text: Meixu Chen,
+                    - emphasis [ref=e281]: Yunzhe Liu
+                    - text: ", Dani Arribas-Bel, and 1 more author"
+                  - generic [ref=e282]:
+                    - emphasis [ref=e283]: Landscape and Urban Planning
+                    - text: ", 2022"
+                  - button "DOI" [ref=e285] [cursor=pointer]
+          - heading "2021" [level=2] [ref=e286]
+          - list [ref=e287]:
+            - listitem [ref=e288]:
+              - generic [ref=e289]:
+                - generic [ref=e290]: JCR Q1
+                - generic [ref=e292]:
+                  - generic [ref=e293]: "Identifying and understanding road-constrained areas of interest (AOIs) through spatiotemporal taxi GPS data: A case study in New York City"
+                  - generic [ref=e294]:
+                    - emphasis [ref=e295]: Yunzhe Liu
+                    - text: ", Alex Singleton, Daniel Arribas-Bel, and 1 more author"
+                  - generic [ref=e296]:
+                    - emphasis [ref=e297]: Computers, Environment and Urban Systems
+                    - text: ", 2021"
+                  - button "DOI" [ref=e299] [cursor=pointer]
+          - heading "2020" [level=2] [ref=e300]
+          - list [ref=e301]:
+            - listitem [ref=e302]:
+              - generic [ref=e303]:
+                - generic [ref=e304]: JCR Q1
+                - generic [ref=e306]:
+                  - generic [ref=e307]: Understanding public transit patterns with open geodemographics to facilitate public transport planning
+                  - generic [ref=e308]:
+                    - emphasis [ref=e309]: Yunzhe Liu
+                    - text: and Tao Cheng
+                  - generic [ref=e310]:
+                    - emphasis [ref=e311]: "Transportmetrica A: Transport Science"
+                    - text: ", 2020"
+                  - button "DOI" [ref=e313] [cursor=pointer]
+            - listitem [ref=e314]:
+              - generic [ref=e315]:
+                - generic [ref=e316]: JCR Q1
+                - generic [ref=e318]:
+                  - generic [ref=e319]: "Considering context and dynamics: A classification of transit-orientated development for New York City"
+                  - generic [ref=e320]:
+                    - emphasis [ref=e321]: Yunzhe Liu
+                    - text: ", Alex Singleton, and Daniel Arribas-Bel"
+                  - generic [ref=e322]:
+                    - emphasis [ref=e323]: Journal of Transport Geography
+                    - text: ", 2020"
+                  - button "DOI" [ref=e325] [cursor=pointer]
+          - heading "2019" [level=2] [ref=e326]
+          - list [ref=e327]:
+            - listitem [ref=e328]:
+              - generic [ref=e329]:
+                - generic [ref=e330]: JCR Q1
+                - generic [ref=e332]:
+                  - generic [ref=e333]: A Principal Component Analysis (PCA)-based framework for automated variable selection in geodemographic classification
+                  - generic [ref=e334]:
+                    - emphasis [ref=e335]: Yunzhe Liu
+                    - text: ", Alex Singleton, and Daniel Arribas-Bel"
+                  - generic [ref=e336]:
+                    - emphasis [ref=e337]: Geo-spatial Information Science
+                    - text: ", 2019"
+                  - button "DOI" [ref=e339] [cursor=pointer]
+  - generic [ref=e105] [cursor=pointer]

@@ -1,0 +1,49 @@
+- generic [active] [ref=f1e1]:
+  - banner:
+    - navigation [ref=f1e2]:
+      - generic [ref=f1e3]:
+        - link "DAWN 破晓研究组，返回主页" [ref=f1e4] [cursor=pointer]:
+          - /url: /
+          - generic [ref=f1e5]:
+            - generic [ref=f1e6]: DAWN
+            - generic [aria-hidden] [ref=f1e7]: ·
+            - generic [ref=f1e8]: 破晓
+        - button "Toggle navigation" [ref=f1e9] [cursor=pointer]
+        - text:  
+    - progressbar [ref=f1e14]
+  - main [ref=f1e15]:
+    - generic [ref=f1e16]:
+      - generic [ref=f1e17]:
+        - heading "教学 · TEACHING" [level=1] [ref=f1e18]:
+          - generic [ref=f1e19]: 教学
+          - text: · TEACHING
+        - paragraph [ref=f1e20]: 课程与课程材料
+      - article [ref=f1e21]:
+        - generic [ref=f1e22]:
+          - heading "2026" [level=2] [ref=f1e23]
+          - generic [ref=f1e24]:
+            - generic [ref=f1e27]:
+              - heading [level=3] [ref=f1e28]:
+                - link "多源城市数据分析与实践 Multi-source Urban Data Analytics and Practice" [ref=f1e29] [cursor=pointer]:
+                  - /url: /teachings/urban-analytics-msc-26/
+                  - generic [ref=f1e30]: 多源城市数据分析与实践
+                  - generic [ref=f1e31]: Multi-source Urban Data Analytics and Practice
+              - generic [ref=f1e33]:
+                - generic [ref=f1e34]: Dr. Yunzhe Liu
+                - generic [ref=f1e36]: "202621742"
+                - generic [ref=f1e38]: 研究生 · 专业选修
+                - generic [ref=f1e40]: 2026年 秋
+                - generic [ref=f1e42]: 法商南楼 402
+            - generic [ref=f1e46]:
+              - heading [level=3] [ref=f1e47]:
+                - link "多源数据分析与实践 Multi-source Data Analytics and Practice" [ref=f1e48] [cursor=pointer]:
+                  - /url: /teachings/urban-analytics-ba-26/
+                  - generic [ref=f1e49]: 多源数据分析与实践
+                  - generic [ref=f1e50]: Multi-source Data Analytics and Practice
+              - generic [ref=f1e52]:
+                - generic [ref=f1e53]: Dr. Yunzhe Liu
+                - generic [ref=f1e55]: SOCI235.01
+                - generic [ref=f1e57]: 本科生 · 专业选修
+                - generic [ref=f1e59]: 2026年 秋
+                - generic [ref=f1e61]: 法商北楼 101
+  - generic [ref=f1e63] [cursor=pointer]
