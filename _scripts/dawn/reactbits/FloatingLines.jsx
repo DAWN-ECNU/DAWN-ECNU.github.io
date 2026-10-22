@@ -57,6 +57,7 @@ uniform vec2 parallaxOffset;
 
 uniform vec3 lineGradient[8];
 uniform int lineGradientCount;
+uniform float lineBrightness;
 uniform vec3 backgroundColor;
 uniform bool lightMode;
 uniform int lightRenderMode;
@@ -102,7 +103,7 @@ vec3 getLineColor(float t, vec3 baseColor) {
     gradientColor = mix(c1, c2, f);
   }
   
-  return gradientColor * 0.5;
+  return gradientColor * 0.5 * lineBrightness;
 }
 
 float wave(vec2 uv, float offset, vec2 screenUv, vec2 mouseUv, bool shouldBend, out float signedDistance) {
@@ -322,12 +323,14 @@ export default function FloatingLines({
   backgroundColor = '#000000',
   lightMode = false,
   lightRenderMode = 0,
+  lineBrightness = 1,
   instantColorChange = false,
   colorTransitionDuration = 1.05
 }) {
   const containerRef = useRef(null);
   const uniformsRef = useRef(null);
   const gradientTweenRef = useRef(null);
+  const brightnessTweenRef = useRef(null);
   const settingsRef = useRef({ interactive, parallax, parallaxStrength, mouseDamping });
   settingsRef.current = { interactive, parallax, parallaxStrength, mouseDamping };
   const targetMouseRef = useRef(new Vector2(-1000, -1000));
@@ -425,6 +428,7 @@ export default function FloatingLines({
         value: Array.from({ length: MAX_GRADIENT_STOPS }, () => new Vector3(1, 1, 1))
       },
       lineGradientCount: { value: 0 },
+      lineBrightness: { value: lineBrightness },
       backgroundColor: { value: hexToVec3(backgroundColor) },
       lightMode: { value: lightMode },
       lightRenderMode: { value: lightRenderMode }
@@ -453,10 +457,18 @@ export default function FloatingLines({
 
     const clock = new Clock();
 
+    let canvasWidthCss = 0;
+    let canvasHeightCss = 0;
     const setSize = () => {
       if (!active) return;
       const width = container.clientWidth || 1;
       const height = container.clientHeight || 1;
+
+      // A ResizeObserver notification need not mean the canvas changed size.
+      // Reallocating the WebGL drawing buffer during mobile scroll can flash.
+      if (width === canvasWidthCss && height === canvasHeightCss) return;
+      canvasWidthCss = width;
+      canvasHeightCss = height;
 
       renderer.setSize(width, height, false);
 
@@ -531,6 +543,7 @@ export default function FloatingLines({
       active = false;
       uniformsRef.current = null;
       gradientTweenRef.current?.kill();
+      brightnessTweenRef.current?.kill();
 
       cancelAnimationFrame(raf);
 
@@ -605,6 +618,22 @@ export default function FloatingLines({
     });
     return () => gradientTweenRef.current?.kill();
   }, [linesGradient, instantColorChange, colorTransitionDuration]);
+
+  useEffect(() => {
+    const brightness = uniformsRef.current?.lineBrightness;
+    if (!brightness) return;
+    brightnessTweenRef.current?.kill();
+    if (instantColorChange) {
+      brightness.value = lineBrightness;
+      return;
+    }
+    brightnessTweenRef.current = gsap.to(brightness, {
+      value: lineBrightness,
+      duration: 1.2,
+      ease: 'sine.inOut'
+    });
+    return () => brightnessTweenRef.current?.kill();
+  }, [lineBrightness, instantColorChange]);
 
   return (
     <div
