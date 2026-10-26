@@ -9130,6 +9130,63 @@ body.motion-off .wk1-section-content [data-cover-shine-title] { animation:none !
   .wk1-section-content .slide-kicker { color:CanvasText !important; }
 }
 </style>
+<style id="classroom-edge-navigation-v1">
+/* Auto-hide the page dock at the right edge without removing its hit area. */
+.slide-nav {
+  right:0; gap:6px; justify-items:center; padding:18px 16px 18px 28px;
+  border-radius:22px 0 0 22px; opacity:0; background:transparent;
+  transform:translate(12px,-50%);
+  transition:opacity 360ms ease,transform 480ms cubic-bezier(.22,1,.36,1),background 360ms ease,box-shadow 360ms ease;
+}
+.slide-nav:hover,.slide-nav:focus-within {
+  opacity:1; transform:translate(0,-50%);
+  background:rgba(9,22,31,.70); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
+  box-shadow:-12px 0 34px rgba(0,0,0,.12);
+}
+html[data-theme="light"] .slide-nav:hover,html[data-theme="light"] .slide-nav:focus-within {
+  background:rgba(248,251,253,.87); box-shadow:-12px 0 34px rgba(21,45,58,.10);
+}
+.slide-nav button,.slide-nav button.active { position:relative; width:32px; background:transparent; }
+.slide-nav button::before {
+  content:""; position:absolute; top:0; bottom:0; left:50%; width:7px; border-radius:999px;
+  background:rgba(211,225,234,.48); transform:translateX(-50%);
+  transition:width 350ms cubic-bezier(.22,1,.36,1),background 350ms ease;
+}
+html[data-theme="light"] .slide-nav button::before { background:rgba(42,71,87,.38); }
+.slide-nav button.active::before { background:linear-gradient(180deg,var(--accent),var(--accent-2)); }
+.slide-nav button:hover::before,.slide-nav button:focus-visible::before { width:11px; }
+html[data-theme="light"] .slide-nav button:focus-visible { outline-color:#315777; }
+@media (hover:none) { .slide-nav { opacity:.88; transform:translate(0,-50%); } }
+@media (prefers-reduced-motion:reduce) { .slide-nav,.slide-nav button::before { transition:none !important; } }
+html[data-motion="off"] .slide-nav,html[data-motion="off"] .slide-nav button::before,body.motion-off .slide-nav,body.motion-off .slide-nav button::before { transition:none !important; }
+</style>
+<style id="wk1-chrome-alignment-v1">
+/* Week 1 chrome alignment, 2026-10-26.
+   Use the Week 2-6 outline geometry and Week 6 cover study-line colour.
+   Cover/closing, section portals and the day/night switch already share
+   their actual implementation with those decks; keep one owner for each. */
+#s-outline .outline-layout {
+  inset:170px calc(var(--stage-edge-x,112px) + 60px);
+  width:auto;
+  height:auto;
+  grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);
+  gap:100px;
+  align-items:center;
+  align-content:center;
+}
+#s-outline .outline-sidebar {
+  width:100%;
+  max-width:640px;
+  margin:0;
+  padding:0;
+  justify-self:start;
+  align-self:center;
+}
+#s1 .cover-lesson-focus {
+  color:var(--ink-soft);
+  -webkit-text-fill-color:currentColor;
+}
+</style>
 </head>
 <body>
   <div class="ambient-field" aria-hidden="true"></div>
@@ -9165,7 +9222,7 @@ body.motion-off .wk1-section-content [data-cover-shine-title] { animation:none !
       <!-- === SLIDE 1: COVER === -->
       <section class="slide active visible" id="s1" data-key="s1" data-title="课程导入首页" data-base="#050913" data-accent="#78a9ff" data-accent-2="#65f0d0">
         <div class="slide-kicker">多源数据分析与实践 · Week 1</div>
-        <div class="slide-number">1 / 29</div>
+        <div class="slide-number">1 / 33</div>
         <canvas class="gradient-waves-canvas cover-mode-canvas" id="gradientWavesCanvas" aria-hidden="true"></canvas>
         <canvas class="gradient-waves-canvas web-threads-canvas cover-mode-canvas" id="webThreadsCanvas" aria-hidden="true"></canvas>
         <div class="slide-content cover-grid">
@@ -9188,7 +9245,7 @@ body.motion-off .wk1-section-content [data-cover-shine-title] { animation:none !
         <canvas class="gradient-waves-canvas cover-mode-canvas" id="outlineGradientWavesCanvas" aria-hidden="true"></canvas>
         <canvas class="gradient-waves-canvas web-threads-canvas cover-mode-canvas" id="outlineShardsCanvas" aria-hidden="true"></canvas>
         <div class="slide-kicker">目录</div>
-        <div class="slide-number">2 / 29</div>
+        <div class="slide-number">2 / 33</div>
         <div class="slide-content outline-layout">
           <div class="outline-hero editable-block reveal" data-block-role="outline-hero">
             <div class="outline-lens" aria-hidden="true">
@@ -9263,7 +9320,7 @@ body.motion-off .wk1-section-content [data-cover-shine-title] { animation:none !
       <!-- === SLIDE 3: EDUCATION === -->
       <!-- === PERSONAL PROFILE OVERVIEW === -->
       <section class="slide wk2-section-transition wk2-portal-transition is-paradigm wk1-section-1" id="s10-section-transition" data-key="s10-section-transition" data-title="1.0 个人简介" data-base="#100f26" data-accent="#9b7cff" data-accent-2="#43bfd2">
-  <div class="slide-kicker">1.0 个人简介</div><div class="slide-number">-- / --</div>
+  <div class="slide-kicker">1.0 个人简介</div><div class="slide-number">3 / 33</div>
 
   <div class="wk2-portal-field" aria-hidden="true">
     <div class="wk2-portal-glow is-primary"></div>
@@ -9308,7 +9365,7 @@ body.motion-off .wk1-section-content [data-cover-shine-title] { animation:none !
 
 <section class="slide wk1-section-content wk1-section-1 profile-slide" id="s2-profile" data-key="s2-profile" data-title="个人简历" data-base="#100f26" data-accent="#9b7cff" data-accent-2="#43bfd2">
         <div class="slide-kicker">1.0 个人简介</div>
-        <div class="slide-number">3 / 31</div>
+        <div class="slide-number">4 / 33</div>
         <div class="slide-content profile-intro-layout">
           <header class="profile-intro-heading editable-block reveal" data-block-role="profile-intro-heading-v1">
             <p class="profile-intro-eyebrow">PROFILE</p>
@@ -9365,7 +9422,7 @@ SOFTWARE.
 
 <section class="slide wk1-section-content wk1-section-1 profile-slide" id="s2" data-key="s2" data-title="教育经历" data-base="#100f26" data-accent="#9b7cff" data-accent-2="#43bfd2">
         <div class="slide-kicker">1.0 个人简介</div>
-        <div class="slide-number">3 / 29</div>
+        <div class="slide-number">5 / 33</div>
         <div class="slide-content profile-layout education-layout">
           <div class="profile-heading-row editable-block reveal" data-block-role="s2-education-heading">
             <div>
@@ -9423,7 +9480,7 @@ SOFTWARE.
       <!-- === SLIDE 4: CAREER === -->
       <section class="slide wk1-section-content wk1-section-1 profile-slide" id="s2-work" data-key="s2-work" data-title="工作经历" data-base="#100f26" data-accent="#9b7cff" data-accent-2="#43bfd2">
         <div class="slide-kicker">1.0 个人简介</div>
-        <div class="slide-number">4 / 29</div>
+        <div class="slide-number">6 / 33</div>
         <div class="slide-content profile-layout career-layout">
           <div class="profile-heading-row editable-block reveal" data-block-role="s2-work-heading-flat-v2">
             <div>
@@ -9497,7 +9554,7 @@ SOFTWARE.
       <!-- === SLIDE 5: RESEARCH DIRECTIONS === -->
       <section class="slide wk1-section-content wk1-section-1 profile-slide" id="s2-research" data-key="s2-research" data-title="研究方向" data-base="#100f26" data-accent="#9b7cff" data-accent-2="#43bfd2">
         <div class="slide-kicker">1.0 个人简介</div>
-        <div class="slide-number">5 / 29</div>
+        <div class="slide-number">7 / 33</div>
         <div class="slide-content profile-layout research-layout">
           <div class="profile-heading-row research-heading-row editable-block reveal" data-block-role="s2-research-heading-compact-v2">
             <div>
@@ -9539,7 +9596,7 @@ SOFTWARE.
       <!-- === SLIDE 6: PROFILE-TO-COURSE TRANSITION === -->
       <section class="slide wk1-section-content wk1-section-1 transition-slide" id="s2-transition" data-key="s2-transition" data-title="新老师与新课程" data-base="#100f26" data-accent="#9b7cff" data-accent-2="#43bfd2">
         <div class="slide-kicker">1.0 个人简介</div>
-        <div class="slide-number">6 / 29</div>
+        <div class="slide-number">8 / 33</div>
         <div class="slide-content course-transition-layout">
           <div class="course-transition-head">
             <div class="editable-block reveal" data-block-role="s2-transition-heading-v1">
@@ -9620,7 +9677,7 @@ SOFTWARE.
       <!-- Course title and PBL teaching approach verified against the instructor's
            ECNU syllabus PDF, page 1. Cohort schedules and section codes are instructor-supplied. -->
       <section class="slide wk2-section-transition wk2-portal-transition is-rstudio wk1-section-2" id="s20-section-transition" data-key="s20-section-transition" data-title="2.0 课程简介" data-base="#071827" data-accent="#4e97ff" data-accent-2="#2f8eae">
-  <div class="slide-kicker">2.0 课程简介</div><div class="slide-number">-- / --</div>
+  <div class="slide-kicker">2.0 课程简介</div><div class="slide-number">9 / 33</div>
 
   <div class="wk2-portal-field" aria-hidden="true">
     <div class="wk2-portal-glow is-primary"></div>
@@ -9665,7 +9722,7 @@ SOFTWARE.
 
 <section class="slide wk1-section-content wk1-section-2 course-overview-slide" id="s3-course-intro" data-key="s3-course-intro" data-title="课程简介" data-base="#071827" data-accent="#4e97ff" data-accent-2="#2f8eae">
         <div class="slide-kicker">2.0 课程简介</div>
-        <div class="slide-number">7 / 29</div>
+        <div class="slide-number">10 / 33</div>
         <div class="slide-content course-overview-layout">
           <header class="course-overview-heading editable-block reveal" data-block-role="course-intro-heading-v1">
             <p class="profile-eyebrow editable" data-role="course-intro-title-en-v2">Multi-source Data Analytics and Practice</p>
@@ -9770,7 +9827,7 @@ SOFTWARE.
       <!-- === CLASSROOM AGREEMENTS: AFTER THE COURSE OVERVIEW === -->
       <section class="slide wk1-section-content wk1-section-2 course-overview-slide etiquette-slide" id="s4" data-key="s4" data-title="注意事项与公约" data-base="#071827" data-accent="#4e97ff" data-accent-2="#2f8eae">
         <div class="slide-kicker">2.0 课程简介</div>
-        <div class="slide-number">8 / 29</div>
+        <div class="slide-number">11 / 33</div>
         <div class="slide-content course-overview-layout etiquette-layout">
           <header class="course-overview-heading editable-block reveal" data-block-role="etiquette-heading-v1">
             <p class="profile-eyebrow editable" data-role="etiquette-title-en-v1">Class Etiquette</p>
@@ -9828,7 +9885,7 @@ SOFTWARE.
            Assessment formats are instructor-supplied; no week or chapter boundary is inferred. -->
       <section class="slide wk1-section-content wk1-section-2 course-overview-slide curriculum-overview-slide" id="s5" data-key="s5" data-title="章节概述" data-base="#071827" data-accent="#4e97ff" data-accent-2="#2f8eae">
         <div class="slide-kicker">2.0 课程简介</div>
-        <div class="slide-number">9 / 29</div>
+        <div class="slide-number">12 / 33</div>
         <div class="slide-content course-overview-layout">
           <header class="course-overview-heading editable-block reveal" data-block-role="curriculum-heading-v1">
             <p class="profile-eyebrow editable" data-role="curriculum-title-en-v1">Course Structure</p>
@@ -9951,7 +10008,7 @@ SOFTWARE.
 
       <section class="slide wk1-section-content wk1-section-2 course-overview-slide curriculum-overview-slide curriculum-foundation" id="s5-foundations" data-key="s5-foundations" data-title="基础章节" data-base="#071827" data-accent="#4e97ff" data-accent-2="#2f8eae">
         <div class="slide-kicker">2.0 课程简介</div>
-        <div class="slide-number">10 / 29</div>
+        <div class="slide-number">13 / 33</div>
         <div class="slide-content course-overview-layout">
           <header class="course-overview-heading editable-block reveal" data-block-role="curriculum-foundation-page-heading-v2">
             <p class="profile-eyebrow editable" data-role="curriculum-foundation-page-en-v2">Foundations</p>
@@ -10028,7 +10085,7 @@ SOFTWARE.
 
       <section class="slide wk1-section-content wk1-section-2 course-overview-slide curriculum-overview-slide curriculum-projects" id="s5-projects" data-key="s5-projects" data-title="专题章节" data-base="#071827" data-accent="#4e97ff" data-accent-2="#2f8eae">
         <div class="slide-kicker">2.0 课程简介</div>
-        <div class="slide-number">11 / 29</div>
+        <div class="slide-number">14 / 33</div>
         <div class="slide-content course-overview-layout">
           <header class="course-overview-heading editable-block reveal" data-block-role="curriculum-projects-page-heading-v2">
             <p class="profile-eyebrow editable" data-role="curriculum-projects-page-en-v2">Project-based Studies</p>
@@ -10128,7 +10185,7 @@ SOFTWARE.
 
       <section class="slide wk1-section-content wk1-section-2" id="s6" data-key="s6" data-title="在线资源平台使用" data-base="#071827" data-accent="#4e97ff" data-accent-2="#2f8eae" data-platform-source="live" data-platform-loading="true" data-platform-interacting="false">
         <div class="slide-kicker">2.0 课程简介</div>
-        <div class="slide-number">12 / 29</div>
+        <div class="slide-number">15 / 33</div>
         <div class="slide-content platform-guide">
           <div class="platform-guide-heading">
             <div class="editable-block" data-block-role="platform-guide-heading-v1">
@@ -10227,7 +10284,7 @@ SOFTWARE.
 
 <section class="slide wk1-section-content wk1-section-2" id="s6-chapter" data-key="s6-chapter" data-title="结构与学习方式" data-base="#071827" data-accent="#4e97ff" data-accent-2="#2f8eae">
         <div class="slide-kicker">2.0 课程简介</div>
-        <div class="slide-number">13 / 29</div>
+        <div class="slide-number">16 / 33</div>
         <div class="slide-content chapter-guide-content">
           <div class="chapter-guide-heading">
             <div class="editable-block" data-block-role="chapter-guide-heading-v2">
@@ -10284,7 +10341,7 @@ SOFTWARE.
 
 <section class="slide wk1-section-content wk1-section-2 wk1-assessment wk1-ai-reflection" id="s7-ai-reflection" data-key="s7-ai-reflection" data-title="AI 时代，学习什么？" data-base="#071827" data-accent="#4e97ff" data-accent-2="#2f8eae">
         <div class="slide-kicker">2.0 课程简介</div>
-        <div class="slide-number">14 / 29</div>
+        <div class="slide-number">20 / 33</div>
         <div class="slide-content assessment-page-content">
           <div class="assessment-heading editable-block" data-block-role="ai-reflection-heading-v1">
             <h2 class="editable assessment-page-title" data-role="ai-reflection-title-v1" data-cover-shine-title>AI 时代，学习什么？</h2>
@@ -10357,7 +10414,7 @@ SOFTWARE.
       </section>
 
       <section class="slide wk2-section-transition wk2-portal-transition is-project wk1-section-3" id="s8-transition" data-key="s8-transition" data-title="3.0 多源时空数据导论" data-base="#081b15" data-accent="#46cf91" data-accent-2="#6da973">
-  <div class="slide-kicker">3.0 多源时空数据导论</div><div class="slide-number">-- / --</div>
+  <div class="slide-kicker">3.0 多源时空数据导论</div><div class="slide-number">21 / 33</div>
 
   <div class="wk2-portal-field" aria-hidden="true">
     <div class="wk2-portal-glow is-primary"></div>
@@ -10402,7 +10459,7 @@ SOFTWARE.
 
 <section class="slide wk1-section-content wk1-section-3 wk1-assessment wk1-data-intro" id="s8" data-di-state="compound" data-di-title-ready="false" data-di-has-open="false" data-key="s8" data-title="多源时空数据" data-base="#081b15" data-accent="#46cf91" data-accent-2="#6da973">
         <div class="slide-kicker">3.0 多源时空数据导论</div>
-        <div class="slide-number">16 / 29</div>
+        <div class="slide-number">22 / 33</div>
         <div class="slide-content assessment-page-content di-page-content">
           <div class="assessment-heading editable-block" data-block-role="data-intro-heading-v1" aria-hidden="true" inert>
             <h2 class="editable assessment-page-title" data-role="data-intro-title-v1" data-cover-shine-title>多源时空数据</h2>
@@ -10515,7 +10572,7 @@ SOFTWARE.
 
       <section class="slide wk1-section-content wk1-section-3 wk1-assessment wk1-census" id="s8-census" data-key="s8-census" data-title="人口普查数据" data-base="#081b15" data-accent="#46cf91" data-accent-2="#6da973" data-census-dictionary-date="2026-09-10">
         <div class="slide-kicker">3.0 多源时空数据导论</div>
-        <div class="slide-number">17 / 29</div>
+        <div class="slide-number">23 / 33</div>
         <div class="slide-content assessment-page-content census-page-content">
           <div class="assessment-heading census-heading editable-block" data-block-role="census-heading-v1">
             <div>
@@ -10670,7 +10727,7 @@ SOFTWARE.
 
       <section class="slide wk1-section-content wk1-section-3 wk1-assessment wk1-census wk1-census-research" id="s8-census-research" data-key="s8-census-research" data-title="人口普查数据的研究应用" data-base="#081b15" data-accent="#46cf91" data-accent-2="#6da973">
         <div class="slide-kicker">3.0 多源时空数据导论</div>
-        <div class="slide-number">18 / 29</div>
+        <div class="slide-number">24 / 33</div>
         <div class="slide-content assessment-page-content cr-page-content">
           <div class="assessment-heading census-heading editable-block" data-block-role="census-research-heading-v1">
             <div><h2 class="editable assessment-page-title" data-role="census-research-title-v1" data-cover-shine-title>人口普查数据的研究应用</h2><p class="editable assessment-page-english" data-role="census-research-english-v1">From Census Tables to Research Questions</p></div>
@@ -10697,7 +10754,7 @@ SOFTWARE.
 
       <section class="slide wk1-section-content wk1-section-3 wk1-assessment wk1-census wk1-social" id="s8-social" data-key="s8-social" data-title="社交媒体数据" data-base="#081b15" data-accent="#46cf91" data-accent-2="#6da973">
         <div class="slide-kicker">3.0 多源时空数据导论</div>
-        <div class="slide-number">19 / 29</div>
+        <div class="slide-number">25 / 33</div>
         <div class="slide-content assessment-page-content sm-page-content">
           <div class="assessment-heading census-heading editable-block" data-block-role="social-heading-v1">
             <div><h2 class="editable assessment-page-title" data-role="social-title-v1" data-cover-shine-title>社交媒体数据</h2><p class="editable assessment-page-english" data-role="social-english-v1">Social Media Data</p></div>
@@ -10754,7 +10811,7 @@ SOFTWARE.
       
       <section class="slide wk1-section-content wk1-section-3 wk1-assessment wk1-census wk1-social-research" id="s8-social-research" data-key="s8-social-research" data-title="社交媒体数据的研究应用" data-base="#081b15" data-accent="#46cf91" data-accent-2="#6da973">
         <div class="slide-kicker">3.0 多源时空数据导论</div>
-        <div class="slide-number">20 / 29</div>
+        <div class="slide-number">26 / 33</div>
         <div class="slide-content assessment-page-content sr-page-content">
           <div class="assessment-heading census-heading editable-block" data-block-role="social-research-heading-v1">
             <div><h2 class="editable assessment-page-title" data-role="social-research-title-v1" data-cover-shine-title>社交媒体数据的研究应用</h2><p class="editable assessment-page-english" data-role="social-research-english-v1">From Social Media Traces to Research Questions</p></div>
@@ -10782,7 +10839,7 @@ SOFTWARE.
 
       <section class="slide wk1-section-content wk1-section-3 wk1-assessment wk1-census wk1-poi" id="s8-poi" data-key="s8-poi" data-title="兴趣点数据" data-base="#081b15" data-accent="#46cf91" data-accent-2="#6da973">
         <div class="slide-kicker">3.0 多源时空数据导论</div>
-        <div class="slide-number">21 / 29</div>
+        <div class="slide-number">27 / 33</div>
         <div class="slide-content assessment-page-content poi-page-content">
           <div class="assessment-heading census-heading editable-block" data-block-role="poi-heading-v1">
             <div><h2 class="editable assessment-page-title" data-role="poi-title-v1" data-cover-shine-title>兴趣点数据（POI）</h2><p class="editable assessment-page-english" data-role="poi-english-v1">Point of Interest Data</p></div>
@@ -10854,7 +10911,7 @@ SOFTWARE.
       
       <section class="slide wk1-section-content wk1-section-3 wk1-assessment wk1-census wk1-poi-research" id="s8-poi-research" data-key="s8-poi-research" data-title="兴趣点数据的研究应用" data-base="#081b15" data-accent="#46cf91" data-accent-2="#6da973">
         <div class="slide-kicker">3.0 多源时空数据导论</div>
-        <div class="slide-number">22 / 29</div>
+        <div class="slide-number">28 / 33</div>
         <div class="slide-content assessment-page-content pir-page-content">
           <div class="assessment-heading census-heading editable-block" data-block-role="poi-research-heading-v1">
             <div><h2 class="editable assessment-page-title" data-role="poi-research-title-v1" data-cover-shine-title>兴趣点数据的研究应用</h2><p class="editable assessment-page-english" data-role="poi-research-english-v1">From Places and Reviews to Research Questions</p></div>
@@ -10882,7 +10939,7 @@ SOFTWARE.
 
       <section class="slide wk1-section-content wk1-section-3 wk1-assessment wk1-census wk1-mobility" id="s8-mobility" data-key="s8-mobility" data-title="人类移动性数据" data-base="#081b15" data-accent="#46cf91" data-accent-2="#6da973">
         <div class="slide-kicker">3.0 多源时空数据导论</div>
-        <div class="slide-number">23 / 29</div>
+        <div class="slide-number">29 / 33</div>
         <div class="slide-content assessment-page-content mob-page-content">
           <div class="assessment-heading census-heading editable-block" data-block-role="mobility-heading-v1"><div><h2 class="editable assessment-page-title" data-role="mobility-title-v1" data-cover-shine-title>人类移动性数据</h2><p class="editable assessment-page-english" data-role="mobility-english-v1">Human Mobility Data</p></div><div class="census-edition"><strong>多种数据结构 · 教学示意</strong></div></div>
           <div class="census-layout mob-layout">
@@ -10977,7 +11034,7 @@ SOFTWARE.
       
       <section class="slide wk1-section-content wk1-section-3 wk1-assessment wk1-census wk1-mobility-research" id="s8-mobility-research" data-key="s8-mobility-research" data-title="人类移动性数据的研究应用" data-base="#081b15" data-accent="#46cf91" data-accent-2="#6da973">
         <div class="slide-kicker">3.0 多源时空数据导论</div>
-        <div class="slide-number">24 / 29</div>
+        <div class="slide-number">30 / 33</div>
         <div class="slide-content assessment-page-content mr-page-content">
           <div class="assessment-heading census-heading editable-block" data-block-role="mobility-research-heading-v1">
             <div><h2 class="editable assessment-page-title" data-role="mobility-research-title-v1" data-cover-shine-title>人类移动性数据的研究应用</h2><p class="editable assessment-page-english" data-role="mobility-research-english-v1">From Human Movement to Research Questions</p></div>
@@ -10999,7 +11056,7 @@ SOFTWARE.
 
       <section class="slide wk1-section-content wk1-section-3 wk1-assessment wk1-census wk1-data-atlas" id="s8-data-atlas" data-key="s8-data-atlas" data-title="多源数据概览" data-base="#081b15" data-accent="#46cf91" data-accent-2="#6da973">
         <div class="slide-kicker">3.0 多源时空数据导论</div>
-        <div class="slide-number">25 / 29</div>
+        <div class="slide-number">31 / 33</div>
         <div class="slide-content assessment-page-content atlas-page-content">
           <div class="assessment-heading census-heading editable-block" data-block-role="atlas-heading-v1"><div><h2 class="editable assessment-page-title" data-role="atlas-title-v1" data-cover-shine-title>多源数据概览</h2><p class="editable assessment-page-english" data-role="atlas-english-v1">A Broader Landscape of Data</p></div><div class="census-edition"><strong>例子列举 · 并非穷尽</strong></div></div>
           <!-- A concise teaching taxonomy based on data-generating processes, not a rigid classification of file formats, providers, openness or size. Rows combine familiar data types, examples and potential sources; institutional examples do not imply public access to individual records. ACS is not labelled a decennial census; survey projects and administrative/operational records are kept distinct. -->
@@ -11040,7 +11097,7 @@ SOFTWARE.
            CDC MMWR (2004): https://www.cdc.gov/mmwr/preview/mmwrhtml/mm5334a1.htm -->
       <section class="slide wk1-section-content wk1-section-3 wk1-assessment wk1-census wk1-dikw" id="s8-dikw" data-key="s8-dikw" data-title="从数据到智慧：DIKW" data-base="#081b15" data-accent="#46cf91" data-accent-2="#6da973" data-dk-state="compound">
         <div class="slide-kicker">3.0 多源时空数据导论</div>
-        <div class="slide-number">29 / 29</div>
+        <div class="slide-number">32 / 33</div>
         <div class="slide-content assessment-page-content dk-page-content">
           <div class="assessment-heading census-heading editable-block" data-block-role="dikw-heading-v1">
             <div><h2 class="editable assessment-page-title" data-role="dikw-title-v1" data-cover-shine-title>从数据到智慧</h2><p class="editable assessment-page-english" data-role="dikw-english-v1">DIKW · An Urban Research Framework</p></div>
@@ -11139,7 +11196,7 @@ SOFTWARE.
       <!-- === SLIDE 7: ASSESSMENT MODE AND STANDARDS === -->
 <section class="slide wk1-section-content wk1-section-2 wk1-assessment" id="s7-groups" data-key="s7-groups" data-title="小组协作与计分" data-base="#071827" data-accent="#4e97ff" data-accent-2="#2f8eae">
         <div class="slide-kicker">2.0 课程简介</div>
-        <div class="slide-number">26 / 29</div>
+        <div class="slide-number">17 / 33</div>
         <div class="slide-content assessment-page-content">
           <div class="assessment-heading editable-block" data-block-role="assessment-team-v1-heading">
             <h2 class="editable assessment-page-title" data-role="assessment-team-v1-title" data-cover-shine-title>小组协作与计分</h2>
@@ -11204,7 +11261,7 @@ SOFTWARE.
 
 <section class="slide wk1-section-content wk1-section-2 wk1-assessment" id="s7-assessment" data-key="s7-assessment" data-title="考核形式与占比" data-base="#071827" data-accent="#4e97ff" data-accent-2="#2f8eae">
         <div class="slide-kicker">2.0 课程简介</div>
-        <div class="slide-number">27 / 29</div>
+        <div class="slide-number">18 / 33</div>
         <div class="slide-content assessment-page-content">
           <div class="assessment-heading editable-block" data-block-role="assessment-components-v1-heading">
             <h2 class="editable assessment-page-title" data-role="assessment-components-v1-title" data-cover-shine-title>考核形式与占比</h2>
@@ -11275,7 +11332,7 @@ SOFTWARE.
 
       <section class="slide wk1-section-content wk1-section-2 wk1-assessment wk1-publications" id="s7-publications" data-key="s7-publications" data-title="从课程项目到学术发表" data-base="#071827" data-accent="#4e97ff" data-accent-2="#2f8eae">
         <div class="slide-kicker">2.0 课程简介</div>
-        <div class="slide-number">28 / 29</div>
+        <div class="slide-number">19 / 33</div>
         <div class="slide-content assessment-page-content">
           <div class="assessment-heading editable-block" data-block-role="publication-heading-v1">
             <h2 class="editable assessment-page-title" data-role="publication-title-v1" data-cover-shine-title>从课程项目到学术发表</h2>
@@ -11393,7 +11450,7 @@ SOFTWARE.
       <!-- === CLOSING SLIDE: WEEK 1 === -->
       <section class="slide wk1-closing" id="s-thanks" data-key="s-thanks" data-title="Thanks · 第一周结束" data-base="#050913" data-accent="#78a9ff" data-accent-2="#65f0d0">
         <div class="slide-kicker">多源数据分析与实践 · Week 1</div>
-        <div class="slide-number">30 / 30</div>
+        <div class="slide-number">33 / 33</div>
         <canvas class="gradient-waves-canvas cover-mode-canvas" id="closingGradientWavesCanvas" aria-hidden="true"></canvas>
         <canvas class="gradient-waves-canvas web-threads-canvas cover-mode-canvas" id="closingWebThreadsCanvas" aria-hidden="true"></canvas>
         <div class="slide-content closing-layout">
