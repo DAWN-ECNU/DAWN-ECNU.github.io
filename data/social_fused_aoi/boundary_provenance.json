@@ -1,0 +1,28 @@
+{
+  "status": "cached_boundary_ready",
+  "provider": "AMap district API",
+  "query_local_date": "2026-11-08",
+  "native_coordinate_system": "GCJ-02",
+  "output_coordinate_system": "Approximate WGS84; iterative inverse of published forward formula",
+  "api_required_for_analysis": false,
+  "files": [
+    {
+      "filename": "shanghai_districts.geojson",
+      "sha256": "62e7d86096b438af6ee69ab9fbe8afe382e0a718d49ca681a67fe7f5a58549ae"
+    },
+    {
+      "filename": "shanghai_city.geojson",
+      "sha256": "961a76b906095b2f2377461d7dc5310a609db4fa67b28f5076e41de6683d01cf"
+    },
+    {
+      "filename": "study_area.geojson",
+      "sha256": "af0dfe13d2d256c2eddeeb5adb11f8365a4dab87fdb404c1c0b501cedff8ece4"
+    }
+  ],
+  "district_count": 16,
+  "study_codes": ["310112", "310107"],
+  "coordinate_model_reference": "https://github.com/wandergis/coordtransform",
+  "api_documentation": "https://lbs.amap.com/api/webservice/guide/api/district",
+  "accuracy_note": "Model consistency checks do not independently certify positional accuracy",
+  "source_epoch_note": "Retrieval date is recorded; underlying AMap boundary update date is unspecified"
+}

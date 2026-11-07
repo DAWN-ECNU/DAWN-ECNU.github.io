@@ -8,6 +8,30 @@ nav_order: 5
 
 # --- 数据集信息 ---
 datasets:
+  - name: "上海闵行与普陀社交媒体教学数据（2023—2025）"
+    desc: "微博与小红书融合记录，共72,000条；保留源时间、经纬度、匿名用户ID和平台标签"
+    icon: "fas fa-table"
+    type: ".csv"
+    url: "https://dawn-ecnu.github.io/data/social_media_gps_2023_2025.csv"
+
+  - name: "上海市界（高德接口缓存）"
+    desc: "2026-11-08查询，GCJ-02经模型近似转换为WGS84；配套社交媒体教学案例"
+    icon: "fas fa-map"
+    type: ".geojson"
+    url: "https://dawn-ecnu.github.io/data/social_fused_aoi/shanghai_city.geojson"
+
+  - name: "上海16区边界（高德接口缓存）"
+    desc: "2026-11-08查询，近似WGS84；保留详细顶点及来源说明"
+    icon: "fas fa-map"
+    type: ".geojson"
+    url: "https://dawn-ecnu.github.io/data/social_fused_aoi/shanghai_districts.geojson"
+
+  - name: "闵行与普陀研究区边界"
+    desc: "从同一套高德上海区界提取，含区名、行政代码和研究区标签"
+    icon: "fas fa-map"
+    type: ".geojson"
+    url: "https://dawn-ecnu.github.io/data/social_fused_aoi/study_area.geojson"
+
   - name: "2020年中国县级常住人口"
     desc: "七普年鉴整理数据；含县级区划代码，不含边界"
     icon: "fas fa-table"
