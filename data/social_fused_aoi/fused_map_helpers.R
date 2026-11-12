@@ -16,76 +16,14 @@ interval_window <- function(boundary_display, pad = 1.20, aspect = 1.30) {
   )
 }
 
-read_interval_basemap <- function(window, cache_dirs, opacity = 0.38, theme = "light") {
+interval_tile_layout <- function(window, zoom) {
   half_world <- 20037508.342789244
-  selected <- NULL
-  for (zoom in c(12L, 11L, 10L)) {
-    tile_span <- 2 * half_world / 2^zoom
-    tile_x <- seq.int(
-      floor((window[["xmin"]] + half_world) / tile_span),
-      floor((window[["xmax"]] + half_world) / tile_span)
-    )
-    tile_y <- seq.int(
-      floor((half_world - window[["ymax"]]) / tile_span),
-      floor((half_world - window[["ymin"]]) / tile_span)
-    )
-    paths <- matrix(NA_character_, nrow = length(tile_y), ncol = length(tile_x))
-    for (row in seq_along(tile_y)) {
-      for (column in seq_along(tile_x)) {
-        candidates <- file.path(
-          cache_dirs,
-          sprintf("%d_%d_%d.jpg", zoom, tile_x[column], tile_y[row])
-        )
-        available <- candidates[file.exists(candidates)]
-        if (length(available)) paths[row, column] <- available[[1]]
-      }
-    }
-    if (!anyNA(paths)) {
-      selected <- list(
-        zoom = zoom, tile_span = tile_span,
-        tile_x = tile_x, tile_y = tile_y, paths = paths
-      )
-      break
-    }
-  }
-  if (is.null(selected)) {
-    return(list(
-      image = NULL, paths = character(), zoom = NA_integer_,
-      status = "Neutral fill. Complete local tile coverage unavailable."
-    ))
-  }
-  mosaic <- array(
-    0, dim = c(nrow(selected$paths) * 256L, ncol(selected$paths) * 256L, 3L)
-  )
-  for (row in seq_len(nrow(selected$paths))) {
-    for (column in seq_len(ncol(selected$paths))) {
-      tile <- jpeg::readJPEG(selected$paths[row, column])
-      stopifnot(identical(dim(tile), c(256L, 256L, 3L)))
-      rows <- (row - 1L) * 256L + seq_len(256L)
-      columns <- (column - 1L) * 256L + seq_len(256L)
-      mosaic[rows, columns, ] <- tile
-    }
-  }
-  background <- as.numeric(grDevices::col2rgb(fused_palette$panel)) / 255
-  for (channel in 1:3) {
-    if (theme == "dark") {
-      mosaic[, , channel] <- pmin(1, background[channel] + (1 - mosaic[, , channel]) * .36)
-    } else {
-      mosaic[, , channel] <- mosaic[, , channel] * opacity + background[channel] * (1 - opacity)
-    }
-  }
-  span <- selected$tile_span
-  list(
-    image = grDevices::as.raster(mosaic),
-    bounds = c(
-      xmin = min(selected$tile_x) * span - half_world,
-      xmax = (max(selected$tile_x) + 1) * span - half_world,
-      ymin = half_world - (max(selected$tile_y) + 1) * span,
-      ymax = half_world - min(selected$tile_y) * span
-    ),
-    paths = as.vector(selected$paths), zoom = selected$zoom,
-    status = "Existing Esri Light Gray JPG cache", opacity = opacity
-  )
+  tile_span <- 2 * half_world / 2^zoom
+  list(tile_span = tile_span,
+    tile_x = seq.int(floor((window[["xmin"]] + half_world) / tile_span),
+      floor((window[["xmax"]] + half_world) / tile_span)),
+    tile_y = seq.int(floor((half_world - window[["ymax"]]) / tile_span),
+      floor((half_world - window[["ymin"]]) / tile_span)))
 }
 
 interval_map_base <- function(window, basemap, boundary_display) {
@@ -118,18 +56,21 @@ interval_graticule <- function(window) {
   list(longitude = longitude, latitude = latitude, lines = lines)
 }
 
-interval_map_frame <- function(plot, window, boundary_display) {
+interval_map_frame <- function(plot, window, boundary_display, draw_boundary = TRUE) {
   graticule <- interval_graticule(window)
-  plot +
+  framed <- plot +
     ggplot2::geom_sf(data = graticule$lines, inherit.aes = FALSE,
       colour = fused_palette$graticule, linewidth = 0.22, alpha = 0.36,
-      show.legend = FALSE) +
-    ggplot2::geom_sf(
+      show.legend = FALSE)
+  if (draw_boundary) {
+    framed <- framed + ggplot2::geom_sf(
       data = boundary_display, fill = NA, colour = fused_palette$boundary_halo, linewidth = 1.65
     ) +
     ggplot2::geom_sf(
       data = boundary_display, fill = NA, colour = fused_palette$boundary, linewidth = 0.95
-    ) +
+    )
+  }
+  framed +
     ggplot2::scale_x_continuous(breaks = graticule$longitude,
       labels = function(x) sprintf("%.2f\u00B0E", x)) +
     ggplot2::scale_y_continuous(breaks = graticule$latitude,
@@ -161,7 +102,7 @@ interval_map_frame <- function(plot, window, boundary_display) {
       panel.background = ggplot2::element_rect(fill = fused_palette$panel, colour = NA),
       plot.background = ggplot2::element_rect(fill = "transparent", colour = NA),
       panel.grid = ggplot2::element_blank(),
-      panel.border = ggplot2::element_rect(fill = NA, colour = fused_palette$frame, linewidth = 0.45),
+      panel.border = ggplot2::element_blank(),
       axis.title = ggplot2::element_blank(),
       axis.text = ggplot2::element_text(colour = fused_palette$muted, size = 12),
       axis.ticks = ggplot2::element_line(colour = fused_palette$muted, linewidth = 0.35),
