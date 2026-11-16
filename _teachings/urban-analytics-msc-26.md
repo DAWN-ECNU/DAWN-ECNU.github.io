@@ -27,7 +27,7 @@ time: "星期四 13：00 - 14：35"
 # --- 教学大纲 ---
 related_publications: false
 # 课程导论与第一至三章 · 课堂解析 HTML 课件已开放；后续课件按周更新。
-# 第0—4章教程开放；第5—9章教程链接暂时注释，更新后恢复。
+# 第0—6章教程开放；第7—9章教程更新后开放。
 schedule:
   - week: 0
     type: "软件安装" # 👈 新增标签
@@ -117,9 +117,10 @@ schedule:
     type: "专题章节" # 👈 新增标签
     topic: "第6章：专题2: 图与网络分析"
     description: "Theme 2: Graph & Network"
-    # materials:
-    #   - name: "课程教程"
-    #     url: "/assets/html/第6章.html"
+    materials:
+      - name: "课程学习"
+        kind: "tutorial"
+        url: "/assets/html/第6章.html"
     # - name: "课件 (第九节课ppt) （五一假期）"
     #   url: "/assets/ppt/第九周_msc.pptx"
     # - name: "课件 (第十一节课ppt) （五一假期）"
