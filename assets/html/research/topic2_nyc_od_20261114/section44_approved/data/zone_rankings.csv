@@ -1,0 +1,11 @@
+LocationID,zone,borough,in_strength,out_strength,pagerank,pagerank_rank,rank_group,pagerank_scaled,pagerank_display,rank_label,zone_label,in_display,out_display
+132,JFK Airport,Queens,34673,25739,0.016800504017257696,1,Top 5,16.800504017257698,16.800504,1,JFK Airport · ID 132,"34,673","25,739"
+138,LaGuardia Airport,Queens,36483,31725,0.016400297094826488,2,Top 5,16.400297094826488,16.400297,2,LaGuardia Airport · ID 138,"36,483","31,725"
+61,Crown Heights North,Brooklyn,25208,23403,0.011698394660991986,3,Top 5,11.698394660991985,11.698395,3,Crown Heights North · ID 61,"25,208","23,403"
+37,Bushwick South,Brooklyn,21721,21219,0.00980736220238588,4,Top 5,9.80736220238588,9.807362,4,Bushwick South · ID 37,"21,721","21,219"
+181,Park Slope,Brooklyn,18291,17707,0.009172083721915145,5,Top 5,9.172083721915145,9.172084,5,Park Slope · ID 181,"18,291","17,707"
+12,Battery Park,Manhattan,230,128,6.782492037236065e-4,252,Bottom 5,0.6782492037236064,0.678249,252,Battery Park · ID 12,230,128
+154,Marine Park/Floyd Bennett Field,Brooklyn,127,116,6.569395437216663e-4,253,Bottom 5,0.6569395437216663,0.656940,253,Marine Park / Floyd Bennett Field · ID 154,127,116
+111,Green-Wood Cemetery,Brooklyn,100,66,6.401749240567389e-4,254,Bottom 5,0.6401749240567388,0.640175,254,Green-Wood Cemetery · ID 111,100,66
+253,Willets Point,Queens,62,52,6.187354158488681e-4,255,Bottom 5,0.618735415848868,0.618735,255,Willets Point · ID 253,62,52
+8,Astoria Park,Queens,41,45,6.049445900604793e-4,256,Bottom 5,0.6049445900604793,0.604945,256,Astoria Park · ID 8,41,45
